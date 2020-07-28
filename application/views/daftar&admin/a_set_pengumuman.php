@@ -52,6 +52,10 @@
                                 <label class="col-sm-3 control-label" for="panduan">Input File Panduan :</label>
                                 <div class="col-sm-5">
                                     <input type="file" class="form-control" name="panduan" id="panduan" placeholder="<?= $skl['tata_cara']; ?>" required>
+                                    <p>*upload file dalam bentuk pdf</p>
+                                </div>
+                                <div class="col-sm-3 alert alert-default">
+                                    <strong><?= $skl['tata_cara']; ?></strong>
                                 </div>
                             </div>
                             <div class="row">

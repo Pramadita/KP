@@ -55,7 +55,7 @@ class model_admin extends CI_model
     {
         $config = array();
         $config['upload_path'] = './sekolah/Panduan/';
-        $config['allowed_types'] = 'doc|docx|pdf|ppt';
+        $config['allowed_types'] = 'pdf';
         $this->load->library('upload', $config, 'panduanupload');
         $this->panduanupload->initialize($config);
         $upload_panduan = $this->panduanupload->do_upload('panduan');
@@ -64,6 +64,11 @@ class model_admin extends CI_model
         $Panduan = $data1['file_name'];
         if ($upload_panduan) {
             $this->panduanupload->data();
+            $fileInfo = $this->db->get_where('sekolah', ['id' => $id])->row();
+            $file = $fileInfo->tata_cara;
+            if ($file != null) {
+                unlink('sekolah/Panduan/' . $file);
+            }
         } else {
             //error
             //other codes

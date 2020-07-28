@@ -3,157 +3,61 @@
 class model_form_update extends CI_model
 {
     //UPDATE
-    public function editdatasiswa()
+    public function editdatasiswa($id)
     {
-        //Akta Lahir
-        $config = array();
-        $config['upload_path'] = './pendaftar/Akta_Lahir/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'Akta-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'akteupload');
-        $this->akteupload->initialize($config);
-        $upload_akte = $this->akteupload->do_upload('akta');
-
-        // KK upload
-        $config = array();
-        $config['upload_path'] = './pendaftar/KK/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'KK-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'kkupload');
-        $this->kkupload->initialize($config);
-        $upload_kk = $this->kkupload->do_upload('kk');
-
-        //Raport
-        $config = array();
-        $config['upload_path'] = './pendaftar/Raport/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'Raport-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'raportupload');
-        $this->raportupload->initialize($config);
-        $upload_raport = $this->raportupload->do_upload('bioraport');
-
-        //KTP_Ayah
-        $config = array();
-        $config['upload_path'] = './pendaftar/KTP_Ayah/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'KTP_Ayah-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'ktpaupload');
-        $this->ktpaupload->initialize($config);
-        $upload_ktpa = $this->ktpaupload->do_upload('ktpa');
-
-        //KTP_Ibu
-        $config = array();
-        $config['upload_path'] = './pendaftar/KTP_Ibu/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'KTP_Ibu-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'ktpiupload');
-        $this->ktpiupload->initialize($config);
-        $upload_ktpi = $this->ktpiupload->do_upload('ktpi');
-
-        //Ijazah
-        $config = array();
-        $config['upload_path'] = './pendaftar/Ijazah_SMP/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'Ijazah-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'sijazahupload');
-        $this->sijazahupload->initialize($config);
-        $upload_sijazah = $this->sijazahupload->do_upload('sijazah');
-
-        //SKHUN
-        $config = array();
-        $config['upload_path'] = './pendaftar/SKHUN_SMP/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'SKHUN_SMP-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'sskhunupload');
-        $this->sskhunupload->initialize($config);
-        $upload_sskhun = $this->sskhunupload->do_upload('sskhun');
-
-        //Surat_Lulus
-        $config = array();
-        $config['upload_path'] = './pendaftar/Surat_Lulus_SMP/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'Surat_Lulus_SMP-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'sulusupload');
-        $this->sulusupload->initialize($config);
-        $upload_sulus = $this->sulusupload->do_upload('sulus');
-
-        //Kartu Bantuan
-        $config = array();
-        $config['upload_path'] = './pendaftar/KPS/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'KPS-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'kpspkhupload');
-        $this->kpspkhupload->initialize($config);
-        $upload_kpspkh = $this->kpspkhupload->do_upload('kpspkh');
-
         $data1 = $this->akteupload->data();
         $data2 = $this->kkupload->data();
-        $data3 = $this->raportupload->data();
-        $data4 =  $this->ktpaupload->data();
-        $data5 = $this->ktpiupload->data();
-        $data6 =  $this->sijazahupload->data();
-        $data7 =  $this->sskhunupload->data();
-        $data8 =  $this->sulusupload->data();
-        $data9 =  $this->kpspkhupload->data();
-
-        $Akta_Lahir = $data1['file_name'];
-        $KK = $data2['file_name'];
-        $Bio_Raport = $data3['file_name'];
-        $KTPA = $data4['file_name'];
-        $KTPI = $data5['file_name'];
-        $Ijazah = $data6['file_name'];
-        $SKHUN = $data7['file_name'];
-        $Sulus = $data8['file_name'];
-        $KPSPKH = $data9['file_name'];
-
-
+        // Akte upload
         if ($_FILES['akta']['size'] != 0) {
-            $data1;
-            $id = $this->input->post('id', true);
-            $siswa = $this->db->get_where('id', $id)->row_array();
-            $Akta = './pendaftar/Akta_Lahir/' . $siswa->Akta_Lahir;
-            if ($Akta != null) {
-                unlink($Akta);
+            $config = array();
+            $config['upload_path'] = './assets/uploads/akta/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['file_name'] = 'Akta-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+            $this->load->library('upload', $config, 'akteupload');
+            $this->akteupload->initialize($config);
+            $upload_akte = $this->akteupload->do_upload('akta');
+
+            if ($upload_akte) {
+                $this->akteupload->data();
+                //success
+                //other codes
+            } else {
+                //error
+                //other codes
+
+                //optional
+                echo 'Akte upload Error : ' . $this->akteupload->display_errors() . '<br/>';
             }
         }
+
+        // KK upload
         if ($_FILES['kk']['size'] != 0) {
-            $data2;
-            $id = $this->input->post('id', true);
-            $siswa = $this->db->get_where('id', $id)->row_array();
-            $KK = './pendaftar/KK/' . $siswa->KK;
-            if ($KK != null) {
-                unlink($KK);
+            $config = array();
+            $config['upload_path'] = './assets/uploads/kk/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['file_name'] = 'KK-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+            $this->load->library('upload', $config, 'kkupload');
+            $this->kkupload->initialize($config);
+            $upload_kk = $this->kkupload->do_upload('kk');
+
+            if ($upload_kk) {
+                $this->kkupload->data();
+
+                $this->db->set('file_name', $config['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('nama_tabel');
+
+                //success
+                //other codes
+            } else {
+                //error
+                //other codes
+
+                //optional
+                echo 'KK upload Error : ' . $this->kkupload->display_errors() . '<br/>';
             }
         }
-        if ($_FILES['bioraport']['size'] != 0) {
-            $data3;
-            $id = $this->input->post('id', true);
-            $siswa = $this->db->get_where('id', $id)->row_array();
-            $Biodata = './pendaftar/Raport/' . $siswa->Bio_Raport;
-            if ($Biodata != null) {
-                unlink($Biodata);
-            }
-        }
-        if ($_FILES['akta']['size'] = 0) {
-            !$data1;
-        }
-        if ($_FILES['kk']['size'] = 0) {
-            !$data2;
-        }
-        if ($_FILES['bioraport']['size'] = 0) {
-            !$data3;
-        }
 
-        //success
-        //other codes
-        else {
-            //error
-            //other codes
-
-            //optional
-            echo 'Akte upload Error : ' . $this->akteupload->display_errors() . '<br/>';
-            echo 'KK upload Error : ' . $this->kkupload->display_errors() . '<br/>';
-        }
         $post = $this->input;
         $data = [
             //DATA SISWA
@@ -210,9 +114,9 @@ class model_form_update extends CI_model
             "Beasiswa_2" => $post->post('beasiswa2', true),
             "Beasiswa_3" => $post->post('beasiswa3', true),*/
 
-            'Akta_Lahir' => $Akta_Lahir, 'KK' => $KK, 'Bio_Raport' => $Bio_Raport,
+            'Akta_Lahir' => $Akta_Lahir, 'KK' => $KK /* 'Bio_Raport' => $Bio_Raport,
             'KTP_Ayah' => $KTPA, 'KTP_Ibu' => $KTPI, 'Ijazah_SMP' => $Ijazah, 'SKHUN_SMP' => $SKHUN,
-            'Surat_Lulus_SMP' => $Sulus, 'KPS/PKH' => $KPSPKH
+            'Surat_Lulus_SMP' => $Sulus, 'KPS/PKH' => $KPSPKH*/
         ];
         $this->db->where('id', $post->post('id'));
         $this->db->update('siswa', $data);
