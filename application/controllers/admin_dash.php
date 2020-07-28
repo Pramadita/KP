@@ -86,9 +86,9 @@ class admin_dash extends CI_Controller
         $this->load->view('daftar&admin/a_edit', $data);
         $this->load->view('templates/footer2');
     }
-    public function edit_form()
+    public function edit_form($id)
     {
-        $this->model_form_update->editdatasiswa();
+        $this->model_form_update->editdatasiswa($id);
         redirect('admin_dash/pendaftar');
     }
 

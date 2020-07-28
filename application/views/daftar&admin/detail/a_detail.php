@@ -458,9 +458,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["KPS/PKH"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/KPS/<?= $siswa["KPS/PKH"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/KPS/<?= $siswa["KPS/PKH"]; ?>" width="145">
+                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["KPS"]; ?></h5>
+                        <a href="<?= base_url(); ?>pendaftar/KPS/<?= $siswa["KPS"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
+                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/KPS/<?= $siswa["KPS"]; ?>" width="145">
                         </a>
                     </div>
                 </div>

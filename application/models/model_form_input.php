@@ -189,7 +189,7 @@ class model_form_input extends CI_model
 
             'Akta_Lahir' => $Akta_Lahir, 'KK' => $KK, 'Bio_Raport' => $Bio_Raport,
             'KTP_Ayah' => $KTPA, 'KTP_Ibu' => $KTPI, 'Ijazah_SMP' => $Ijazah, 'SKHUN_SMP' => $SKHUN,
-            'Surat_Lulus_SMP' => $Sulus, 'KPS/PKH' => $KPSPKH
+            'Surat_Lulus_SMP' => $Sulus, 'KPS' => $KPSPKH
         ];
         $this->db->insert('siswa', $data);
     }

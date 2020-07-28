@@ -49,7 +49,7 @@
                         <h4> Field dengan label bertanda <b><i> * wajib diisi</i></b></h4>
                     </div>
 
-                    <form method="post" action="<?= base_url('admin_dash/edit_form'); ?>" enctype="multipart/form-data">
+                    <form method="post" action="<?= base_url('admin_dash/edit_form/') . $siswa['id']; ?>" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?= $siswa['id']; ?>">
                         <div class="tab-content">
                             <div id="w4-siswa" class="tab-pane active">
@@ -504,7 +504,7 @@
                                             <input type="file" accept="image/*" class="form-control" name="bioraport" id="w4-bioraport"><?= $siswa['Bio_Raport']; ?></input>
                                         </div>
                                     </div>
-                                    <!--<div class="form-group">
+                                    <div class="form-group">
                                         <label class="col-sm-3 control-label" for="w4-ktpa">Scan KTP Ayah * :</label>
                                         <div class="col-sm-5">
                                             <input type="file" accept="image/*" class="form-control" name="ktpa" id="w4-ktpa"><?= $siswa['KTP_Ayah']; ?></input>
@@ -537,9 +537,9 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label" for="w4-kpspkh">Scan KPS/PKH (jika ada):</label>
                                         <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="kpspkh" id="w4-kpspkh"><?= $siswa['KPS/PKH']; ?></input>
+                                            <input type="file" accept="image/*" class="form-control" name="kpspkh" id="w4-kpspkh"><?= $siswa['KPS']; ?></input>
                                         </div>
-                                    </div>-->
+                                    </div>
                                     <div class="form-group">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
