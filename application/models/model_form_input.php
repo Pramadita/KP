@@ -9,7 +9,6 @@ class model_form_input extends CI_model
         $config = array();
         $config['upload_path'] = './pendaftar/Akta_Lahir/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'Akta-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
         $this->load->library('upload', $config, 'akteupload');
         $this->akteupload->initialize($config);
         $upload_akte = $this->akteupload->do_upload('akta');
@@ -18,7 +17,6 @@ class model_form_input extends CI_model
         $config = array();
         $config['upload_path'] = './pendaftar/KK/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'KK-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
         $this->load->library('upload', $config, 'kkupload');
         $this->kkupload->initialize($config);
         $upload_kk = $this->kkupload->do_upload('kk');
@@ -27,7 +25,6 @@ class model_form_input extends CI_model
         $config = array();
         $config['upload_path'] = './pendaftar/Raport/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'Raport-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
         $this->load->library('upload', $config, 'raportupload');
         $this->raportupload->initialize($config);
         $upload_raport = $this->raportupload->do_upload('bioraport');
@@ -36,7 +33,6 @@ class model_form_input extends CI_model
         $config = array();
         $config['upload_path'] = './pendaftar/KTP_Ayah/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'KTP_Ayah-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
         $this->load->library('upload', $config, 'ktpaupload');
         $this->ktpaupload->initialize($config);
         $upload_ktpa = $this->ktpaupload->do_upload('ktpa');
@@ -45,7 +41,6 @@ class model_form_input extends CI_model
         $config = array();
         $config['upload_path'] = './pendaftar/KTP_Ibu/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'KTP_Ibu-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
         $this->load->library('upload', $config, 'ktpiupload');
         $this->ktpiupload->initialize($config);
         $upload_ktpi = $this->ktpiupload->do_upload('ktpi');
@@ -54,7 +49,6 @@ class model_form_input extends CI_model
         $config = array();
         $config['upload_path'] = './pendaftar/Ijazah_SMP/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'Ijazah-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
         $this->load->library('upload', $config, 'sijazahupload');
         $this->sijazahupload->initialize($config);
         $upload_sijazah = $this->sijazahupload->do_upload('sijazah');
@@ -63,7 +57,6 @@ class model_form_input extends CI_model
         $config = array();
         $config['upload_path'] = './pendaftar/SKHUN_SMP/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'SKHUN_SMP-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
         $this->load->library('upload', $config, 'sskhunupload');
         $this->sskhunupload->initialize($config);
         $upload_sskhun = $this->sskhunupload->do_upload('sskhun');
@@ -72,7 +65,6 @@ class model_form_input extends CI_model
         $config = array();
         $config['upload_path'] = './pendaftar/Surat_Lulus_SMP/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'Surat_Lulus_SMP-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
         $this->load->library('upload', $config, 'sulusupload');
         $this->sulusupload->initialize($config);
         $upload_sulus = $this->sulusupload->do_upload('sulus');

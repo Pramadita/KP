@@ -484,7 +484,11 @@
 
                                 <div id="w4-confirm" class="tab-pane">
                                     <div class="well info">
-                                        <h4 class="text-dark">Sertakan Scan/Foto Dengan Kualitas yang Baik !</h4>
+                                        <h4 class="text-dark">Ketentuan Gambar Berkas!</h4>
+                                        <li class="text-dark">Pastikan kualitas gambar yang disertakan berkualitas baik!</li>
+                                        <li class="text-dark">Jenis file gambar haruslah berupa .jpeg atau .jpg atau .png atau </li>
+                                        <li class="text-dark">Nama file disesuaikan dengan format.</li>
+                                        <p> Format Penamaan Berkas = Berkas_Nama Pendaftar.jenis file</br> Contoh : Akta Lahir_Dadan.jpg</p>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label" for="w4-akta">Akta Lahir * :</label>
