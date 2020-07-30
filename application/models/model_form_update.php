@@ -51,8 +51,9 @@ class model_form_update extends CI_model
                 $this->db->where('id', $id);
                 $this->db->update('siswa');
                 $file = $fileInfo->KK;
-                if ($file != null) {
-                    unlink('pendaftar/KK/' . $file);
+                $kk = 'pendaftar/KK/' . $file;
+                if ($kk != null) {
+                    unlink($kk);
                 }
             } else {
                 //error

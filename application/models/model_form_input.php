@@ -88,15 +88,6 @@ class model_form_input extends CI_model
         $data8 =  $this->sulusupload->data();
         $data9 =  $this->kpspkhupload->data();
 
-        $Akta_Lahir = $data1['file_name'];
-        $KK = $data2['file_name'];
-        $Bio_Raport = $data3['file_name'];
-        $KTPA = $data4['file_name'];
-        $KTPI = $data5['file_name'];
-        $Ijazah = $data6['file_name'];
-        $SKHUN = $data7['file_name'];
-        $Sulus = $data8['file_name'];
-        $KPSPKH = $data9['file_name'];
 
 
         if (
@@ -179,9 +170,8 @@ class model_form_input extends CI_model
             "Beasiswa_2" => $post->post('beasiswa2', true),
             "Beasiswa_3" => $post->post('beasiswa3', true),*/
 
-            'Akta_Lahir' => $Akta_Lahir, 'KK' => $KK, 'Bio_Raport' => $Bio_Raport,
-            'KTP_Ayah' => $KTPA, 'KTP_Ibu' => $KTPI, 'Ijazah_SMP' => $Ijazah, 'SKHUN_SMP' => $SKHUN,
-            'Surat_Lulus_SMP' => $Sulus, 'KPS' => $KPSPKH
+            "Akta_Lahir" => $post->post('akta', true),
+
         ];
         $this->db->insert('siswa', $data);
     }

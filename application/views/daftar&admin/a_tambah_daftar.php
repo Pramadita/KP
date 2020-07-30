@@ -52,7 +52,7 @@
                     <form method="post" action="<?= base_url('form_daftar/tambah_form_admin'); ?>" enctype="multipart/form-data">
                         <div class="tab-content">
                             <div id="w4-siswa" class="tab-pane active">
-                                <div class="form-group">
+                                <!--<div class="form-group">
                                     <label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="Tingkat" id="Tingkat" required>
@@ -71,14 +71,14 @@
                                             <option value="Pemasaran">Pemasaran</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="Nama_Siswa">Nama Lengkap * :</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" name="Nama_Siswa" id="Nama_Siswa" required>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <!--<div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-jk">Jenis Kelamin * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jk" id="w4-jk">
@@ -483,98 +483,98 @@
                                         </div>
                                     </div>
                                 </section>
-                            </div>
+                            </div>-->
 
-                            <div id="w4-confirm" class="tab-pane">
-                                <div class="well info">
-                                    <h4 class="text-dark">Ketentuan Gambar Berkas!</h4>
-                                    <li class="text-dark">Pastikan kualitas gambar yang disertakan berkualitas baik!</li>
-                                    <li class="text-dark">Jenis file gambar haruslah berupa .jpeg atau .jpg atau .png atau </li>
-                                    <li class="text-dark">Nama file disesuaikan dengan format.</li>
-                                    <p> Format Penamaan Berkas = Berkas_Nama Pendaftar.jenis file</br> Contoh : Akta Lahir_Dadan.jpg</p>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-akta">Akta Lahir * :</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="akta" id="w4-akta" required>
+                                <div id="w4-confirm" class="tab-pane">
+                                    <div class="well info">
+                                        <h4 class="text-dark">Ketentuan Gambar Berkas!</h4>
+                                        <li class="text-dark">Pastikan kualitas gambar yang disertakan berkualitas baik!</li>
+                                        <li class="text-dark">Jenis file gambar haruslah berupa .jpeg atau .jpg atau .png atau </li>
+                                        <li class="text-dark">Nama file disesuaikan dengan format.</li>
+                                        <p> Format Penamaan Berkas = Berkas_Nama Pendaftar.jenis file</br> Contoh : Akta Lahir_Dadan.jpg</p>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-kk">Scan Kartu Keluarga * :</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="kk" id="w4-kk" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-bioraport">Scan Biodata pada Raport SMP * :</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="bioraport" id="w4-bioraport" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-ktpa">Scan KTP Ayah * :</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="ktpa" id="w4-ktpa" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-ktpi">Scan KTP Ibu * :</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="ktpi" id="w4-ktpi" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-sijazah">Scan Ijazah SMP :</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="sijazah" id="w4-sijazah">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-sskhun">Scan SKHUN SMP :</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="sskhun" id="w4-sskhun">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-sulus">Scan Surat Kelulusan SMP :</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="sulus" id="w4-sulus">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-kpspkh">Scan KPS/PKH (jika ada):</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="kpspkh" id="w4-kpspkh">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-9">
-                                        <div class="checkbox-custom">
-                                            <input type="checkbox" name="terms" id="w4-terms" required>
-                                            <label for="w4-terms">I agree to the terms of service</label>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-akta">Akta Lahir * :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="akta" id="w4-akta" required>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-kk">Scan Kartu Keluarga * :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="kk" id="w4-kk" required>
+                                        </div>
+                                    </div>
+                                    <!--<div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-bioraport">Scan Biodata pada Raport SMP * :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="bioraport" id="w4-bioraport" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-ktpa">Scan KTP Ayah * :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="ktpa" id="w4-ktpa" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-ktpi">Scan KTP Ibu * :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="ktpi" id="w4-ktpi" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-sijazah">Scan Ijazah SMP :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="sijazah" id="w4-sijazah">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-sskhun">Scan SKHUN SMP :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="sskhun" id="w4-sskhun">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-sulus">Scan Surat Kelulusan SMP :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="sulus" id="w4-sulus">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-kpspkh">Scan KPS/PKH (jika ada):</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="kpspkh" id="w4-kpspkh">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-3"></div>
+                                        <div class="col-sm-9">
+                                            <div class="checkbox-custom">
+                                                <input type="checkbox" name="terms" id="w4-terms" required>
+                                                <label for="w4-terms">I agree to the terms of service</label>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                                 </div>
-                                <button type="submit" class="btn btn-primary pull-right">Daftar</button>
-                            </div>
 
+                            </div>
                         </div>
-                </div>
-                <div class="panel-footer">
-                    <ul class="pager">
-                        <li class="previous disabled">
-                            <a><i class="fa fa-angle-left"></i> Previous</a>
-                        </li>
-                        <!--<li>
+                        <div class="panel-footer">
+                            <ul class="pager">
+                                <li class="previous disabled">
+                                    <a><i class="fa fa-angle-left"></i> Previous</a>
+                                </li>
+                                <!--<li>
                                 <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                             </li>-->
-                        <li class="next">
-                            <a>Next <i class="fa fa-angle-right"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                </form>
+                                <li class="next">
+                                    <a>Next <i class="fa fa-angle-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
 
             </section>
         </div>

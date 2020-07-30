@@ -22,25 +22,31 @@
         <header class="panel-heading">
             <h2 class="panel-title">Data Pendaftar</h2>
         </header>
-        <?php if ($this->session->flashdata('flash')) : ?>
-            <!-- <div class="row mt-3">
+        <!--<?php if ($this->session->flashdata('flash')) : ?>
+            <div class="row mt-3">
                     <div class="col-md-6">
                         <div class="alert alert-succes alert-dismissible fade show" role="alert">
-                            Data <strong>Berhasil</strong> <?= $this->session->flashdata(); ?>
+                            Data <strong>Berhasil</strong> <?= $this->session->flashdata('flash'); ?>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                     </div>
-                </div>-->
-        <?php endif; ?>
+                </div>
+        <?php endif; ?>-->
         <div class="panel-body">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-2">
                     <div class="mb-md">
                         <p><a href="<?= base_url(); ?>admin_dash/tambah_daftar" class="btn btn-primary">Add <i class="fa fa-plus"></i></a></p>
                     </div>
                 </div>
+                <?php if ($this->session->flashdata('flash')) : ?>
+                    <div class="col-sm-9 alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <strong>Data Berhasil </strong><?= $this->session->flashdata('flash'); ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div class="table-responsive">

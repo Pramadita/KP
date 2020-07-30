@@ -42,7 +42,6 @@ class admin_dash extends CI_Controller
     {
         $data['judul'] = 'PPDB | ADMIN PENDAFTAR';
         $data['siswa'] = $this->model_siswa->getallsiswa();
-
         $this->load->view('templates/header2', $data);
         $this->load->view('templates/nav_admin');
         $this->load->view('daftar&admin/a_pendaftar', $data);
@@ -89,6 +88,7 @@ class admin_dash extends CI_Controller
     public function edit_form($id)
     {
         $this->model_form_update->editdatasiswa($id);
+        $this->session->set_flashdata('flash', 'Diedit');
         redirect('admin_dash/pendaftar');
     }
 
@@ -104,11 +104,13 @@ class admin_dash extends CI_Controller
     public function update_info($id)
     {
         $this->model_admin->updateinfo($id);
+        $this->session->set_flashdata('flash', 'Diupdate');
         redirect('admin_dash/upload_data');
     }
     public function update_tatacara($id)
     {
         $this->model_admin->updatetatacara($id);
+        $this->session->set_flashdata('flash', 'Diupdate');
         redirect('admin_dash/upload_data');
     }
 

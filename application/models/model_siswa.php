@@ -34,32 +34,59 @@ class model_siswa extends CI_model
         $fileInfo = $this->db->get_where('siswa', ['id' => $id])->row();
         $query = $this->db->delete('siswa', ['id' => $id]);
         if ($query) {
-            $file = $fileInfo->Akta_Lahir;
-            unlink('pendaftar/Akta_Lahir/' . $file);
+            $file1 = $fileInfo->Akta_Lahir;
+            $akta = './pendaftar/Akta_Lahir/' . $file1;
+            if ($_FILES[$akta]['size'] != 0) {
+                unlink($akta);
+            }
 
-            $file = $fileInfo->KK;
-            unlink('pendaftar/KK/' . $file);
+            $file2 = $fileInfo->KK;
+            $kk = './pendaftar/KK/' . $file2;
+            if ($_FILES[$kk]['size'] != 0) {
+                unlink($kk);
+            }
 
-            $file = $fileInfo->Bio_Raport;
-            unlink('pendaftar/Raport/' . $file);
+            $file3 = $fileInfo->Bio_Raport;
+            $raport = './pendaftar/Raport/' . $file3;
+            if ($_FILES[$raport]['size'] != 0) {
+                unlink($raport);
+            }
 
-            $file = $fileInfo->KTP_Ayah;
-            unlink('pendaftar/KTP_Ayah/' . $file);
+            $file4 = $fileInfo->KTP_Ayah;
+            $ktpa = './pendaftar/KTP_Ayah/' . $file4;
+            if ($_FILES[$ktpa]['size'] != 0) {
+                unlink($ktpa);
+            }
 
-            $file = $fileInfo->KTP_Ibu;
-            unlink('pendaftar/KTP_Ibu/' . $file);
+            $file5 = $fileInfo->KTP_Ibu;
+            $ktpi = './pendaftar/KTP_Ibu/' . $file5;
+            if ($_FILES[$ktpi]['size'] != 0) {
+                unlink($ktpi);
+            }
 
-            $file = $fileInfo->Ijazah_SMP;
-            unlink('pendaftar/Ijazah_SMP/' . $file);
+            $file6 = $fileInfo->Ijazah_SMP;
+            $ijazah = './pendaftar/Ijazah_SMP/' . $file6;
+            if ($_FILES[$ijazah]['size'] != 0) {
+                unlink($ijazah);
+            }
 
-            $file = $fileInfo->SKHUN_SMP;
-            unlink('pendaftar/SKHUN_SMP/' . $file);
+            $file7 = $fileInfo->SKHUN_SMP;
+            $skhun = './pendaftar/SKHUN_SMP/' . $file7;
+            if ($_FILES[$skhun]['size'] != 0) {
+                unlink($skhun);
+            }
 
-            $file = $fileInfo->Surat_Lulus_SMP;
-            unlink('pendaftar/Surat_Lulus_SMP/' . $file);
+            $file8 = $fileInfo->Surat_Lulus_SMP;
+            $sulus = './pendaftar/Surat_Lulus_SMP/' . $file8;
+            if ($_FILES[$sulus]['size'] != 0) {
+                unlink($sulus);
+            }
 
-            $file = $fileInfo->KPS;
-            unlink('pendaftar/KPS/' . $file);
+            $file9 = $fileInfo->KPS;
+            $kps = './pendaftar/Surat_Lulus_SMP/' . $file9;
+            if ($_FILES[$kps]['size'] != 0) {
+                unlink($kps);
+            }
         }
     }
 }

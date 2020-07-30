@@ -12,6 +12,12 @@
                 </ol>
             </div>
         </header>
+        <?php if ($this->session->flashdata('flash')) : ?>
+            <div class="col-sm-12 alert alert-success">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Data Berhasil </strong><?= $this->session->flashdata('flash'); ?>
+            </div>
+        <?php endif; ?>
         <div class="col-md-12">
             <section class="panel panel-dark">
                 <header class="panel-heading">
@@ -40,7 +46,7 @@
         <div class="col-md-12">
             <section class="panel panel-dark">
                 <header class="panel-heading">
-                    <h4 class="panel-title">Data Periodik</h4>
+                    <h4 class="panel-title">Upload Panduan</h4>
                     <div class="panel-actions">
                         <a href="#" class="fa fa-caret-down"></a>
                     </div>
@@ -55,7 +61,9 @@
                                     <p>*upload file dalam bentuk pdf</p>
                                 </div>
                                 <div class="col-sm-3 alert alert-default">
-                                    <strong><?= $skl['tata_cara']; ?></strong>
+                                    <div class="col-sm-3">
+                                        <strong><?= $skl['tata_cara']; ?></strong>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
