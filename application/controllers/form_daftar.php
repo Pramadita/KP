@@ -7,6 +7,7 @@ class form_daftar extends CI_Controller
     {
         parent::__construct();
         $this->load->model('model_form_input');
+        $this->load->model('model_admin');
     }
 
     public function index()
@@ -19,6 +20,7 @@ class form_daftar extends CI_Controller
     public function form_daftar()
     {
         $data['judul'] = 'PPDB | FORM PENDAFTARAN SMK ATM';
+        $data['sekolah'] = $this->model_admin->getallsekolah();
         $this->load->view('templates/header2', $data);
         $this->load->view('daftar&admin/s_form_pendaftaran', $data);
         $this->load->view('templates/footer2');

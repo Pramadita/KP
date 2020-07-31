@@ -32,7 +32,7 @@
                             <div class="row">
                                 <label class="col-sm-3 control-label" for="periode">Input Periode :</label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="periode" id="periode" placeholder="<?= $skl['periode_daftar']; ?>" required>
+                                    <input type="text" class="form-control" name="periode" id="periode" placeholder="<?= $skl['periode_daftar']; ?>">
                                 </div>
                             </div>
                             <div class="row">
@@ -46,7 +46,7 @@
         <div class="col-md-12">
             <section class="panel panel-dark">
                 <header class="panel-heading">
-                    <h4 class="panel-title">Upload Panduan</h4>
+                    <h4 class="panel-title">Upload Panduan dan Ketentuan</h4>
                     <div class="panel-actions">
                         <a href="#" class="fa fa-caret-down"></a>
                     </div>
@@ -57,12 +57,36 @@
                             <div class="row">
                                 <label class="col-sm-3 control-label" for="panduan">Input File Panduan :</label>
                                 <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="panduan" id="panduan" placeholder="<?= $skl['tata_cara']; ?>" required>
+                                    <input type="file" class="form-control" name="panduan" id="panduan" placeholder="<?= $skl['tata_cara']; ?>">
                                     <p>*upload file dalam bentuk pdf</p>
                                 </div>
                                 <div class="col-sm-3 alert alert-default">
                                     <div class="col-sm-3">
                                         <strong><?= $skl['tata_cara']; ?></strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-3 control-label" for="berkas">Input Contoh Berkas :</label>
+                                <div class="col-sm-5">
+                                    <input type="file" class="form-control" name="berkas" id="berkas" placeholder="<?= $skl['berkas']; ?>">
+                                    <p>*upload file dalam bentuk pdf</p>
+                                </div>
+                                <div class="col-sm-3 alert alert-default">
+                                    <div class="col-sm-3">
+                                        <strong><?= $skl['berkas']; ?></strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-3 control-label" for="foto">Input Contoh Foto :</label>
+                                <div class="col-sm-5">
+                                    <input type="file" class="form-control" name="foto" id="foto" placeholder="<?= $skl['foto']; ?>">
+                                    <p>*upload file dalam bentuk pdf</p>
+                                </div>
+                                <div class="col-sm-3 alert alert-default">
+                                    <div class="col-sm-3">
+                                        <strong><?= $skl['foto']; ?></strong>
                                     </div>
                                 </div>
                             </div>

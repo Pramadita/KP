@@ -81,7 +81,6 @@
                                     <a href="<?= base_url('download/download_bantuan/') . $skl['id']; ?>" value="" class="view-more">Download</a>
                                 </p>
                             <?php endforeach; ?>
-                            <!--<p><a href="<?= base_url('download/download_bantuan'); ?>" class="view-more">Download</a></p>-->
                         </div>
                     </div>
                     <div class="one-third color-3 animate-box">
