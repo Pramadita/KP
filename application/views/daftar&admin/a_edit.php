@@ -483,73 +483,39 @@
                             </div>-->
 
                                 <div id="w4-confirm" class="tab-pane">
-                                    <div class="well info">
-                                        <h4 class="text-dark">Ketentuan Gambar Berkas!</h4>
-                                        <li class="text-dark">Pastikan kualitas gambar yang disertakan berkualitas baik!</li>
-                                        <li class="text-dark">Jenis file gambar haruslah berupa .jpeg atau .jpg atau .png atau </li>
-                                        <li class="text-dark">Nama file disesuaikan dengan format.</li>
-                                        <p> Format Penamaan Berkas = Berkas_Nama Pendaftar.jenis file</br> Contoh : Akta Lahir_Dadan.jpg</p>
-                                    </div>
+                                    <h4 class="text-danger">Ketentuan Berkas dan Foto Siswa!</h4>
+                                    <h5 class="text-primary">Berkas.</h5>
+                                    <li>Scan/Foto berkas harus jelas!</li>
+                                    <li class="text-dark">Berkas yang <strong>wajib</strong> disertakan yaitu : Akta Kelahiran, Kartu Keluarga, Biodata Rapot SMP, KTP Ibu dan Ayah </br><strong>(Untuk penerima kartu bantuan</strong>, kartu bantuan <strong>wajib</strong> disertakan).</li>
+                                    <li class="text-dark">Berkas yang <strong>ikut disertakan jika sudah ada atau tidak wajib disertakan jika belum ada</strong> yaitu : Ijazah SMP, SKHUN SMP, Surat Kelulusan SMP.</li>
+                                    <li class="text-dark">Seluruh foto berkas dimasukkan dalam 1 jenis file berbentuk <strong>.doc atau .docx atau .pdf</strong>.</br>Bisa gunakan microsoft word, wps dan aplikasi lain untuk membuatnya. </li>
+                                    <li class="text-dark">Nama file disesuaikan dengan format.</li>
+                                    <p class="text-dark"> Format Penamaan Berkas = <strong>Berkas_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file berkas</strong>, Contoh : Berkas_Lily Lyanna_Pemasaran.doc</p>
+                                    </br>
+                                    <h5 class="text-primary">Foto Siswa.</h5>
+                                    <li>Foto siswa harus jelas!</li>
+                                    <li class="text-dark"> Ukuran foto <strong>3x4 dengan format .jpg atau .jpeg atau.png</strong></li>
+                                    <li class="text-dark">Foto yang disertakan merupakan <strong>foto resmi dengan background berwarna biru</strong></li>
+                                    <li class="text-dark"><strong>Foto diupload terpisah dengan berkas.</strong> Tersedia form input foto setelah berkas.</li>
+                                    <li class="text-dark">Nama file disesuaikan dengan format.</li>
+                                    <p class="text-dark"> Format Penamaan Foto = <strong>Foto_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong>, Contoh : Foto_Lily Lyanna_Pemasaran.png</p>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-akta">Akta Lahir * :</label>
+                                        <label class="col-sm-3 control-label" for="w4-akta">Berkas* :</label>
                                         <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="akta" id="w4-akta"><?= $siswa['Akta_Lahir']; ?></input>
+                                            <input type="file" class="form-control" name="berkas" id="w4-berkas" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-kk">Scan Kartu Keluarga * :</label>
+                                        <label class="col-sm-3 control-label" for="w4-kk">Foto Pendaftar* :</label>
                                         <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="kk" id="w4-kk"><?= $siswa['KK']; ?></input>
+                                            <input type="file" class="form-control" name="foto" id="w4-foto" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-bioraport">Scan Biodata pada Raport SMP * :</label>
-                                        <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="bioraport" id="w4-bioraport"><?= $siswa['Bio_Raport']; ?></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-ktpa">Scan KTP Ayah * :</label>
-                                        <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="ktpa" id="w4-ktpa"><?= $siswa['KTP_Ayah']; ?></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-ktpi">Scan KTP Ibu * :</label>
-                                        <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="ktpi" id="w4-ktpi"><?= $siswa['KTP_Ibu']; ?></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-sijazah">Scan Ijazah SMP :</label>
-                                        <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="sijazah" id="w4-sijazah"><?= $siswa['Ijazah_SMP']; ?></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-sskhun">Scan SKHUN SMP :</label>
-                                        <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="sskhun" id="w4-sskhun"><?= $siswa['SKHUN_SMP']; ?></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-sulus">Scan Surat Kelulusan SMP :</label>
-                                        <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="sulus" id="w4-sulus"><?= $siswa['Surat_Lulus_SMP']; ?></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-kpspkh">Scan KPS/PKH (jika ada):</label>
-                                        <div class="col-sm-5">
-                                            <input type="file" accept="image/*" class="form-control" name="kpspkh" id="w4-kpspkh"><?= $siswa['KPS']; ?></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
                                             <div class="checkbox-custom">
-                                                <input type="checkbox" name="terms" id="w4-terms">
-                                                <label for="w4-terms">I agree to the terms of service</label>
+                                                <input type="checkbox" name="terms" id="w4-terms" required>
+                                                <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
                                             </div>
                                         </div>
                                     </div>

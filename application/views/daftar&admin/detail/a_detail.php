@@ -406,65 +406,18 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Akta_Lahir"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/Akta_Lahir/<?= $siswa["Akta_Lahir"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/Akta_Lahir/<?= $siswa["Akta_Lahir"]; ?>" width="145">
+                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Berkas"]; ?></h5>
+                        <a href="<?= base_url(); ?>pendaftar/Berkas/<?= $siswa["Berkas"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"pdf" }' title="Caption. Can be aligned it to any side and contain any HTML.">
+                            <embed class="responsive" src="<?= base_url(); ?>pendaftar/Berkas/<?= $siswa["Berkas"]; ?>" width="145">
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["KK"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/KK/<?= $siswa["KK"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/KK/<?= $siswa["KK"]; ?>" width="145">
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Bio_Raport"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/Raport/<?= $siswa["Bio_Raport"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/Raport/<?= $siswa["Bio_Raport"]; ?>" width="145">
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["KTP_Ayah"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/KTP_Ayah/<?= $siswa["KTP_Ayah"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/KTP_Ayah/<?= $siswa["KTP_Ayah"]; ?>" width="145">
+                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Foto"]; ?></h5>
+                        <a href="<?= base_url(); ?>pendaftar/Foto/<?= $siswa["Foto"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
+                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/Foto/<?= $siswa["Foto"]; ?>" width="145">
                         </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["KTP_Ibu"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/KTP_Ibu/<?= $siswa["KTP_Ibu"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/KTP_Ibu/<?= $siswa["KTP_Ibu"]; ?>" width="145">
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Ijazah_SMP"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/Ijazah_SMP/<?= $siswa["Ijazah_SMP"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/Ijazah_SMP/<?= $siswa["Ijazah_SMP"]; ?>" width="145">
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["SKHUN_SMP"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/SKHUN_SMP/<?= $siswa["SKHUN_SMP"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/SKHUN_SMP/<?= $siswa["SKHUN_SMP"]; ?>" width="145">
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Surat_Lulus_SMP"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/Surat_Lulus_SMP/<?= $siswa["Surat_Lulus_SMP"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/Surat_Lulus_SMP/<?= $siswa["Surat_Lulus_SMP"]; ?>" width="145">
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["KPS"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/KPS/<?= $siswa["KPS"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/KPS/<?= $siswa["KPS"]; ?>" width="145">
-                        </a>
-                    </div>
-                </div>
-            </div>
         </section>
     </div>
 

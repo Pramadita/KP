@@ -5,104 +5,31 @@ class model_form_input extends CI_model
     //CREATE
     public function tambahdatasiswa()
     {
-        //Akta Lahir
+        //Berkas
         $config = array();
-        $config['upload_path'] = './pendaftar/Akta_Lahir/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $this->load->library('upload', $config, 'akteupload');
-        $this->akteupload->initialize($config);
-        $upload_akte = $this->akteupload->do_upload('akta');
+        $config['upload_path'] = './pendaftar/Berkas/';
+        $config['allowed_types'] = 'doc|docx|pdf|';
+        $this->load->library('upload', $config, 'berkasupload');
+        $this->berkasupload->initialize($config);
+        $upload_berkas = $this->berkaspload->do_upload('berkas');
 
-        // KK upload
+        //Foto
         $config = array();
-        $config['upload_path'] = './pendaftar/KK/';
+        $config['upload_path'] = './pendaftar/Foto/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
-        $this->load->library('upload', $config, 'kkupload');
-        $this->kkupload->initialize($config);
-        $upload_kk = $this->kkupload->do_upload('kk');
+        $this->load->library('upload', $config, 'fotoupload');
+        $this->fotoupload->initialize($config);
+        $upload_foto = $this->fotoupload->do_upload('foto');
 
-        //Raport
-        $config = array();
-        $config['upload_path'] = './pendaftar/Raport/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $this->load->library('upload', $config, 'raportupload');
-        $this->raportupload->initialize($config);
-        $upload_raport = $this->raportupload->do_upload('bioraport');
-
-        //KTP_Ayah
-        $config = array();
-        $config['upload_path'] = './pendaftar/KTP_Ayah/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $this->load->library('upload', $config, 'ktpaupload');
-        $this->ktpaupload->initialize($config);
-        $upload_ktpa = $this->ktpaupload->do_upload('ktpa');
-
-        //KTP_Ibu
-        $config = array();
-        $config['upload_path'] = './pendaftar/KTP_Ibu/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $this->load->library('upload', $config, 'ktpiupload');
-        $this->ktpiupload->initialize($config);
-        $upload_ktpi = $this->ktpiupload->do_upload('ktpi');
-
-        //Ijazah
-        $config = array();
-        $config['upload_path'] = './pendaftar/Ijazah_SMP/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $this->load->library('upload', $config, 'sijazahupload');
-        $this->sijazahupload->initialize($config);
-        $upload_sijazah = $this->sijazahupload->do_upload('sijazah');
-
-        //SKHUN
-        $config = array();
-        $config['upload_path'] = './pendaftar/SKHUN_SMP/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $this->load->library('upload', $config, 'sskhunupload');
-        $this->sskhunupload->initialize($config);
-        $upload_sskhun = $this->sskhunupload->do_upload('sskhun');
-
-        //Surat_Lulus
-        $config = array();
-        $config['upload_path'] = './pendaftar/Surat_Lulus_SMP/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $this->load->library('upload', $config, 'sulusupload');
-        $this->sulusupload->initialize($config);
-        $upload_sulus = $this->sulusupload->do_upload('sulus');
-
-        //Kartu Bantuan
-        $config = array();
-        $config['upload_path'] = './pendaftar/KPS/';
-        $config['allowed_types'] = 'jpeg|jpg|png|';
-        $config['file_name'] = 'KPS-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config, 'kpspkhupload');
-        $this->kpspkhupload->initialize($config);
-        $upload_kpspkh = $this->kpspkhupload->do_upload('kpspkh');
-
-        $data1 = $this->akteupload->data();
-        $data2 = $this->kkupload->data();
-        $data3 = $this->raportupload->data();
-        $data4 =  $this->ktpaupload->data();
-        $data5 = $this->ktpiupload->data();
-        $data6 =  $this->sijazahupload->data();
-        $data7 =  $this->sskhunupload->data();
-        $data8 =  $this->sulusupload->data();
-        $data9 =  $this->kpspkhupload->data();
+        $data1 = $this->berkasupload->data();
+        $data2 = $this->fotoupload->data();
+        $berkas = $data1['file_name'];
+        $foto = $data2['file_name'];
 
 
-
-        if (
-            $upload_akte && $upload_kk && $upload_raport && $upload_ktpa && $upload_ktpi
-            && $upload_sijazah && $upload_sskhun && $upload_sulus && $upload_kpspkh
-        ) {
+        if ($upload_berkas && $upload_foto) {
             $data1;
             $data2;
-            $data3;
-            $data4;
-            $data5;
-            $data6;
-            $data7;
-            $data8;
-            $data9;
 
             //success
             //other codes
@@ -170,7 +97,7 @@ class model_form_input extends CI_model
             "Beasiswa_2" => $post->post('beasiswa2', true),
             "Beasiswa_3" => $post->post('beasiswa3', true),*/
 
-            "Akta_Lahir" => $post->post('akta', true),
+            'Berkas' => $berkas, 'Foto' => $foto
 
         ];
         $this->db->insert('siswa', $data);

@@ -3,26 +3,6 @@
 class model_admin extends CI_model
 {
     //CREATE
-    public function tambahinfo()
-    {
-        $config = array();
-        $config['upload_path'] = './sekolah/Info/';
-        $config['allowed_types'] = 'jpg';
-        $config['file_name'] = 'Info';
-        $this->load->library('upload', $config, 'infoupload');
-        $this->infoupload->initialize($config);
-        $upload_info = $this->infoupload->do_upload('info');
-
-        if ($upload_info) {
-            $this->infoupload->data();
-        } else {
-            //error
-            //other codes
-
-            //optional
-            echo 'info upload Error : ' . $this->infoupload->display_errors() . '<br/>';
-        }
-    }
 
     //READ
     public function getallsekolah()
