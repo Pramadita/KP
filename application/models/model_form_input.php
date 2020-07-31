@@ -11,7 +11,7 @@ class model_form_input extends CI_model
         $config['allowed_types'] = 'doc|docx|pdf|';
         $this->load->library('upload', $config, 'berkasupload');
         $this->berkasupload->initialize($config);
-        $upload_berkas = $this->berkaspload->do_upload('berkas');
+        $upload_berkas = $this->berkasupload->do_upload('berkas');
 
         //Foto
         $config = array();
@@ -38,8 +38,8 @@ class model_form_input extends CI_model
             //other codes
 
             //optional
-            echo 'Akte upload Error : ' . $this->akteupload->display_errors() . '<br/>';
-            echo 'KK upload Error : ' . $this->kkupload->display_errors() . '<br/>';
+            echo 'Akte upload Error : ' . $this->berkasupload->display_errors() . '<br/>';
+            echo 'Foto upload Error : ' . $this->fotoupload->display_errors() . '<br/>';
         }
         $post = $this->input;
         $data = [

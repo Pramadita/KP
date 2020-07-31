@@ -14,7 +14,7 @@ class model_form_update extends CI_model
             $config['allowed_types'] = 'doc|docx|pdf|';
             $this->load->library('upload', $config, 'berkasupload');
             $this->berkasupload->initialize($config);
-            $upload_berkas = $this->berkaspload->do_upload('berkas');
+            $upload_berkas = $this->berkasupload->do_upload('berkas');
             $data1 = $this->berkasupload->data();
             if ($upload_berkas) {
                 $data1;

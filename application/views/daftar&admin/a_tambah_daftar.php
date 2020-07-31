@@ -518,7 +518,7 @@
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9">
                                             <div class="checkbox-custom">
-                                                <input type="checkbox" name="terms" id="w4-terms" required>
+                                                <input type="checkbox" name="terms" id="w4-terms">
                                                 <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
                                             </div>
                                         </div>

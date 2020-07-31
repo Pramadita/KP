@@ -407,7 +407,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Berkas"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/Berkas/<?= $siswa["Berkas"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"pdf" }' title="Caption. Can be aligned it to any side and contain any HTML.">
+                        <a href="<?= base_url(); ?>pendaftar/Berkas/<?= $siswa["Berkas"]; ?>">
                             <embed class="responsive" src="<?= base_url(); ?>pendaftar/Berkas/<?= $siswa["Berkas"]; ?>" width="145">
                         </a>
                     </div>

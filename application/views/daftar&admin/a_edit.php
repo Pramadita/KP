@@ -502,19 +502,19 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label" for="w4-akta">Berkas* :</label>
                                         <div class="col-sm-5">
-                                            <input type="file" class="form-control" name="berkas" id="w4-berkas" required>
+                                            <input type="file" class="form-control" name="berkas" id="w4-berkas">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label" for="w4-kk">Foto Pendaftar* :</label>
                                         <div class="col-sm-5">
-                                            <input type="file" class="form-control" name="foto" id="w4-foto" required>
+                                            <input type="file" class="form-control" name="foto" id="w4-foto">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-9">
                                             <div class="checkbox-custom">
-                                                <input type="checkbox" name="terms" id="w4-terms" required>
+                                                <input type="checkbox" name="terms" id="w4-terms">
                                                 <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
                                             </div>
                                         </div>
