@@ -22,60 +22,73 @@
             </header>
             <div class="panel-body">
                 <ul class="list-unstyled">
-                    <li>
-                        <div class="form-group">
-                            <div class="form-group"> <label class="col-sm-4 control-label dark" for="Prodi">Program Studi </label>
-                                <div class="col-sm-5">
-                                    <label> : <?= $siswa["Prodi"]; ?> </label>
+                    <div class="row">
+                        <div class=" col-sm-8">
+                            <li>
+                                <div class="form-group">
+                                    <div class="form-group"> <label class="col-sm-4 control-label dark" for="Prodi">Program Studi </label>
+                                        <div class="col-sm-4">
+                                            <label> : <?= $siswa["Prodi"]; ?> </label>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li>
+                                <div class="form-group"><label class="col-sm-4 control-label" for="Nama_Siswa">Nama </label>
+                                    <div class="col-sm-4">
+                                        <label> : <?= $siswa["Nama_Siswa"]; ?></label>
+                                    </div>
                                 </div>
-                            </div>
-                    </li>
-                    <li>
-                        <div class="form-group"><label class="col-sm-4 control-label" for="Nama_Siswa">Nama </label>
-                            <div class="col-sm-5">
-                                <label> : <?= $siswa["Nama_Siswa"]; ?></label>
-                            </div>
+                            </li>
+                            <li>
+                                <div class="form-group"><label class="col-sm-4 control-label " for="jk">Jenis Kelamin </label>
+                                    <div class="col-sm-4">
+                                        <label> : <?= $siswa["Jenis_Kelamin"]; ?></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-group"><label class="col-sm-4 control-label" for="asek">Asal Sekolah </label>
+                                    <div class="col-sm-4">
+                                        <label> : <?= $siswa["Asal_Sekolah"]; ?></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-group"><label class="col-sm-4 control-label" for="asek">NISN </label>
+                                    <div class="col-sm-4">
+                                        <label> : <?= $siswa["NISN"]; ?></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-group"><label class="col-sm-4 control-label" for="ijazah">NOMOR SERI IJAZAH </label>
+                                    <div class="col-sm-4">
+                                        <label> : <?= $siswa["No_Ijazah"]; ?></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-group"><label class="col-sm-4 control-label" for="skhun">SERI SKHUN SMP/MTs </label>
+                                    <div class="col-sm-4">
+                                        <label> : <?= $siswa["No_SKHUN"]; ?></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-group"><label class="col-sm-4 control-label" for="un">No Ujian Nasional SMP/MTs </label>
+                                    <div class="col-sm-4">
+                                        <label> : <?= $siswa["No_UN"]; ?></label>
+                                    </div>
+                                </div>
+                            </li>
                         </div>
-                    </li>
-                    <li>
-                        <div class="form-group"><label class="col-sm-4 control-label " for="jk">Jenis Kelamin </label>
-                            <div class="col-sm-5">
-                                <label> : <?= $siswa["Jenis_Kelamin"]; ?></label>
-                            </div>
+                        <div class=" col-sm-4">
+                            <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Foto"]; ?></h5>
+                            <a href="<?= base_url(); ?>pendaftar/Foto/<?= $siswa["Foto"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
+                                <img class="img-responsive" src="<?= base_url(); ?>pendaftar/Foto/<?= $siswa["Foto"]; ?>" width="145">
+                            </a>
                         </div>
-                    </li>
-                    <li>
-                        <div class="form-group"><label class="col-sm-4 control-label" for="asek">Asal Sekolah </label>
-                            <div class="col-sm-5">
-                                <label> : <?= $siswa["Asal_Sekolah"]; ?></label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group"><label class="col-sm-4 control-label" for="asek">NISN </label>
-                            <div class="col-sm-5">
-                                <label> : <?= $siswa["NISN"]; ?></label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group"><label class="col-sm-4 control-label" for="ijazah">NOMOR SERI IJAZAH </label>
-                            <div class="col-sm-5">
-                                <label> : <?= $siswa["No_Ijazah"]; ?></label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group"><label class="col-sm-4 control-label" for="skhun">SERI SKHUN SMP/MTs </label>
-                            <div class="col-sm-5">
-                                <label> : <?= $siswa["No_SKHUN"]; ?></label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group"><label class="col-sm-4 control-label" for="un">No Ujian Nasional SMP/MTs </label>
-                            <div class="col-sm-5">
-                                <label> : <?= $siswa["No_UN"]; ?></label>
+                    </div>
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="nik">NIK </label>
                             <div class="col-sm-5">
@@ -405,16 +418,10 @@
             </header>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Berkas"]; ?></h5>
+                    <div class="col-md-12">
+                        <h5 class="text-semibold text-dark text-uppercase text-center"><?= $siswa["Berkas"]; ?></h5>
                         <a href="<?= base_url(); ?>pendaftar/Berkas/<?= $siswa["Berkas"]; ?>">
-                            <embed class="responsive" src="<?= base_url(); ?>pendaftar/Berkas/<?= $siswa["Berkas"]; ?>" width="145">
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Foto"]; ?></h5>
-                        <a href="<?= base_url(); ?>pendaftar/Foto/<?= $siswa["Foto"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="Caption. Can be aligned it to any side and contain any HTML.">
-                            <img class="img-responsive" src="<?= base_url(); ?>pendaftar/Foto/<?= $siswa["Foto"]; ?>" width="145">
+                            <embed class="responsive" src="<?= base_url(); ?>pendaftar/Berkas/<?= $siswa["Berkas"]; ?>" width="100%" height="600px" />
                         </a>
                     </div>
                 </div>

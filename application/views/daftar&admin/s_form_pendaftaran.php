@@ -43,10 +43,10 @@
                             <h4> Field dengan label bertanda <b><i> * wajib diisi</i></b></h4>
                         </div>
 
-                        <form method="post" action="<?= base_url('form_daftar/tambah_form') . $siswa['id']; ?>" enctype="multipart/form-data">
+                        <form method="post" action="<?= base_url('form_daftar/tambah_form') ?>" enctype="multipart/form-data">
                             <div class="tab-content">
                                 <div id="w4-siswa" class="tab-pane active">
-                                    <!--<div class="form-group">
+                                    <div class="form-group">
                                         <label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
                                         <div class="col-md-3">
                                             <select class="form-control mb-md" name="Tingkat" id="Tingkat" required>
@@ -59,14 +59,14 @@
                                                 <option value="" selected disabled>-Pilih Program Studi-</option>
                                             </select>
                                         </div>
-                                    </div>-->
+                                    </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label" for="Nama_Siswa">Nama Lengkap * :</label>
                                         <div class="col-sm-9">
                                             <input type="text" class="form-control" name="Nama_Siswa" id="Nama_Siswa" required>
                                         </div>
                                     </div>
-                                    <!--<div class="form-group">
+                                    <div class="form-group">
                                         <label class="col-sm-3 control-label" for="w4-jk">Jenis Kelamin * :</label>
                                         <div class="col-md-3">
                                             <select class="form-control mb-md" name="jk" id="w4-jk">
@@ -471,63 +471,63 @@
                                             </div>
                                         </div>
                                     </section>
-                                </div>-->
+                                </div>
 
-                                    <div id="w4-confirm" class="tab-pane">
-                                        <h4 class="text-danger">Ketentuan Berkas dan Foto Siswa!</h4>
-                                        <h5 class="text-primary">Berkas.</h5>
-                                        <li>Scan/Foto berkas harus jelas!</li>
-                                        <li class="text-dark">Berkas yang <strong>wajib</strong> disertakan yaitu : Akta Kelahiran, Kartu Keluarga, Biodata Rapot SMP, KTP Ibu dan Ayah </br><strong>(Untuk penerima kartu bantuan</strong>, kartu bantuan <strong>wajib</strong> disertakan).</li>
-                                        <li class="text-dark">Berkas yang <strong>ikut disertakan jika sudah ada atau tidak wajib disertakan jika belum ada</strong> yaitu : Ijazah SMP, SKHUN SMP, Surat Kelulusan SMP.</li>
-                                        <li class="text-dark">Seluruh foto berkas dimasukkan dalam 1 jenis file berbentuk <strong>.doc atau .docx atau .pdf</strong>.</br>Bisa gunakan microsoft word, wps dan aplikasi lain untuk membuatnya. </li>
-                                        <li class="text-dark">Nama file disesuaikan dengan format.</li>
-                                        <p class="text-dark"> Format Penamaan Berkas = <strong>Berkas_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file berkas</strong>, Contoh : Berkas_Lily Lyanna_Pemasaran.doc</p>
-                                        </br>
-                                        <h5 class="text-primary">Foto Siswa.</h5>
-                                        <li>Foto siswa harus jelas!</li>
-                                        <li class="text-dark"> Ukuran foto <strong>3x4 dengan format .jpg atau .jpeg atau.png</strong></li>
-                                        <li class="text-dark">Foto yang disertakan merupakan <strong>foto resmi dengan background berwarna biru</strong></li>
-                                        <li class="text-dark"><strong>Foto diupload terpisah dengan berkas.</strong> Tersedia form input foto setelah berkas.</li>
-                                        <li class="text-dark">Nama file disesuaikan dengan format.</li>
-                                        <p class="text-dark"> Format Penamaan Foto = <strong>Foto_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong>, Contoh : Foto_Lily Lyanna_Pemasaran.png</p>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label" for="w4-akta">Berkas* :</label>
-                                            <div class="col-sm-5">
-                                                <input type="file" class="form-control" name="berkas" id="w4-berkas" required>
-                                            </div>
+                                <div id="w4-confirm" class="tab-pane">
+                                    <h4 class="text-danger">Ketentuan Berkas dan Foto Siswa!</h4>
+                                    <h5 class="text-primary">Berkas.</h5>
+                                    <li>Scan/Foto berkas harus jelas!</li>
+                                    <li class="text-dark">Berkas yang <strong>wajib</strong> disertakan yaitu : Akta Kelahiran, Kartu Keluarga, Biodata Rapot SMP, KTP Ibu dan Ayah </br><strong>(Untuk penerima kartu bantuan</strong>, kartu bantuan <strong>wajib</strong> disertakan).</li>
+                                    <li class="text-dark">Berkas yang <strong>ikut disertakan jika sudah ada atau tidak wajib disertakan jika belum ada</strong> yaitu : Ijazah SMP, SKHUN SMP, Surat Kelulusan SMP.</li>
+                                    <li class="text-dark">Seluruh foto berkas dimasukkan dalam 1 jenis file berbentuk <strong>.pdf</strong>.</br>Bisa gunakan microsoft word, wps dan aplikasi lain untuk membuatnya. </li>
+                                    <li class="text-dark">Nama file disesuaikan dengan format.</li>
+                                    <p class="text-dark"> Format Penamaan Berkas = <strong>Berkas_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file berkas</strong>, Contoh : Berkas_Lily Lyanna_Pemasaran.doc</p>
+                                    </br>
+                                    <h5 class="text-primary">Foto Siswa.</h5>
+                                    <li>Foto siswa harus jelas!</li>
+                                    <li class="text-dark"> Ukuran foto <strong>3x4 dengan format .jpg atau .jpeg atau.png</strong></li>
+                                    <li class="text-dark">Foto yang disertakan merupakan <strong>foto resmi dengan background berwarna biru</strong></li>
+                                    <li class="text-dark"><strong>Foto diupload terpisah dengan berkas.</strong> Tersedia form input foto setelah berkas.</li>
+                                    <li class="text-dark">Nama file disesuaikan dengan format.</li>
+                                    <p class="text-dark"> Format Penamaan Foto = <strong>Foto_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong>, Contoh : Foto_Lily Lyanna_Pemasaran.png</p>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-akta">Berkas* :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="berkas" id="w4-berkas" required>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label" for="w4-kk">Foto Pendaftar* :</label>
-                                            <div class="col-sm-5">
-                                                <input type="file" class="form-control" name="foto" id="w4-foto" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-9">
-                                                <div class="checkbox-custom">
-                                                    <input type="checkbox" name="terms" id="w4-terms" required>
-                                                    <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                                     </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="w4-kk">Foto Pendaftar* :</label>
+                                        <div class="col-sm-5">
+                                            <input type="file" class="form-control" name="foto" id="w4-foto" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-9">
+                                            <div class="checkbox-custom">
+                                                <input type="checkbox" name="terms" id="w4-terms" required>
+                                                <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                                 </div>
                             </div>
-                            <div class="panel-footer">
-                                <ul class="pager">
-                                    <li class="previous disabled">
-                                        <a><i class="fa fa-angle-left"></i> Previous</a>
-                                    </li>
-                                    <!--<li>
+                    </div>
+                    <div class="panel-footer">
+                        <ul class="pager">
+                            <li class="previous disabled">
+                                <a><i class="fa fa-angle-left"></i> Previous</a>
+                            </li>
+                            <!--<li>
                                 <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                             </li>-->
-                                    <li class="next">
-                                        <a>Next <i class="fa fa-angle-right"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </form>
+                            <li class="next">
+                                <a>Next <i class="fa fa-angle-right"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    </form>
 
                 </section>
             </div>

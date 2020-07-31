@@ -11,7 +11,7 @@ class model_form_update extends CI_model
             //Berkas
             $config = array();
             $config['upload_path'] = './pendaftar/Berkas/';
-            $config['allowed_types'] = 'doc|docx|pdf|';
+            $config['allowed_types'] = 'pdf';
             $this->load->library('upload', $config, 'berkasupload');
             $this->berkasupload->initialize($config);
             $upload_berkas = $this->berkasupload->do_upload('berkas');
