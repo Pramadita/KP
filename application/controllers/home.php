@@ -22,8 +22,9 @@ class home extends CI_Controller
     public function info_ppdb()
     {
         $data['judul'] = 'INFO PPDB';
+        $data['sekolah'] = $this->model_admin->getallsekolah();
         $this->load->view('templates/header1', $data);
-        $this->load->view('utama/info-ppdb');
+        $this->load->view('utama/info-ppdb', $data);
         $this->load->view('templates/footer1');
     }
     public function kontak_kami()

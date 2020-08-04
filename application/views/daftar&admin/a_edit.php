@@ -502,13 +502,19 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label" for="w4-akta">Berkas* :</label>
                                         <div class="col-sm-5">
-                                            <input type="file" class="form-control" name="berkas" id="w4-berkas">
+                                            <input type="file" class="form-control" name="berkas" id="w4-berkas" accept="application/pdf">
+                                            <?php if ($this->session->flashdata('salah')) : ?>
+                                                <p class="text-danger"><?= $this->session->flashdata('salah'); ?></p>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label" for="w4-kk">Foto Pendaftar* :</label>
                                         <div class="col-sm-5">
-                                            <input type="file" class="form-control" name="foto" id="w4-foto">
+                                            <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*">
+                                            <?php if ($this->session->flashdata('salahs')) : ?>
+                                                <p class="text-danger"><?= $this->session->flashdata('salahs'); ?></p>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <div class="form-group">

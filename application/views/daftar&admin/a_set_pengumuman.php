@@ -35,9 +35,9 @@
                                     <input type="text" class="form-control" name="periode" id="periode" placeholder="<?= $skl['periode_daftar']; ?>">
                                 </div>
                             </div>
-                            <div class="row">
-                                <button type="submit" class="btn btn-primary pull-right">Edit</button>
-                            </div>
+                        </div>
+                        <div class="row">
+                            <button type="submit" class="btn btn-primary pull-right">Edit</button>
                         </div>
                     </form>
                 </div>
@@ -55,10 +55,28 @@
                     <form method="post" action="<?= base_url('admin_dash/update_tatacara/' . $skl['id']) ?>" enctype="multipart/form-data">
                         <div class="form-group">
                             <div class="row">
+                                <label class="col-sm-3 control-label" for="info">Input Brosur/Info :</label>
+                                <div class="col-sm-5">
+                                    <input type="file" class="form-control" name="info" id="info" placeholder="<?= $skl['Info']; ?>">
+                                    <p>*upload file dalam bentuk jpg/png/jpeg</p>
+                                    <?php if ($this->session->flashdata('wrong')) : ?>
+                                        <p class="text-danger"><?= $this->session->flashdata('wrong'); ?></p>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="col-sm-3 alert alert-default">
+                                    <div class="col-sm-3">
+                                        <strong><?= $skl['Info']; ?></strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <label class="col-sm-3 control-label" for="panduan">Input File Panduan :</label>
                                 <div class="col-sm-5">
                                     <input type="file" class="form-control" name="panduan" id="panduan" placeholder="<?= $skl['tata_cara']; ?>">
                                     <p>*upload file dalam bentuk pdf</p>
+                                    <?php if ($this->session->flashdata('wrong')) : ?>
+                                        <p class="text-danger"><?= $this->session->flashdata('wrongs'); ?></p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="col-sm-3 alert alert-default">
                                     <div class="col-sm-3">
@@ -71,6 +89,9 @@
                                 <div class="col-sm-5">
                                     <input type="file" class="form-control" name="berkas" id="berkas" placeholder="<?= $skl['berkas']; ?>">
                                     <p>*upload file dalam bentuk pdf</p>
+                                    <?php if ($this->session->flashdata('wrong')) : ?>
+                                        <p class="text-danger"><?= $this->session->flashdata('wrongss'); ?></p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="col-sm-3 alert alert-default">
                                     <div class="col-sm-3">
@@ -82,7 +103,10 @@
                                 <label class="col-sm-3 control-label" for="foto">Input Contoh Foto :</label>
                                 <div class="col-sm-5">
                                     <input type="file" class="form-control" name="foto" id="foto" placeholder="<?= $skl['foto']; ?>">
-                                    <p>*upload file dalam bentuk pdf</p>
+                                    <p>*upload file dalam bentuk jpg/png/jpeg</p>
+                                    <?php if ($this->session->flashdata('wrong')) : ?>
+                                        <p class="text-danger"><?= $this->session->flashdata('wrongsss'); ?></p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="col-sm-3 alert alert-default">
                                     <div class="col-sm-3">
@@ -90,6 +114,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <button type="submit" class="btn btn-primary pull-right">Edit</button>
                             </div>

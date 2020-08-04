@@ -110,7 +110,6 @@ class admin_dash extends CI_Controller
     public function update_tatacara($id)
     {
         $this->model_admin->updatetatacara($id);
-        $this->session->set_flashdata('flash', 'Diupdate');
         redirect('admin_dash/upload_data');
     }
 

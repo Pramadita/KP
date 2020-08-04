@@ -31,7 +31,7 @@ class model_form_update extends CI_model
                 //other codes
 
                 //optional
-                echo 'Berkas upload Error : ' . $this->berkasupload->display_errors() . '<br/>';
+                $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
         if ($_FILES['foto']['size'] != 0) {
@@ -58,7 +58,7 @@ class model_form_update extends CI_model
                 //other codes
 
                 //optional
-                echo 'Foto upload Error : ' . $this->fotoupload->display_errors() . '<br/>';
+                $this->session->set_flashdata('salahs', 'Pastikan file sesuai ketentuan');
             }
         }
 

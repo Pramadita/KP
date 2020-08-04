@@ -22,6 +22,7 @@ class model_admin extends CI_model
     //UPDATE
     public function updateinfo($id)
     {
+        $fileInfo = $this->db->get_where('sekolah', ['id' => $id])->row();
         $post = $this->input;
         $data = [
             //DATA INFO
@@ -34,6 +35,36 @@ class model_admin extends CI_model
     public function updatetatacara($id)
     {
         $fileInfo = $this->db->get_where('sekolah', ['id' => $id])->row();
+        if ($_FILES['info']['size'] != 0) {
+            //Berkas
+            $config = array();
+            $config['upload_path'] = './sekolah/Info/';
+            $config['allowed_types'] = 'jpeg|jpg|png';
+            $this->load->library('upload', $config, 'infoupload');
+            $this->infoupload->initialize($config);
+            $upload_info = $this->infoupload->do_upload('info');
+
+            $data1 = $this->infoupload->data();
+            if ($upload_info) {
+                $data1;
+                $this->db->set('Info', $data1['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('sekolah');
+
+                $file = $fileInfo->Info;
+                if ($file != null) {
+                    unlink('sekolah/Info/' . $file);
+                }
+                $this->session->set_flashdata('flash', 'Diupdate');
+            } else {
+                //error
+                //other codes
+
+                //optional
+                $this->session->set_flashdata('wrong', 'Pastikan file sesuai ketentuan');
+            }
+        }
+
         if ($_FILES['panduan']['size'] != 0) {
             //Berkas
             $config = array();
@@ -54,12 +85,13 @@ class model_admin extends CI_model
                 if ($file != null) {
                     unlink('sekolah/Panduan/' . $file);
                 }
+                $this->session->set_flashdata('flash', 'Diupdate');
             } else {
                 //error
                 //other codes
 
                 //optional
-                echo 'Berkas upload Error : ' . $this->panduanupload->display_errors() . '<br/>';
+                $this->session->set_flashdata('wrongs', 'Pastikan file sesuai ketentuan');
             }
         }
         if ($_FILES['berkas']['size'] != 0) {
@@ -82,12 +114,9 @@ class model_admin extends CI_model
                 if ($file != null) {
                     unlink('sekolah/berkas/' . $file);
                 }
+                $this->session->set_flashdata('flash', 'Diupdate');
             } else {
-                //error
-                //other codes
-
-                //optional
-                echo 'Berkas upload Error : ' . $this->berkasupload->display_errors() . '<br/>';
+                $this->session->set_flashdata('wrongss', 'Pastikan file sesuai ketentuan');
             }
         }
         if ($_FILES['foto']['size'] != 0) {
@@ -110,12 +139,9 @@ class model_admin extends CI_model
                 if ($file != null) {
                     unlink('sekolah/foto/' . $file);
                 }
+                $this->session->set_flashdata('flash', 'Diupdate');
             } else {
-                //error
-                //other codes
-
-                //optional
-                echo 'Berkas upload Error : ' . $this->fotoupload->display_errors() . '<br/>';
+                $this->session->set_flashdata('wrongsss', 'Pastikan file sesuai ketentuan');
             }
         }
     }
