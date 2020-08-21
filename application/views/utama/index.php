@@ -9,15 +9,10 @@
                         <div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
                             <div class="slider-text-inner text-center">
                                 <h1>Selamat Datang di PPDB Online SMK Auliya Teladan Mandiri</h1>
-                                <?php foreach ($oc as $btd) : ?>
-                                    <p><?php if ($btd['status'] == 1) : ?>
-                                            <a href="<?= base_url(); ?>home/belum_masa_daftar" class="btn btn-primary btn-lg btn-learn">
-                                            <?php elseif ($btd['status'] == 2) : ?>
-                                                <a href="<?= base_url(); ?>form_daftar/form_daftar" class="btn btn-primary btn-lg btn-learn">
-                                                <?php endif ?>
-                                                Daftar</a>
-                                    </p>
-                                <?php endforeach ?>
+
+                                <a href="<?= base_url(); ?>form_daftar/form_daftar" class="btn btn-primary btn-lg btn-learn">
+                                    Daftar</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -30,15 +25,10 @@
                     <div class="row">
                         <div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
                             <div class="slider-text-inner text-center">
-                                <?php foreach ($oc as $btd) : ?>
-                                    <h1>Daftarkan Calon Siswa Disini</h1>
-                                    <p><?php if ($btd['status'] == 1) : ?>
-                                            <a href="<?= base_url(); ?>home/belum_masa_daftar" class="btn btn-primary btn-lg btn-learn">
-                                            <?php elseif ($btd['status'] == 2) : ?>
-                                                <a href="<?= base_url(); ?>form_daftar/form_daftar" class="btn btn-primary btn-lg btn-learn">
-                                                <?php endif ?>
-                                                Daftar</a></p>
-                                <?php endforeach; ?>
+                                <h1>Daftarkan Calon Siswa Disini</h1>
+                                <p>
+                                    <a href="<?= base_url(); ?>form_daftar/form_daftar" class="btn btn-primary btn-lg btn-learn">
+                                        Daftar</a></p>
                             </div>
                         </div>
                     </div>

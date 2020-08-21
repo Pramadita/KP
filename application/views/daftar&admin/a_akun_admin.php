@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-6 col-lg-12 col-xl-6">
             <div class="row">
-                <div class="col-md-12 col-lg-6 col-xl-6">
+                <div class="col-md-12 col-lg-6 col-xl-6" href="<?= base_url(); ?>admin_dash/pendaftar">
                     <section class="panel panel-featured-left panel-featured-dark">
                         <div class="panel-body">
                             <div class="widget-summary">
@@ -27,7 +27,7 @@
                                 <div class="widget-summary-col">
                                     <div class="summary">
                                         <div class="info">
-                                            <strong class="amount">Pendaftar</strong>
+                                            <a href="<?= base_url(); ?>admin_dash/upload_data"><strong class="amount">Pendaftar</strong></a>
                                         </div>
                                     </div>
                                     <div class="summary-footer">
@@ -50,12 +50,11 @@
                                 <div class="widget-summary-col">
                                     <div class="summary">
                                         <div class="info">
-                                            <a href="<?= base_url(); ?>pengumuman.php"></a>
-                                            <strong class="amount">Edit Pengumuman</strong>
+                                            <a href="<?= base_url(); ?>admin_dash/upload_data"><strong class="amount">Edit Pengumuman</strong></a>
                                         </div>
                                     </div>
                                     <div class="summary-footer">
-                                        <a class="text-muted text-uppercase">(Lihat)</a>
+                                        <a class="text-muted text-uppercase" href="<?= base_url(); ?>admin_dash/upload_data">(Lihat)</a>
                                     </div>
                                 </div>
                             </div>

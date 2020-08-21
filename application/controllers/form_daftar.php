@@ -19,11 +19,16 @@ class form_daftar extends CI_Controller
     }
     public function form_daftar()
     {
-        $data['judul'] = 'PPDB | FORM PENDAFTARAN SMK ATM';
-        $data['sekolah'] = $this->model_admin->getallsekolah();
-        $this->load->view('templates/header2', $data);
-        $this->load->view('daftar&admin/s_form_pendaftaran', $data);
-        $this->load->view('templates/footer2');
+        $open = $this->db->get_where('oc', ['status' => '1'])->row();
+        if ($open) {
+            redirect('home/belum_masa_daftar');
+        } else {
+            $data['judul'] = 'PPDB | FORM PENDAFTARAN SMK ATM';
+            $data['sekolah'] = $this->model_admin->getallsekolah();
+            $this->load->view('templates/header2', $data);
+            $this->load->view('daftar&admin/s_form_pendaftaran', $data);
+            $this->load->view('templates/footer2');
+        }
     }
     public function tambah_form()
     {

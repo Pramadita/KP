@@ -17,7 +17,19 @@
         </ul>
     </div>
 </aside>
+<div class="colorlib-event">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                <h2>Info Pendaftaran</h2>
+            </div>
+        </div>
+        <?php foreach ($sekolah as $skl) : ?>
+            <img class="img-responsive" src="<?= base_url('sekolah/Info/') . $skl['Info']; ?>" style="display: block; margin: auto;">
 
+        <?php endforeach; ?>
+    </div>
+</div>
 <div class="colorlib-trainers">
     <div class="container">
         <div class="row">
@@ -71,19 +83,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="colorlib-event">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                <h2>Info Pendaftaran</h2>
-            </div>
-        </div>
-        <?php foreach ($sekolah as $skl) : ?>
-            <img class="img-responsive" src="<?= base_url('sekolah/Info/') . $skl['Info']; ?>" style="display: block; margin: auto;">
-
-        <?php endforeach; ?>
     </div>
 </div>

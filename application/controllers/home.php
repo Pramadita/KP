@@ -54,9 +54,14 @@ class home extends CI_Controller
 
     public function belum_masa_daftar()
     {
-        $data['judul'] = 'NOT AVAILABLE';
-        $this->load->view('templates/header1', $data);
-        $this->load->view('errors/NotAvailable');
-        $this->load->view('templates/footer1');
+        $close = $this->db->get_where('oc', ['status' => '1'])->row();
+        if (!$close) {
+            redirect('home');
+        } else {
+            $data['judul'] = 'NOT AVAILABLE';
+            $this->load->view('templates/header1', $data);
+            $this->load->view('errors/NotAvailable');
+            $this->load->view('templates/footer1');
+        }
     }
 }
