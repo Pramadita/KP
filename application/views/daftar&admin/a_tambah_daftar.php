@@ -59,7 +59,7 @@
                         <div class="tab-content">
                             <div id="w4-siswa" class="tab-pane active">
                                 <div class="form-group">
-                                    <!--<label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
+                                    <label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="Tingkat" id="Tingkat" required>
                                             <option value="" selected disabled>-Pilih Tingkat-</option>
@@ -67,7 +67,7 @@
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                         </select>
-                                    </div>-->
+                                    </div>
                                     <label class="col-md-2 control-label" for="Prodi">Program Studi * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="Prodi" id="Prodi" required>
@@ -84,7 +84,7 @@
                                         <input type="text" class="form-control" name="Nama_Siswa" id="Nama_Siswa" required>
                                     </div>
                                 </div>
-                                <!--<div class="form-group">
+                                <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-jk">Jenis Kelamin * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jk" id="w4-jk" required>
@@ -493,22 +493,13 @@
 
                             <div id="w4-confirm" class="tab-pane">
                                 <h4 class="text-danger">Ketentuan Berkas dan Foto Siswa!</h4>
-                                <?php foreach ($sekolah as $skl) : ?>
-                                    <h5 class="text-primary">Berkas.</h5>
-                                    <li>Scan/Foto berkas harus jelas!</li>
-                                    <li class="text-dark">Berkas yang <strong>wajib</strong> disertakan yaitu : Akta Kelahiran, Kartu Keluarga, Biodata Rapot SMP, KTP Ibu dan Ayah </br><strong>(Untuk penerima kartu bantuan</strong>, kartu bantuan <strong>wajib</strong> disertakan).</li>
-                                    <li class="text-dark">Berkas yang <strong>tidak wajib disertakan jika belum ada</strong> yaitu : Ijazah SMP, SKHUN SMP, Surat Kelulusan SMP.</li>
-                                    <li class="text-dark">Seluruh foto berkas dimasukkan dalam 1 jenis file berbentuk <strong>.pdf</strong>.</br>Bisa gunakan microsoft word, wps dan aplikasi lain untuk membuatnya. </li>
-                                    <li class="text-dark">Nama file disesuaikan dengan format. Format Penamaan Berkas = <strong>Berkas_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file berkas </strong></br>Contoh penamaan : Berkas_Lily Lyanna_Pemasaran.doc,</br>Contoh file berkas = <a href="<?= base_url('download/download_berkas/') . $skl['id']; ?>"><strong>dowload disini</strong></a></li>
-                                    </br>
-                                    <h5 class="text-primary">Foto Siswa.</h5>
-                                    <li>Foto siswa harus jelas!</li>
-                                    <li class="text-dark"> Ukuran foto <strong>3x4 dengan format .jpg atau .jpeg atau.png</strong></li>
-                                    <li class="text-dark">Foto yang disertakan merupakan <strong>foto resmi dengan background berwarna biru</strong></li>
-                                    <li class="text-dark"><strong>Foto diupload terpisah dengan berkas.</strong> Tersedia form input foto setelah berkas.</li>
-                                    <li> class="text-dark">Nama file disesuaikan dengan format. Format Penamaan Foto = <strong>Foto_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong></br>Contoh : Foto_Lily Lyanna_Pemasaran.png</br>Contoh file foto = <a href="<?= base_url('download/download_foto/') . $skl['id']; ?>"><strong>download disini</strong></a></li>
-                                <?php endforeach; ?>-->
-
+                                <h4 class="text-danger">Ketentuan Foto dan Berkas Siswa</h4>
+                                <li>Foto yang disertakan harus jelas!</li>
+                                <li class="text-dark">Foto siswa yang disertakan <strong>merupakan foto resmi berukuran 3x4 dengan backround biru </strong>
+                                </li>
+                                <li class="text-dark">Seluruh foto berkas termasuk foto siswa diupload dengan format <strong> .jpg atau .jpeg atau.png</strong></li>
+                                <li class="text-dark">Nama file disesuaikan dengan ketetuan penamaan.</li>
+                                <p class="text-dark"> Ketentuan Penamaan = <strong>Jenis Berkas_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong>,</br>Contoh : Foto_Lily Lyanna_Pemasaran.png, Akta_Kelahiran_Lily Lyanna_Pemasaran.png</p>
 
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-foto">Foto Siswa* :</label>

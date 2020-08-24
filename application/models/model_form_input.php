@@ -170,14 +170,14 @@ class model_form_input extends CI_model
         $post = $this->input;
         $data = [
             //DATA SISWA
-            /* "Tingkat" => $post->post('Tingkat'),*/
+            "Tingkat" => $post->post('Tingkat'),
             "Prodi" => $post->post('Prodi'),
             "Nama_siswa" => $post->post('Nama_Siswa', true),
-            /*"Jenis_Kelamin" => $post->post('jk'),
+            "Jenis_Kelamin" => $post->post('jk'),
             "Asal_Sekolah" => $post->post('asek'),
             "NISN" => $post->post('nisn', true),
             "No_Ijazah" => $post->post('ijazah', true),
-            "No_SKHUN" => $post->post('No.SKHUN', true),
+            "No_SKHUN" => $post->post('noskhun', true),
             "No_UN" => $post->post('un', true),
             "NIK" => $post->post('nik', true),
             "TTL" => $post->post('tl', true),
@@ -221,7 +221,7 @@ class model_form_input extends CI_model
             "Prestasi_3" => $post->post('prestasi3', true),
             "Beasiswa_1" => $post->post('beasiswa1', true),
             "Beasiswa_2" => $post->post('beasiswa2', true),
-            "Beasiswa_3" => $post->post('beasiswa3', true),*/
+            "Beasiswa_3" => $post->post('beasiswa3', true),
 
             //BERKAS
             "Foto" => $foto,
@@ -230,7 +230,7 @@ class model_form_input extends CI_model
             "Raport" => $raport,
             "KTP_Ibu" => $ktpi,
             "KTP_Ayah" => $ktpa,
-            "Ijazah" => $ijzah,
+            "Ijazah" => $ijazah,
             "SKHUN" => $skhun,
             "Surat_Lulus" => $sulus
         ];

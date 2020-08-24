@@ -75,15 +75,16 @@ class admin_dash extends CI_Controller
     {
         $data['judul'] = 'PPDB | EDIT FORM PENDAFTARAN SMK ATM';
         $data['siswa'] = $this->model_siswa->getsiswabyid($id);
-        $data['Tingkat'] = ['1', '2', '3'];
-        $data['Prodi'] = ['Agribisnis Peternakan Unggas', 'Usaha Perjalanan Wisata', 'Pemasaran'];
-        $data['Jenis_Kelamin'] = ['Laki-laki', 'Perempuan'];
-        $data['Transport'] = ['Jalan Kaki', 'Kendaraan Pribadi', 'Kendaraan Umum', 'Lainnya'];
-        $data['Tinggal'] = ['Bersama Orang Tua', 'Asrama', 'Kost', 'Panti Asuhan', 'Lainnya'];
-        $data['Pakaian'] = ['S', 'M', 'L', 'XL', 'XXL'];
-        $data['Pekerjaan'] = ['Tidak Bekerja', 'Nelayan', 'Petani', 'Peternak', 'PNS/TNI/POLRI', 'Karyawan Swasta', 'Pedagang Kecil', ' Wiraswasta', 'Wirausaha', 'Buruh', 'Pekerja Seni', 'Pensiunan', 'Lainnya'];
-        $data['Pendidikan'] = ['Tidak Sekolah', 'SD Sederajat', 'SMP Sederajat', 'SMA Sederajat', 'D1-D3', 'D4/S1', 'S2', 'S3'];
-        $data['Penghasilan'] = ['Kurang dari Rp.1.000.000', 'Rp.1.000.000 - Rp.2.000.000', 'Lebih dari Rp.2.000.000'];
+        $data['Tingkat'] = ['', '1', '2', '3'];
+        $data['Prodi'] = ['', 'Agribisnis Peternakan Unggas', 'Usaha Perjalanan Wisata', 'Pemasaran'];
+        $data['Jenis_Kelamin'] = ['', 'Laki-laki', 'Perempuan'];
+        $data['Transport'] = ['', 'Jalan Kaki', 'Kendaraan Pribadi', 'Kendaraan Umum', 'Lainnya'];
+        $data['Tinggal'] = ['', 'Bersama Orang Tua', 'Asrama', 'Kost', 'Panti Asuhan', 'Lainnya'];
+        $data['Pakaian'] = ['', 'S', 'M', 'L', 'XL', 'XXL'];
+        $data['Pekerjaan'] = ['', 'Tidak Bekerja', 'Nelayan', 'Petani', 'Peternak', 'PNS/TNI/POLRI', 'Karyawan Swasta', 'Pedagang Kecil', ' Wiraswasta', 'Wirausaha', 'Buruh', 'Pekerja Seni', 'Pensiunan', 'Lainnya'];
+        $data['Pendidikan'] = ['', 'Tidak Sekolah', 'SD Sederajat', 'SMP Sederajat', 'SMA Sederajat', 'D1-D3', 'D4/S1', 'S2', 'S3'];
+        $data['Penghasilan'] = ['', 'Kurang dari Rp.1.000.000', 'Rp.1.000.000 - Rp.2.000.000', 'Lebih dari Rp.2.000.000'];
+        $data['Bantuan'] = ['', 'Kartu Indonesia Pintar (KIP)', 'Katu Indonesia Sehat (KIS)', 'PKH', 'KPS'];
 
         $this->load->view('templates/header2', $data);
         $this->load->view('templates/nav_admin');
