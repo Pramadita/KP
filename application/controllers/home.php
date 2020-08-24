@@ -42,16 +42,6 @@ class home extends CI_Controller
         $this->load->view('utama/cek_status', $data);
         $this->load->view('templates/footer1');
     }
-
-    public function detail_pendaftar($id)
-    {
-        $data['judul'] = 'PPDB | DETAIL CALON SISWA';
-        $data['siswa'] = $this->model_siswa->getsiswabyid($id);
-        $this->load->view('templates/header1', $data);
-        $this->load->view('utama/a_detail_siswa', $data);
-        $this->load->view('templates/footer1');
-    }
-
     public function belum_masa_daftar()
     {
         $close = $this->db->get_where('oc', ['status' => '1'])->row();

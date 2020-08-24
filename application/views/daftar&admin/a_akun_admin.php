@@ -27,7 +27,7 @@
                                 <div class="widget-summary-col">
                                     <div class="summary">
                                         <div class="info">
-                                            <a href="<?= base_url(); ?>admin_dash/upload_data"><strong class="amount">Pendaftar</strong></a>
+                                            <a href="<?= base_url(); ?>admin_dash/pendaftar"><strong class="amount">Pendaftar</strong></a>
                                         </div>
                                     </div>
                                     <div class="summary-footer">

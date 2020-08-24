@@ -48,16 +48,11 @@
                         <span class="icon"><i class="flaticon-market"></i></span>
                         <div class="desc">
                             <h3>Sebelum Daftar pastikan anda sudah membaca ketentuan pada panduan.</h3>
-                            <?php
-                            foreach ($oc as $btd) : ?>
-                                <p><?php if ($btd['status'] == 1) : ?>
-                                        <a href="<?= base_url(); ?>home/belum_masa_daftar" class="view-more">
-                                        <?php elseif ($btd['status'] == 2) : ?>
-                                            <a href="<?= base_url(); ?>form_daftar/form_daftar" class="view-more">
-                                            <?php endif ?>
-                                            Daftar</a>
-                                </p>
-                            <?php endforeach ?>
+
+                            <p>
+                                <a href="<?= base_url(); ?>form_daftar/form_daftar" class="view-more">
+                                    Daftar</a>
+                            </p>
                         </div>
                     </div>
                 </div>

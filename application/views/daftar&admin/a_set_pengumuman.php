@@ -32,7 +32,24 @@
                             <div class="row">
                                 <label class="col-sm-3 control-label" for="periode">Input Periode :</label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="periode" id="periode" placeholder="<?= $skl['periode_daftar']; ?>">
+                                    <input type="text" class="form-control" name="periode" id="periode" value="<?= $skl['periode_daftar']; ?>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label class="col-sm-3 control-label" for="info">Input Brosur/Info :</label>
+                                <div class="col-sm-5">
+                                    <input type="file" accept="image/*" class="form-control" name="info" id="info" placeholder="<?= $skl['Info']; ?>">
+                                    <p>*upload file dalam bentuk jpg/png/jpeg</p>
+                                    <?php if ($this->session->flashdata('wrong')) : ?>
+                                        <p class="text-danger"><?= $this->session->flashdata('wrong'); ?></p>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="col-sm-3 alert alert-default">
+                                    <div class="col-sm-3">
+                                        <strong><?= $skl['Info']; ?></strong>
+                                    </div>
                                 </div>
                             </div>
                         </div>

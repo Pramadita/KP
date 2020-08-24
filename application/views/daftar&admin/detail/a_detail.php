@@ -26,6 +26,14 @@
                         <div class=" col-sm-8">
                             <li>
                                 <div class="form-group">
+                                    <div class="form-group"> <label class="col-sm-4 control-label dark" for="Prodi">Tingkat </label>
+                                        <div class="col-sm-4">
+                                            <label> : <?= $siswa["Tingkat"]; ?> </label>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li>
+                                <div class="form-group">
                                     <div class="form-group"> <label class="col-sm-4 control-label dark" for="Prodi">Program Studi </label>
                                         <div class="col-sm-4">
                                             <label> : <?= $siswa["Prodi"]; ?> </label>
@@ -467,6 +475,7 @@
             <input type="submit" class="text-right" disabled value="LULUS">
         </div>
     <?php endif ?>
+
     <!-- end  page -->
 </section>
 </div>

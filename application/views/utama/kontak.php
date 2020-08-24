@@ -45,4 +45,3 @@
         </div>
     </div>
 </div>
-<div id="map" class="colorlib-map"></div>

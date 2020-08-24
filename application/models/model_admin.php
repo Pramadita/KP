@@ -23,18 +23,6 @@ class model_admin extends CI_model
     public function updateinfo($id)
     {
         $fileInfo = $this->db->get_where('sekolah', ['id' => $id])->row();
-        $post = $this->input;
-        $data = [
-            //DATA INFO
-            "periode_daftar" => $post->post('periode')
-        ];
-        $this->db->where('id', $id);
-        $this->db->update('sekolah', $data);
-    }
-
-    public function updatetatacara($id)
-    {
-        $fileInfo = $this->db->get_where('sekolah', ['id' => $id])->row();
         if ($_FILES['info']['size'] != 0) {
             //Berkas
             $config = array();
@@ -64,6 +52,18 @@ class model_admin extends CI_model
                 $this->session->set_flashdata('wrong', 'Pastikan file sesuai ketentuan');
             }
         }
+        $post = $this->input;
+        $data = [
+            //DATA INFO
+            "periode_daftar" => $post->post('periode')
+        ];
+        $this->db->where('id', $id);
+        $this->db->update('sekolah', $data);
+    }
+
+    public function updatetatacara($id)
+    {
+        $fileInfo = $this->db->get_where('sekolah', ['id' => $id])->row();
 
         if ($_FILES['panduan']['size'] != 0) {
             //Berkas
@@ -74,7 +74,7 @@ class model_admin extends CI_model
             $this->panduanupload->initialize($config);
             $upload_panduan = $this->panduanupload->do_upload('panduan');
 
-            $data1 = $this->panduansupload->data();
+            $data1 = $this->panduanupload->data();
             if ($upload_panduan) {
                 $data1;
                 $this->db->set('tata_cara', $data1['file_name']);

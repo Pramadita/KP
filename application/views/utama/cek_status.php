@@ -1,4 +1,4 @@
-<div class="colorlib-blog colorlib-light-grey">
+<div class="colorlib-intro">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center colorlib-heading animate-box">
@@ -11,7 +11,6 @@
                                 <th onclick="sortTable(1)">NISN</th>
                                 <th>Prodi</th>
                                 <th>Asal Sekolah</th>
-                                <th>Action</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
@@ -23,9 +22,6 @@
                                     <td><?= $ssw['NISN'] ?></td>
                                     <td><?= $ssw['Prodi'] ?></td>
                                     <td><?= $ssw['Asal_Sekolah'] ?></td>
-                                    <td>
-                                        <a class="btn" href="<?= base_url(); ?>home/detail_pendaftar/<?= $ssw['id']; ?>">Detail</a>
-                                    </td>
                                     <td><?php if ($ssw['status'] == 1) : ?>
                                             <label>Belum Diverifikasi</label>
                                         <?php elseif ($ssw['status'] == 2) : ?>

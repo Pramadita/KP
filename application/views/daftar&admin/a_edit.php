@@ -53,10 +53,11 @@
                         <input type="hidden" name="id" value="<?= $siswa['id']; ?>">
                         <div class="tab-content">
                             <div id="w4-siswa" class="tab-pane active">
-                                <!--<div class="form-group">
+                                <div class="form-group">
                                     <label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="Tingkat" id="Tingkat" required>
+                                        <select class="form-control mb-md" name="Tingkat" id="Tingkat">
+                                            <option value="0" disabled>-Tingkat-</option>
                                             <?php foreach ($Tingkat as $tingkat) : ?>
                                                 <?php if ($tingkat == $siswa['Tingkat']) : ?>
                                                     <option value="<?php echo $siswa["Tingkat"]; ?>" selected> <?= $tingkat; ?></option>
@@ -68,7 +69,8 @@
                                     </div>
                                     <label class="col-md-2 control-label" for="Prodi">Program Studi * :</label>
                                     <div class="col-md-4">
-                                        <select class="form-control mb-md" name="Prodi" id="Prodi" required>
+                                        <select class="form-control mb-md" name="Prodi" id="Prodi">
+                                            <option value="0" disabled>-Program Studi-</option>
                                             <?php foreach ($Prodi as $prodi) : ?>
                                                 <?php if ($prodi == $siswa['Prodi']) : ?>
                                                     <option value="<?= $prodi; ?>" selected> <?= $prodi; ?></option>
@@ -78,17 +80,18 @@
                                             <?php endforeach; ?>
                                         </select>
                                     </div>
-                                </div>-->
+                                </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="Nama_Siswa">Nama Lengkap * :</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" name="Nama_Siswa" id="Nama_Siswa" value="<?= $siswa['Nama_Siswa']; ?>" required>
                                     </div>
                                 </div>
-                                <!--<div class=" form-group">
+                                <div class=" form-group">
                                     <label class="col-sm-3 control-label" for="w4-jk">Jenis Kelamin * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jk" id="w4-jk">
+                                            <option value="0" disabled>-Jenis Kelamin-</option>
                                             <?php foreach ($Jenis_Kelamin as $jk) : ?>
                                                 <?php if ($jk == $siswa['Jenis_Kelamin']) : ?>
                                                     <option value="<?= $jk; ?>" selected> <?= $jk; ?></option>
@@ -108,7 +111,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-nisn">NISN * :</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="nisn" id="w4-nisn" value="<?= $siswa['NISN']; ?>" required>
+                                        <input type="number" class="form-control" name="nisn" id="w4-nisn" value="<?= $siswa['NISN']; ?>" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -128,28 +131,28 @@
                                     <label class="control-label">lihat pada lembar SKHUN paling bawah</label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-un">No Ujian Nasional SMP/Mts :</label>
+                                    <label class="col-sm-3 control-label" for="w4-un">No Ujian Nasional SMP/Mts *:</label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" name="un" id="w4-un" value="<?= $siswa['No_UN']; ?>">
+                                        <input type="text" class="form-control" name="un" id="w4-un" value="<?= $siswa['No_UN']; ?>" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-nik">NIK * :</label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" name="nik" id="w4-nik" value="<?= $siswa['NIK']; ?>">
+                                        <input type="text" class="form-control" name="nik" id="w4-nik" value="<?= $siswa['NIK']; ?>" required>
                                     </div>
                                     <label class="control-label">lihat pada kartu keluarga</label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-tl">Tempat Tanggal Lahir * :</label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" name="tl" id="w4-tl" value="<?= $siswa['TTL']; ?>">
+                                        <input type="text" class="form-control" name="tl" id="w4-tl" value="<?= $siswa['TTL']; ?>" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-att"> Alamat Tempat Tinggal * :</label>
                                     <div class="col-sm-9">
-                                        <textarea class="form-control" name="att" id="w4-att" rows="3" id="textareaAutosize" data-plugin-textarea-autosize="" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 74px;"><?= $siswa['Alamat_Tinggal']; ?></textarea>
+                                        <textarea class="form-control" name="att" id="w4-att" rows="3" id="textareaAutosize" data-plugin-textarea-autosize="" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 74px;" required><?= $siswa['Alamat_Tinggal']; ?></textarea>
                                         <label>maksimal 200 karakter</label>
                                     </div>
                                 </div>
@@ -157,6 +160,7 @@
                                     <label class="col-sm-3 control-label" for="w4-transport">Alat Transportasi ke Sekolah * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="transport" id="w4-transport">
+                                            <option value="0" disabled>-Alat Transportasi ke Sekolah-</option>
                                             <?php foreach ($Transport as $transport) : ?>
                                                 <?php if ($transport == $siswa['Transportasi']) : ?>
                                                     <option value="<?= $transport; ?>" selected> <?= $transport; ?></option>
@@ -171,6 +175,7 @@
                                     <label class="col-sm-3 control-label" for="w4-jtinggal">Jenis Tinggal * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jtinggal" id="w4-jtinggal">
+                                            <option value="0" disabled>-Jenis Tinggal-</option>
                                             <?php foreach ($Tinggal as $tinggal) : ?>
                                                 <?php if ($tinggal == $siswa['Jenis_Tinggal']) : ?>
                                                     <option value="<?= $tinggal; ?>" selected> <?= $tinggal; ?></option>
@@ -183,6 +188,7 @@
                                     <label class="col-sm-2 control-label" for="w4-rtinggal">Rencana Tinggal * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="rtinggal" id="w4-rtinggal">
+                                            <option value="0" disabled>-Rencana Tinggal-</option>
                                             <?php foreach ($Tinggal as $tinggal) : ?>
                                                 <?php if ($tinggal == $siswa['Rencana_Tinggal']) : ?>
                                                     <option value="<?= $tinggal; ?>" selected> <?= $tinggal; ?></option>
@@ -197,6 +203,7 @@
                                     <label class="col-sm-3 control-label" for="w4-pakaian">Ukuran Pakaian * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="pakaian" id="w4-pakaian">
+                                            <option value="0" disabled>-Ukuran Pakaian-</option>
                                             <?php foreach ($Pakaian as $pakaian) : ?>
                                                 <?php if ($pakaian == $siswa['Ukuran_Pakaian']) : ?>
                                                     <option value="<?= $pakaian; ?>" selected> <?= $pakaian; ?></option>
@@ -211,7 +218,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-hp">No Handphone * :</label>
                                     <div class="col-md-4">
-                                        <input type="text" class="form-control" name="hp" id="w4-hp" value="<?= $siswa['No_HP']; ?>">
+                                        <input type="number" class="form-control" name="hp" id="w4-hp" value="<?= $siswa['No_HP']; ?>">
                                     </div>
                                     <label>No Hp digunakan untuk komunikasi dan informasi sekolah</br>mohon isi dengan nomor yang aktif</label>
                                 </div>
@@ -248,6 +255,7 @@
                                     <label class="col-md-3 control-label" for="w4-jobayah">Pekerjaan * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jobayah" id="w4-jobayah">
+                                            <option value="0" disabled>-Pekerjaan Ayah-</option>
                                             <?php foreach ($Pekerjaan as $job) : ?>
                                                 <?php if ($job == $siswa['Pekerjaan_Ayah']) : ?>
                                                     <option value="<?= $job; ?>" selected> <?= $job; ?></option>
@@ -260,6 +268,7 @@
                                     <label class="col-md-3 control-label" for="w4-edua">Pendidikan Terakhir * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="edua" id="w4-edua">
+                                            <option value="0" disabled>-Pendidikan Ayah-</option>
                                             <?php foreach ($Pendidikan as $edu) : ?>
                                                 <?php if ($edu == $siswa['Pendidikan_Ayah']) : ?>
                                                     <option value="<?= $edu; ?>" selected> <?= $edu; ?></option>
@@ -274,6 +283,7 @@
                                     <label class="col-md-3 control-label" for="w4-hasila">Penghasilan Bulanan * :</label>
                                     <div class="col-md-4">
                                         <select class="form-control mb-md" name="hasila" id="w4-hasila">
+                                            <option value="0" disabled>-Penghasilan Ayah-</option>
                                             <?php foreach ($Penghasilan as $penghasilan) : ?>
                                                 <?php if ($penghasilan == $siswa['Penghasilan_Ayah']) : ?>
                                                     <option value="<?= $penghasilan; ?>" selected> <?= $penghasilan; ?></option>
@@ -300,6 +310,7 @@
                                     <label class="col-md-3 control-label" for="w4-jobibu">Pekerjaan * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jobibu" id="w4-jobibu">
+                                            <option value="0" disabled>-Pekerjaan Ibu-</option>
                                             <?php foreach ($Pekerjaan as $job) : ?>
                                                 <?php if ($job == $siswa['Pekerjaan_Ibu']) : ?>
                                                     <option value="<?= $job; ?>" selected> <?= $job; ?></option>
@@ -312,6 +323,7 @@
                                     <label class="col-md-3 control-label" for="w4-edui">Pendidikan Terakhir * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="edui" id="w4-edui">
+                                            <option value="0" disabled>-Pendidikan Ibu-</option>
                                             <?php foreach ($Pendidikan as $edu) : ?>
                                                 <?php if ($edu == $siswa['Pendidikan_Ibu']) : ?>
                                                     <option value="<?= $edu; ?>" selected> <?= $edu; ?></option>
@@ -326,6 +338,7 @@
                                     <label class="col-md-3 control-label" for="w4-hasili">Penghasilan Bulanan * :</label>
                                     <div class="col-md-4">
                                         <select class="form-control mb-md" name="hasili" id="w4-hasili">
+                                            <option value="0" disabled>-Penghasilan Ibu-</option>
                                             <?php foreach ($Penghasilan as $penghasilan) : ?>
                                                 <?php if ($penghasilan == $siswa['Penghasilan_Ibu']) : ?>
                                                     <option value="<?= $penghasilan; ?>" selected><?= $penghasilan; ?></option>
@@ -353,8 +366,7 @@
                                     <label class="col-md-3 control-label" for="w4-jobwali">Pekerjaan * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jobwali" id="w4-jobwali">
-
-                                            <option value="" disabled>-Pekerjaan-</option>
+                                            <option value="0" disabled>-Pekerjaan-</option>
                                             <?php foreach ($Pekerjaan as $job) : ?>
                                                 <?php if ($job == $siswa['Pekerjaan_Wali']) : ?>
                                                     <option value="<?= $job; ?>" selected> <?= $job; ?></option>
@@ -403,31 +415,31 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-tinggi">Tinggi Badan * :</label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" name="tinggi" id="w4-tinggi" value="<?= $siswa['Tinggi_Badan']; ?>">
+                                        <input type="number" class="form-control" name="tinggi" id="w4-tinggi" value="<?= $siswa['Tinggi_Badan']; ?>">
                                     </div>
                                     <label class="col-sm-1 control-label" for="w4-tinggi">cm</label>
                                     <label class="col-sm-2  control-label" for="w4-bb">Berat Badan * :</label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" name="bb" id="w4-bb" value="<?= $siswa['Berat_Badan']; ?>">
+                                        <input type="number" class="form-control" name="bb" id="w4-bb" value="<?= $siswa['Berat_Badan']; ?>">
                                     </div>
                                     <label class=" control-label" for="w4-tinggi">kg</label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-jarak">Jarak Ke Sekolah * :</label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" name="jarak" id="w4-jarak" value="<?= $siswa['Jarak_Sekolah']; ?>">
+                                        <input type="number" class="form-control" name="jarak" id="w4-jarak" value="<?= $siswa['Jarak_Sekolah']; ?>">
                                     </div>
                                     <label class="col-sm-1 control-label" for="w4-jarak">km</label>
                                     <label class="col-sm-2  control-label" for="w4-waktu">Waktu Tempuh Ke Sekolah * :</label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" name="waktu" id="w4-waktu" value="<?= $siswa['Waktu_Tempuh']; ?>">
+                                        <input type="number" class="form-control" name="waktu" id="w4-waktu" value="<?= $siswa['Waktu_Tempuh']; ?>">
                                     </div>
                                     <label class=" control-label" for="w4-waktu">menit</label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-saudara">Jumlah Saudara Kandung * :</label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" name="saudara" id="w4-saudara" value="<?= $siswa['Saudara_Kandung']; ?>">
+                                        <input type="number" class="form-control" name="saudara" id="w4-saudara" value="<?= $siswa['Saudara_Kandung']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -480,55 +492,47 @@
                                         </div>
                                     </div>
                                 </section>
-                            </div>-->
-
-                                <div id="w4-confirm" class="tab-pane">
-                                    <h4 class="text-danger">Ketentuan Berkas dan Foto Siswa!</h4>
-                                    <h5 class="text-primary">Berkas.</h5>
-                                    <li>Scan/Foto berkas harus jelas!</li>
-                                    <li class="text-dark">Berkas yang <strong>wajib</strong> disertakan yaitu : Akta Kelahiran, Kartu Keluarga, Biodata Rapot SMP, KTP Ibu dan Ayah </br><strong>(Untuk penerima kartu bantuan</strong>, kartu bantuan <strong>wajib</strong> disertakan).</li>
-                                    <li class="text-dark">Berkas yang <strong>ikut disertakan jika sudah ada atau tidak wajib disertakan jika belum ada</strong> yaitu : Ijazah SMP, SKHUN SMP, Surat Kelulusan SMP.</li>
-                                    <li class="text-dark">Seluruh foto berkas dimasukkan dalam 1 jenis file berbentuk <strong> .pdf</strong>.</br>Bisa gunakan microsoft word, wps dan aplikasi lain untuk membuatnya. </li>
-                                    <li class="text-dark">Nama file disesuaikan dengan format.</li>
-                                    <p class="text-dark"> Format Penamaan Berkas = <strong>Berkas_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file berkas</strong>, Contoh : Berkas_Lily Lyanna_Pemasaran.doc</p>
-                                    </br>
-                                    <h5 class="text-primary">Foto Siswa.</h5>
-                                    <li>Foto siswa harus jelas!</li>
-                                    <li class="text-dark"> Ukuran foto <strong>3x4 dengan format .jpg atau .jpeg atau.png</strong></li>
-                                    <li class="text-dark">Foto yang disertakan merupakan <strong>foto resmi dengan background berwarna biru</strong></li>
-                                    <li class="text-dark"><strong>Foto diupload terpisah dengan berkas.</strong> Tersedia form input foto setelah berkas.</li>
-                                    <li class="text-dark">Nama file disesuaikan dengan format.</li>
-                                    <p class="text-dark"> Format Penamaan Foto = <strong>Foto_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong>, Contoh : Foto_Lily Lyanna_Pemasaran.png</p>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-akta">Berkas* :</label>
-                                        <div class="col-sm-5">
-                                            <input type="file" class="form-control" name="berkas" id="w4-berkas" accept="application/pdf">
-                                            <?php if ($this->session->flashdata('salah')) : ?>
-                                                <p class="text-danger"><?= $this->session->flashdata('salah'); ?></p>
-                                            <?php endif; ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="w4-kk">Foto Pendaftar* :</label>
-                                        <div class="col-sm-5">
-                                            <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*">
-                                            <?php if ($this->session->flashdata('salahs')) : ?>
-                                                <p class="text-danger"><?= $this->session->flashdata('salahs'); ?></p>
-                                            <?php endif; ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-9">
-                                            <div class="checkbox-custom">
-                                                <input type="checkbox" name="terms" id="w4-terms">
-                                                <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary pull-right">Edit</button>
-                                </div>
-
                             </div>
+
+                            <div id="w4-confirm" class="tab-pane">
+                                <h4 class="text-danger">Ketentuan Berkas dan Foto Siswa!</h4>
+                                <h5 class="text-primary">Berkas.</h5>
+                                <li>Scan/Foto berkas harus jelas!</li>
+                                <li class="text-dark">Berkas yang <strong>wajib</strong> disertakan yaitu : Akta Kelahiran, Kartu Keluarga, Biodata Rapot SMP, KTP Ibu dan Ayah </br><strong>(Untuk penerima kartu bantuan</strong>, kartu bantuan <strong>wajib</strong> disertakan).</li>
+                                <li class="text-dark">Berkas yang <strong>ikut disertakan jika sudah ada atau tidak wajib disertakan jika belum ada</strong> yaitu : Ijazah SMP, SKHUN SMP, Surat Kelulusan SMP.</li>
+                                <li class="text-dark">Seluruh foto berkas dimasukkan dalam 1 jenis file berbentuk <strong> .pdf</strong>.</br>Bisa gunakan microsoft word, wps dan aplikasi lain untuk membuatnya. </li>
+                                <li class="text-dark">Nama file disesuaikan dengan format.</li>
+                                <p class="text-dark"> Format Penamaan Berkas = <strong>Berkas_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file berkas</strong>, Contoh : Berkas_Lily Lyanna_Pemasaran.doc</p>
+                                </br>
+                                <h5 class="text-primary">Foto Siswa.</h5>
+                                <li>Foto siswa harus jelas!</li>
+                                <li class="text-dark"> Ukuran foto <strong>3x4 dengan format .jpg atau .jpeg atau.png</strong></li>
+                                <li class="text-dark">Foto yang disertakan merupakan <strong>foto resmi dengan background berwarna biru</strong></li>
+                                <li class="text-dark"><strong>Foto diupload terpisah dengan berkas.</strong> Tersedia form input foto setelah berkas.</li>
+                                <li class="text-dark">Nama file disesuaikan dengan format.</li>
+                                <p class="text-dark"> Format Penamaan Foto = <strong>Foto_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong>, Contoh : Foto_Lily Lyanna_Pemasaran.png</p>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-akta">Berkas* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="berkas" id="w4-berkas" accept="application/pdf" value="<?= $siswa['Berkas']; ?>">
+                                        <?php if ($this->session->flashdata('salah')) : ?>
+                                            <p class="text-danger"><?= $this->session->flashdata('salah'); ?></p>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-kk">Foto Pendaftar* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" value="<?= $siswa['Foto']; ?>">
+                                        <?php if ($this->session->flashdata('salahs')) : ?>
+                                            <p class="text-danger"><?= $this->session->flashdata('salahs'); ?></p>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary pull-right">Edit</button>
+                            </div>
+
+                        </div>
                     </form>
                 </div>
                 <div class="panel-footer">
