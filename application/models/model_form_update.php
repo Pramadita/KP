@@ -7,68 +7,220 @@ class model_form_update extends CI_model
     {
         $fileInfo = $this->db->get_where('siswa', ['id' => $id])->row();
 
-        if ($_FILES['berkas']['size'] != 0) {
-            //Berkas
-            $config = array();
-            $config['upload_path'] = './pendaftar/Berkas/';
-            $config['allowed_types'] = 'pdf';
-            $this->load->library('upload', $config, 'berkasupload');
-            $this->berkasupload->initialize($config);
-            $upload_berkas = $this->berkasupload->do_upload('berkas');
-            $data1 = $this->berkasupload->data();
-            if ($upload_berkas) {
-                $data1;
-                $this->db->set('Berkas', $data1['file_name']);
-                $this->db->where('id', $id);
-                $this->db->update('siswa');
-
-                $file = $fileInfo->Berkas;
-                if ($file != null) {
-                    unlink('pendaftar/Berkas/' . $file);
-                }
-            } else {
-                //error
-                //other codes
-
-                //optional
-                $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
-            }
-        }
         if ($_FILES['foto']['size'] != 0) {
-            // Foto
+            //Akta
             $config = array();
-            $config['upload_path'] = './pendaftar/Foto/';
+            $config['upload_path'] = './pendaftar/Foto_Siswa/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
             $this->load->library('upload', $config, 'fotoupload');
             $this->fotoupload->initialize($config);
             $upload_foto = $this->fotoupload->do_upload('foto');
-            $data2 = $this->fotoupload->data();
+            $data0 = $this->fotoupload->data();
             if ($upload_foto) {
-                $data2;
-                $this->db->set('Foto', $data2['file_name']);
+                $data0;
+                $this->db->set('Foto', $data0['file_name']);
                 $this->db->where('id', $id);
                 $this->db->update('siswa');
 
                 $file = $fileInfo->Foto;
                 if ($file != null) {
-                    unlink('pendaftar/Foto/' . $file);
+                    unlink('pendaftar/Foto_Siswa/' . $file);
                 }
             } else {
-                //error
-                //other codes
+                $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
+            }
+        }
+        if ($_FILES['akta']['size'] != 0) {
+            //Akta
+            $config = array();
+            $config['upload_path'] = './pendaftar/Akta_Lahir/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $this->load->library('upload', $config, 'aktaupload');
+            $this->aktaupload->initialize($config);
+            $upload_akta = $this->aktaupload->do_upload('akta');
+            $data1 = $this->aktaupload->data();
+            if ($upload_akta) {
+                $data1;
+                $this->db->set('Akta_Lahir', $data1['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('siswa');
 
-                //optional
+                $file = $fileInfo->Akta_Lahir;
+                if ($file != null) {
+                    unlink('pendaftar/Akta_Lahir/' . $file);
+                }
+            } else {
+                $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
+            }
+        }
+        if ($_FILES['kk']['size'] != 0) {
+            //KK
+            $config = array();
+            $config['upload_path'] = './pendaftar/KK/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $this->load->library('upload', $config, 'kkupload');
+            $this->kkupload->initialize($config);
+            $upload_kk = $this->kkupload->do_upload('kk');
+            $data2 = $this->kkupload->data();
+            if ($upload_kk) {
+                $data2;
+                $this->db->set('KK', $data2['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('siswa');
+
+                $file = $fileInfo->KK;
+                if ($file != null) {
+                    unlink('pendaftar/KK/' . $file);
+                }
+            } else {
                 $this->session->set_flashdata('salahs', 'Pastikan file sesuai ketentuan');
             }
         }
+        if ($_FILES['raport']['size'] != 0) {
+            //raport
+            $config = array();
+            $config['upload_path'] = './pendaftar/Bio_Raport/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $this->load->library('upload', $config, 'raportupload');
+            $this->raportupload->initialize($config);
+            $upload_raport = $this->raportupload->do_upload('raport');
+            $data3 = $this->raportupload->data();
+            if ($upload_raport) {
+                $data3;
+                $this->db->set('Raport', $data3['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('siswa');
 
+                $file = $fileInfo->Raport;
+                if ($file != null) {
+                    unlink('pendaftar/Bio_Raport/' . $file);
+                }
+            } else {
+                $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
+            }
+        }
+        if ($_FILES['ktpa']['size'] != 0) {
+            //ktpa
+            $config = array();
+            $config['upload_path'] = './pendaftar/KTP_Ayah/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $this->load->library('upload', $config, 'ktpaupload');
+            $this->ktpaupload->initialize($config);
+            $upload_ktpa = $this->ktpaupload->do_upload('ktpa');
+            $data4 = $this->ktpaupload->data();
+            if ($upload_ktpa) {
+                $data4;
+                $this->db->set('KTP_Ayah', $data4['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('siswa');
+
+                $file = $fileInfo->KTP_Ayah;
+                if ($file != null) {
+                    unlink('pendaftar/KTP_Ayah/' . $file);
+                }
+            } else {
+                $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
+            }
+        }
+        if ($_FILES['ktpi']['size'] != 0) {
+            //ktpi
+            $config = array();
+            $config['upload_path'] = './pendaftar/KTP_Ibu/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $this->load->library('upload', $config, 'ktpiupload');
+            $this->ktpiupload->initialize($config);
+            $upload_ktpi = $this->ktpiupload->do_upload('ktpi');
+            $data5 = $this->ktpiupload->data();
+            if ($upload_ktpi) {
+                $data5;
+                $this->db->set('KTP_Ibu', $data5['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('siswa');
+
+                $file = $fileInfo->KTP_Ibu;
+                if ($file != null) {
+                    unlink('pendaftar/KTP_Ibu/' . $file);
+                }
+            } else {
+                $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
+            }
+        }
+        if ($_FILES['ijazah']['size'] != 0) {
+            //ijazah
+            $config = array();
+            $config['upload_path'] = './pendaftar/Ijazah/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $this->load->library('upload', $config, 'ijazahupload');
+            $this->ijazahupload->initialize($config);
+            $upload_ijazah = $this->ijazahupload->do_upload('ijazah');
+            $data6 = $this->ijazahupload->data();
+            if ($upload_ijazah) {
+                $data6;
+                $this->db->set('Ijazah', $data6['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('siswa');
+
+                $file = $fileInfo->ijazah;
+                if ($file != null) {
+                    unlink('pendaftar/Ijazah/' . $file);
+                }
+            } else {
+                $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
+            }
+        }
+        if ($_FILES['skhun']['size'] != 0) {
+            //SKHUN
+            $config = array();
+            $config['upload_path'] = './pendaftar/SKHUN/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $this->load->library('upload', $config, 'skhunupload');
+            $this->skhunupload->initialize($config);
+            $upload_skhun = $this->skhunupload->do_upload('skhun');
+            $data7 = $this->skhunupload->data();
+            if ($upload_skhun) {
+                $data7;
+                $this->db->set('SKHUN', $data7['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('siswa');
+
+                $file = $fileInfo->SKHUN;
+                if ($file != null) {
+                    unlink('pendaftar/SKHUN/' . $file);
+                }
+            } else {
+                $this->session->set_flashdata('salahs', 'Pastikan file sesuai ketentuan');
+            }
+        }
+        if ($_FILES['sulus']['size'] != 0) {
+            //sulus
+            $config = array();
+            $config['upload_path'] = './pendaftar/Surat_Lulus/';
+            $config['allowed_types'] = 'jpeg|jpg|png|';
+            $this->load->library('upload', $config, 'sulusupload');
+            $this->sulusupload->initialize($config);
+            $upload_sulus = $this->sulusupload->do_upload('sulus');
+            $data8 = $this->sulusupload->data();
+            if ($upload_sulus) {
+                $data8;
+                $this->db->set('Surat_Lulus', $data8['file_name']);
+                $this->db->where('id', $id);
+                $this->db->update('siswa');
+
+                $file = $fileInfo->Surat_Lulus;
+                if ($file != null) {
+                    unlink('pendaftar/Surat_Lulus/' . $file);
+                }
+            } else {
+                $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
+            }
+        }
         $post = $this->input;
         $data = [
             //DATA SISWA
-            "Tingkat" => $post->post('Tingkat'),
+            //"Tingkat" => $post->post('Tingkat'),
             "Prodi" => $post->post('Prodi'),
             "Nama_siswa" => $post->post('Nama_Siswa', true),
-            "Jenis_Kelamin" => $post->post('jk'),
+            /*"Jenis_Kelamin" => $post->post('jk'),
             "Asal_Sekolah" => $post->post('asek'),
             "NISN" => $post->post('nisn', true),
             "No_Ijazah" => $post->post('ijazah', true),
@@ -116,7 +268,7 @@ class model_form_update extends CI_model
             "Prestasi_3" => $post->post('prestasi3', true),
             "Beasiswa_1" => $post->post('beasiswa1', true),
             "Beasiswa_2" => $post->post('beasiswa2', true),
-            "Beasiswa_3" => $post->post('beasiswa3', true),
+            "Beasiswa_3" => $post->post('beasiswa3', true),*/
         ];
         $this->db->where('id', $post->post('id'));
         $this->db->update('siswa', $data);

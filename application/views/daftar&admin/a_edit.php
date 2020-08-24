@@ -54,7 +54,7 @@
                         <div class="tab-content">
                             <div id="w4-siswa" class="tab-pane active">
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
+                                    <!--<label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="Tingkat" id="Tingkat">
                                             <option value="0" disabled>-Tingkat-</option>
@@ -66,7 +66,7 @@
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
                                         </select>
-                                    </div>
+                                    </div>-->
                                     <label class="col-md-2 control-label" for="Prodi">Program Studi * :</label>
                                     <div class="col-md-4">
                                         <select class="form-control mb-md" name="Prodi" id="Prodi">
@@ -87,7 +87,7 @@
                                         <input type="text" class="form-control" name="Nama_Siswa" id="Nama_Siswa" value="<?= $siswa['Nama_Siswa']; ?>" required>
                                     </div>
                                 </div>
-                                <div class=" form-group">
+                                <!--<div class=" form-group">
                                     <label class="col-sm-3 control-label" for="w4-jk">Jenis Kelamin * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jk" id="w4-jk">
@@ -510,23 +510,59 @@
                                 <li class="text-dark">Foto yang disertakan merupakan <strong>foto resmi dengan background berwarna biru</strong></li>
                                 <li class="text-dark"><strong>Foto diupload terpisah dengan berkas.</strong> Tersedia form input foto setelah berkas.</li>
                                 <li class="text-dark">Nama file disesuaikan dengan format.</li>
-                                <p class="text-dark"> Format Penamaan Foto = <strong>Foto_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong>, Contoh : Foto_Lily Lyanna_Pemasaran.png</p>
+                                <p class="text-dark"> Format Penamaan Foto = <strong>Foto_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong>, Contoh : Foto_Lily Lyanna_Pemasaran.png</p>-->
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-akta">Berkas* :</label>
+                                    <label class="col-sm-3 control-label" for="w4-foto">Foto Siswa* :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="berkas" id="w4-berkas" accept="application/pdf" value="<?= $siswa['Berkas']; ?>">
-                                        <?php if ($this->session->flashdata('salah')) : ?>
-                                            <p class="text-danger"><?= $this->session->flashdata('salah'); ?></p>
-                                        <?php endif; ?>
+                                        <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" value="<?= $siswa['Foto']; ?>">
+                                    </div>
+                                </div>
+                                <div class=" form-group">
+                                    <label class="col-sm-3 control-label" for="w4-akta">Akta Kelahiran* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="akta" id="w4-akta" accept="image/*" value="<?= $siswa['Akta_Lahir']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-kk">Foto Pendaftar* :</label>
+                                    <label class="col-sm-3 control-label" for="w4-kk">KK* :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" value="<?= $siswa['Foto']; ?>">
-                                        <?php if ($this->session->flashdata('salahs')) : ?>
-                                            <p class="text-danger"><?= $this->session->flashdata('salahs'); ?></p>
-                                        <?php endif; ?>
+                                        <input type="file" class="form-control" name="kk" id="w4-kk" accept="image/*" value="<?= $siswa['KK']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-raport">Biodata Raport* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="raport" id="w4-raport" accept="image/*" value="<?= $siswa['Raport']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-ktpa">KTP Ayah* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="ktpa" id="w4-ktpa" accept="image/*" value="<?= $siswa['KTP_Ayah']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-ktpi">KTP Ibu* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="ktpi" id="w4-ktpi" accept="image/*" value="<?= $siswa['KTP_Ibu']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-ijazah">Ijazah :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="ijazah" id="w4-ijazah" accept="image/*" value="<?= $siswa['Ijazah']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-skhun">SKHUN :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="skhun" id="w4-skhun" accept="image/*" value="<?= $siswa['SKHUN']; ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-sulus">Surat Kelulusan SMP :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="sulus" id="w4-sulus" accept="image/*" value="<?= $siswa['Surat_Lulus']; ?>">
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary pull-right">Edit</button>

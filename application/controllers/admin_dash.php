@@ -31,6 +31,11 @@ class admin_dash extends CI_Controller
         $this->load->view('daftar&admin/a_tambah_daftar');
         $this->load->view('templates/footer2');
     }
+    public function tambah_form_admin()
+    {
+        $this->model_form_input->tambahdatasiswa();
+        redirect('admin_dash/tambah_daftar');
+    }
     public function tambah_info()
     {
         $this->model_admin->tambahinfo();

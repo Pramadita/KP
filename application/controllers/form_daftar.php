@@ -35,11 +35,6 @@ class form_daftar extends CI_Controller
         $this->model_form_input->tambahdatasiswa();
         redirect('home');
     }
-    public function tambah_form_admin()
-    {
-        $this->model_form_input->tambahdatasiswa();
-        redirect('admin_dash/tambah_daftar');
-    }
     public function ubah_pw()
     {
         $data['judul'] = 'PPDB | UBAH PASSWORD';

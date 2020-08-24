@@ -55,11 +55,11 @@
                         <h4> Field dengan label bertanda <b><i> * wajib diisi</i></b></h4>
                     </div>
 
-                    <form method="post" action="<?= base_url('form_daftar/tambah_form') ?>" enctype="multipart/form-data">
+                    <form method="post" action="<?= base_url('admin_dash/tambah_form_admin') ?>" enctype="multipart/form-data">
                         <div class="tab-content">
                             <div id="w4-siswa" class="tab-pane active">
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
+                                    <!--<label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="Tingkat" id="Tingkat" required>
                                             <option value="" selected disabled>-Pilih Tingkat-</option>
@@ -67,7 +67,7 @@
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                         </select>
-                                    </div>
+                                    </div>-->
                                     <label class="col-md-2 control-label" for="Prodi">Program Studi * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="Prodi" id="Prodi" required>
@@ -84,7 +84,7 @@
                                         <input type="text" class="form-control" name="Nama_Siswa" id="Nama_Siswa" required>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <!--<div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-jk">Jenis Kelamin * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jk" id="w4-jk" required>
@@ -507,28 +507,71 @@
                                     <li class="text-dark">Foto yang disertakan merupakan <strong>foto resmi dengan background berwarna biru</strong></li>
                                     <li class="text-dark"><strong>Foto diupload terpisah dengan berkas.</strong> Tersedia form input foto setelah berkas.</li>
                                     <li> class="text-dark">Nama file disesuaikan dengan format. Format Penamaan Foto = <strong>Foto_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong></br>Contoh : Foto_Lily Lyanna_Pemasaran.png</br>Contoh file foto = <a href="<?= base_url('download/download_foto/') . $skl['id']; ?>"><strong>download disini</strong></a></li>
-                                <?php endforeach; ?>
+                                <?php endforeach; ?>-->
+
 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-akta">Berkas* :</label>
-                                    <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="berkas" id="w4-berkas" accept="application/pdf" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-kk">Foto Pendaftar* :</label>
+                                    <label class="col-sm-3 control-label" for="w4-foto">Foto Siswa* :</label>
                                     <div class="col-sm-5">
                                         <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-akta">Akta Kelahiran* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="akta" id="w4-berkas" accept="image/*" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-kk">KK* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="kk" id="w4-foto" accept="image/*" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-raport">Biodata Raport* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="raport" id="w4-raport" accept="image/*" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-ktpa">KTP Ayah* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="ktpa" id="w4-ktpa" accept="image/*" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-ktpi">KTP Ibu* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="ktpi" id="w4-ktpi" accept="image/*" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-ijazah">Ijazah :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="ijazah" id="w4-ijazah" accept="image/*">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-skhun">SKHUN :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="skhun" id="w4-skhun" accept="image/*">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-sulus">Surat Kelulusan SMP :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="sulus" id="w4-sulus" accept="image/*">
+                                    </div>
+                                </div>
+                                <!--<div class="form-group">
                                     <div class="col-sm-9">
                                         <div class="checkbox-custom">
                                             <input type="checkbox" name="terms" id="w4-terms" required>
                                             <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                             </div>
                         </div>
