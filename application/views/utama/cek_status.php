@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12 text-center colorlib-heading animate-box">
                 <h2>Status Pendaftar</h2>
-                <p>Silahkan cek status kelulusan anda jika sudah mendaftar.</p>
+                <p>Silahkan cek status kelulusan jika sudah mendaftar. Ketikkan nama calon siswa di kolom pencarian.</br>Jika terdapat keluhan dan pertanyaan, anda dapat menghubungi kontak kami yang tersedia.</p>
                 <div class="table-responsive">
                     <table id="cek_status" class="table table-striped table-bordered" style="width:100%">
                         <thead>
