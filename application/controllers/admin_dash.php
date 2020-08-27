@@ -78,7 +78,7 @@ class admin_dash extends CI_Controller
         $data['judul'] = 'PPDB | EDIT FORM PENDAFTARAN SMK ATM';
         $data['siswa'] = $this->model_siswa->getsiswabyid($id);
         $data['Tingkat'] = ['', '1', '2', '3'];
-        $data['Prodi'] = ['', 'Agribisnis Peternakan Unggas', 'Usaha Perjalanan Wisata', 'Pemasaran'];
+        $data['Prodi'] = ['', 'Agribisnis Ternak Unggas', 'Usaha Perjalanan Wisata', 'Pemasaran'];
         $data['Jenis_Kelamin'] = ['', 'Laki-laki', 'Perempuan'];
         $data['Transport'] = ['', 'Jalan Kaki', 'Kendaraan Pribadi', 'Kendaraan Umum', 'Lainnya'];
         $data['Tinggal'] = ['', 'Bersama Orang Tua', 'Asrama', 'Kost', 'Panti Asuhan', 'Lainnya'];
@@ -125,7 +125,17 @@ class admin_dash extends CI_Controller
     public function approve_siswa($id)
     {
         $this->model_siswa->approve_request($id);
-        redirect('admin_dash/pendaftar');
+        redirect(base_url() . "admin_dash/detail/" . $id);
+    }
+    public function no_approve_siswa($id)
+    {
+        $this->model_siswa->no_approve_request($id);
+        redirect(base_url() . "admin_dash/detail/" . $id);
+    }
+    public function back_approve_siswa($id)
+    {
+        $this->model_siswa->back_approve_request($id);
+        redirect(base_url() . "admin_dash/detail/" . $id);
         //$this->send_email($id);
         //$this->approve_success();
     }

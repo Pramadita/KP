@@ -217,7 +217,7 @@
                                     <div class="col-md-5">
                                         <select class="form-control mb-md" name="bantuan" id="w4-bantuan">
                                             <option value="0" selected disabled>-Jenis Bantuan-</option>
-                                            <option value="Kartu Indonesia Pintar (KIP)">Kartu Indonesis Pintar (KIP)</option>
+                                            <option value="Kartu Indonesia Pintar (KIP)">Kartu Indonesia Pintar (KIP)</option>
                                             <option value="Kartu Indonesia Sehat (KIS)">Kartu Indonesia Sehat (KIS)</option>
                                             <option value="PKH">PKH</option>
                                             <option value="KPS">KPS</option>
@@ -554,15 +554,15 @@
                                     <div class="col-sm-5">
                                         <input type="file" class="form-control" name="sulus" id="w4-sulus" accept="image/*">
                                     </div>
-                                </div>
-                                <!--<div class="form-group">
+                                </div>->
+                                <div class="form-group">
                                     <div class="col-sm-9">
                                         <div class="checkbox-custom">
                                             <input type="checkbox" name="terms" id="w4-terms" required>
                                             <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
                                         </div>
                                     </div>
-                                </div>-->
+                                </div>
                                 <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                             </div>
                         </div>

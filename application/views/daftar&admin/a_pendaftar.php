@@ -79,41 +79,11 @@
                                 </td>
                                 <td>
                                     <?php if ($ssw['status'] == 1) : ?>
-                                        <a class="mb-xs mt-xs mr-xs btn-sm modal-basic btn btn-warning" name="verif" href="#verif">Verifikasi</a>
-                                        <div id="verif" class="modal-block modal-header-color modal-block-warning mfp-hide">
-                                            <section class="panel">
-                                                <header class="panel-heading">
-                                                    <h2 class="panel-title">Apakah anda yakin ?</h2>
-                                                </header>
-                                                <div class="panel-body">
-                                                    <div class="modal-wrapper">
-                                                        <div class="modal-icon">
-                                                            <i class="fa fa-question-circle"></i>
-                                                        </div>
-                                                        <div class="modal-text">
-                                                            <h4>Verifikasi</h4>
-                                                            <p>Apakah anda yakin untuk memverifikasi ?</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <footer class="panel-footer">
-                                                    <div class="row">
-                                                        <div class="form-group">
-                                                            <div class="col-sm-10 text-right">
-                                                                <button class="btn btn-default modal-dismiss">Cancel</button>
-                                                            </div>
-                                                            <div>
-                                                                <form method="post" class="approval" action="<?= base_url('admin_dash/approve_siswa/' . $ssw['id']); ?>">
-                                                                    <input type="submit" class="btn btn-warning" name="conf" value="Confirm">
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </footer>
-                                            </section>
-                                        </div>
+                                        <p>BELUM DI VERIFIKASI</p>
                                     <?php elseif ($ssw['status'] == 2) : ?>
-                                        <input type="submit" disabled value="LULUS">
+                                        <p class="text-primary">LULUS</p>
+                                    <?php elseif ($ssw['status'] == 3) : ?>
+                                        <p class="text-danger">TIDAK LULUS</p>
                                     <?php endif ?>
                                 </td>
                             </tr>

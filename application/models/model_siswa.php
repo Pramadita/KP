@@ -27,6 +27,18 @@ class model_siswa extends CI_model
         $this->db->set('status', '2');
         $this->db->update('siswa');
     }
+    public function no_approve_request($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->set('status', '3');
+        $this->db->update('siswa');
+    }
+    public function back_approve_request($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->set('status', '1');
+        $this->db->update('siswa');
+    }
 
     //DELETE
     public function hapusdatasiswa($id)

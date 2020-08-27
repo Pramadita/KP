@@ -25,7 +25,9 @@
                                     <td><?php if ($ssw['status'] == 1) : ?>
                                             <label>Belum Diverifikasi</label>
                                         <?php elseif ($ssw['status'] == 2) : ?>
-                                            <label>Lulus</label>
+                                            <label class="text-primary">Lulus</label>
+                                        <?php elseif ($ssw['status'] == 3) : ?>
+                                            <label class="text-danger">Tidak Lulus</label>
                                         <?php endif ?>
                                     </td>
                                 </tr>

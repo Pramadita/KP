@@ -212,7 +212,7 @@
                                                 <div class="col-md-5">
                                                     <select class="form-control mb-md" name="bantuan" id="w4-bantuan">
                                                         <option value="0" selected disabled>-Jenis Bantuan-</option>
-                                                        <option value="Kartu Indonesia Pintar (KIP)">Kartu Indonesis Pintar (KIP)</option>
+                                                        <option value="Kartu Indonesia Pintar (KIP)">Kartu Indonesia Pintar (KIP)</option>
                                                         <option value="Kartu Indonesia Sehat (KIS)">Kartu Indonesia Sehat (KIS)</option>
                                                         <option value="PKH">PKH</option>
                                                         <option value="KPS">KPS</option>
@@ -227,7 +227,6 @@
                                                 </div>
                                                 <label>tidak perlu diisi jika bukan penerima bantuan</label>
                                             </div>
-
                                         </div>
                                         <div class="col-sm-1"></div>
                                     </div>

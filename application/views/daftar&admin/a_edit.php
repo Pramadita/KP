@@ -60,16 +60,16 @@
                                             <option value="0" disabled>-Tingkat-</option>
                                             <?php foreach ($Tingkat as $tingkat) : ?>
                                                 <?php if ($tingkat == $siswa['Tingkat']) : ?>
-                                                    <option value="<?php echo $siswa["Tingkat"]; ?>" selected> <?= $tingkat; ?></option>
+                                                    <option value="<?= $tingkat; ?>" selected> <?= $tingkat; ?></option>
                                                 <?php else : ?>
-                                                    <option value="<?php echo $siswa["Tingkat"]; ?>"><?= $tingkat; ?></option>
+                                                    <option value="<?= $tingkat; ?>"><?= $tingkat; ?></option>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
                                         </select>
                                     </div>
                                     <label class="col-md-2 control-label" for="Prodi">Program Studi * :</label>
                                     <div class="col-md-4">
-                                        <select class="form-control mb-md" name="Prodi" id="Prodi">
+                                        <select class="form-control mb-md" name="Prodi" id="Prodi" required>
                                             <option value="0" disabled>-Program Studi-</option>
                                             <?php foreach ($Prodi as $prodi) : ?>
                                                 <?php if ($prodi == $siswa['Prodi']) : ?>
@@ -90,7 +90,7 @@
                                 <div class=" form-group">
                                     <label class="col-sm-3 control-label" for="w4-jk">Jenis Kelamin * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="jk" id="w4-jk">
+                                        <select class="form-control mb-md" name="jk" id="w4-jk" required>
                                             <option value="0" disabled>-Jenis Kelamin-</option>
                                             <?php foreach ($Jenis_Kelamin as $jk) : ?>
                                                 <?php if ($jk == $siswa['Jenis_Kelamin']) : ?>
@@ -159,7 +159,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-transport">Alat Transportasi ke Sekolah * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="transport" id="w4-transport">
+                                        <select class="form-control mb-md" name="transport" id="w4-transport" required>
                                             <option value="0" disabled>-Alat Transportasi ke Sekolah-</option>
                                             <?php foreach ($Transport as $transport) : ?>
                                                 <?php if ($transport == $siswa['Transportasi']) : ?>
@@ -174,7 +174,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-jtinggal">Jenis Tinggal * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="jtinggal" id="w4-jtinggal">
+                                        <select class="form-control mb-md" name="jtinggal" id="w4-jtinggal" required>
                                             <option value="0" disabled>-Jenis Tinggal-</option>
                                             <?php foreach ($Tinggal as $tinggal) : ?>
                                                 <?php if ($tinggal == $siswa['Jenis_Tinggal']) : ?>
@@ -187,7 +187,7 @@
                                     </div>
                                     <label class="col-sm-2 control-label" for="w4-rtinggal">Rencana Tinggal * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="rtinggal" id="w4-rtinggal">
+                                        <select class="form-control mb-md" name="rtinggal" id="w4-rtinggal" required>
                                             <option value="0" disabled>-Rencana Tinggal-</option>
                                             <?php foreach ($Tinggal as $tinggal) : ?>
                                                 <?php if ($tinggal == $siswa['Rencana_Tinggal']) : ?>
