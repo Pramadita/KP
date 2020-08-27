@@ -102,22 +102,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-sm-3 control-label" for="berkas">Input Contoh Berkas :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" accept="application/pdf" class="form-control" name="berkas" id="berkas" placeholder="<?= $skl['berkas']; ?>">
-                                    <p>*upload file dalam bentuk pdf</p>
-                                    <?php if ($this->session->flashdata('wrong')) : ?>
-                                        <p class="text-danger"><?= $this->session->flashdata('wrongss'); ?></p>
-                                    <?php endif; ?>
-                                </div>
-                                <div class="col-sm-3 alert alert-default">
-                                    <div class="col-sm-3">
-                                        <strong><?= $skl['berkas']; ?></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-sm-3 control-label" for="foto">Input Contoh Foto :</label>
+                                <label class="col-sm-3 control-label" for="foto">Input Contoh Foto:</label>
                                 <div class="col-sm-5">
                                     <input type="file" accept="image/*" class="form-control" name="foto" id="foto" placeholder="<?= $skl['foto']; ?>">
                                     <p>*upload file dalam bentuk jpg/png/jpeg</p>

@@ -443,49 +443,49 @@
                 <div class="popup-gallery">
                     <div class="col-md-12">
                         <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Akta_Lahir/<?= $siswa["Akta_Lahir"]; ?>" title="<?= $siswa["Akta_Lahir"]; ?>">
-                            <p><?= $siswa["Akta_Lahir"]; ?></p>
+                            <p class="text-center"><?= $siswa["Akta_Lahir"]; ?></p>
                             <div class="img-responsive center">
                                 <img src="<?= base_url(); ?>pendaftar/Akta_Lahir/<?= $siswa["Akta_Lahir"]; ?>" width="105">
                             </div>
                         </a>
                         <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/KK/<?= $siswa["KK"]; ?>" title="<?= $siswa["KK"]; ?>">
-                            <p><?= $siswa["KK"]; ?></p>
+                            <p class="text-center"><?= $siswa["KK"]; ?></p>
                             <div class="img-responsive center">
                                 <img src="<?= base_url(); ?>pendaftar/KK/<?= $siswa["KK"]; ?>" width="105">
                             </div>
                         </a>
                         <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Bio_Raport/<?= $siswa["Raport"]; ?>" title="<?= $siswa["Raport"]; ?>">
-                            <p><?= $siswa["Raport"]; ?></p>
+                            <p class="text-center"><?= $siswa["Raport"]; ?></p>
                             <div class="img-responsive center">
                                 <img src="<?= base_url(); ?>pendaftar/Bio_Raport/<?= $siswa["Raport"]; ?>" width="105">
                             </div>
                         </a>
                         <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/KTP_Ayah/<?= $siswa["KTP_Ayah"]; ?>" title="<?= $siswa["KTP_Ayah"]; ?>">
-                            <p><?= $siswa["KTP_Ayah"]; ?></p>
+                            <p class="text-center"><?= $siswa["KTP_Ayah"]; ?></p>
                             <div class="img-responsive center">
                                 <img src="<?= base_url(); ?>pendaftar/KTP_Ayah/<?= $siswa["KTP_Ayah"]; ?>" width="105">
                             </div>
                         </a>
                         <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/KTP_Ibu/<?= $siswa["KTP_Ibu"]; ?>" title="<?= $siswa["KTP_Ibu"]; ?>">
-                            <p><?= $siswa["KTP_Ibu"]; ?></p>
+                            <p class="text-center"><?= $siswa["KTP_Ibu"]; ?></p>
                             <div class="img-responsive center">
                                 <img src="<?= base_url(); ?>pendaftar/KTP_Ibu/<?= $siswa["KTP_Ibu"]; ?>" width="105">
                             </div>
                         </a>
                         <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Ijazah/<?= $siswa["Ijazah"]; ?>" title="<?= $siswa["Ijazah"]; ?>">
-                            <p><?= $siswa["Ijazah"]; ?></p>
+                            <p class="text-center"><?= $siswa["Ijazah"]; ?></p>
                             <div class="img-responsive center">
                                 <img src="<?= base_url(); ?>pendaftar/Ijazah/<?= $siswa["Ijazah"]; ?>" width="105">
                             </div>
                         </a>
                         <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/SKHUN/<?= $siswa["SKHUN"]; ?>" title="<?= $siswa["SKHUN"]; ?>">
-                            <p><?= $siswa["SKHUN"]; ?></p>
+                            <p class="text-center"><?= $siswa["SKHUN"]; ?></p>
                             <div class="img-responsive center">
                                 <img src="<?= base_url(); ?>pendaftar/SKHUN/<?= $siswa["SKHUN"]; ?>" width="105">
                             </div>
                         </a>
                         <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Surat_Lulus/<?= $siswa["Surat_Lulus"]; ?>" title="<?= $siswa["Surat_Lulus"]; ?>">
-                            <p><?= $siswa["Surat_Lulus"]; ?></p>
+                            <p class="text-center"><?= $siswa["Surat_Lulus"]; ?></p>
                             <div class="img-responsive center">
                                 <img src="<?= base_url(); ?>pendaftar/Surat_Lulus/<?= $siswa["Surat_Lulus"]; ?>" width="105">
                             </div>

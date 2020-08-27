@@ -10,6 +10,8 @@ class admin_dash extends CI_Controller
         $this->load->model('model_admin');
         $this->load->model('model_form_input');
         $this->load->model('model_form_update');
+        $this->load->model("login_model");
+        if ($this->login_model->isNotLogin()) redirect(site_url('SMK_ATM_LOG_auth'));
     }
 
     public function index()
@@ -147,5 +149,19 @@ class admin_dash extends CI_Controller
                 window.location.href="' . base_url("admin_dash/pendaftar") . '";
             </script>
         ';
+    }
+    public function ubah_pw_admin()
+    {
+        $data['judul'] = 'PPDB | UBAH PASSWORD ADMIN';
+        $this->load->view('templates/header2', $data);
+        $this->load->view('templates/nav_admin');
+        $this->load->view('daftar&admin/a_ubah_pw');
+        $this->load->view('templates/footer2');
+    }
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect(site_url('SMK_ATM_LOG_auth'));
     }
 }

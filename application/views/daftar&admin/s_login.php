@@ -12,11 +12,19 @@
                     <h2 class="title text-uppercase text-bold m-none"><i class="fa fa-user mr-xs"></i> Log In</h2>
                 </div>
                 <div class="panel-body">
-                    <form action="<?= base_url(); ?>home/index" method="post">
+                    <form action="<?= base_url(); ?>SMK_ATM_LOG_auth" method="post">
+                        <?php if ($this->session->flashdata('pw')) : ?>
+                            <div class="form-group mb-lg">
+                                <div class="col-sm-12 alert alert-danger">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <?= $this->session->flashdata('pw'); ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                         <div class="form-group mb-lg">
-                            <label>Username</label>
+                            <label>Username/Email</label>
                             <div class="input-group input-group-icon">
-                                <input name="username" type="text" class="form-control input-lg" />
+                                <input name="email" type="text" class="form-control input-lg" />
                                 <span class="input-group-addon">
                                     <span class="icon icon-lg">
                                         <i class="fa fa-user"></i>
@@ -28,10 +36,9 @@
                         <div class="form-group mb-lg">
                             <div class="clearfix">
                                 <label class="pull-left">Password</label>
-                                <a href="<?= base_url(); ?>auth/ubah_pw" class="pull-right">Lupa Password?</a>
                             </div>
                             <div class="input-group input-group-icon">
-                                <input name="pwd" type="password" class="form-control input-lg" />
+                                <input name="password" type="password" class="form-control input-lg" />
                                 <span class="input-group-addon">
                                     <span class="icon icon-lg">
                                         <i class="fa fa-lock"></i>
@@ -46,7 +53,6 @@
                                 <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs mt-lg">Log In</button>
                             </div>
                         </div>
-                        <p class="text-center">Belum Punya Akun? <a href="<?= base_url(); ?>auth/form_daftar">Silakan Isi Form Sebagai Calon Siswa!</a>
 
                     </form>
                 </div>
