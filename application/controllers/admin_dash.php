@@ -3,6 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class admin_dash extends CI_Controller
 {
+    private $_table = "admin";
     public function __construct()
     {
         parent::__construct();
@@ -18,8 +19,9 @@ class admin_dash extends CI_Controller
     {
         $data['judul'] = 'PPDB | ADMIN';
         $data['oc'] = $this->model_siswa->getalloc();
+        $data['admin'] = $this->model_siswa->getalladmin();
         $this->load->view('templates/header2', $data);
-        $this->load->view('templates/nav_admin');
+        $this->load->view('templates/nav_admin', $data);
         $this->load->view('daftar&admin/a_akun_admin', $data);
         $this->load->view('templates/footer2');
     }
@@ -28,8 +30,9 @@ class admin_dash extends CI_Controller
     public function tambah_daftar()
     {
         $data['judul'] = 'PPDB | ADMIN TAMBAH DAFTAR';
+        $data['admin'] = $this->model_siswa->getalladmin();
         $this->load->view('templates/header2', $data);
-        $this->load->view('templates/nav_admin');
+        $this->load->view('templates/nav_admin', $data);
         $this->load->view('daftar&admin/a_tambah_daftar');
         $this->load->view('templates/footer2');
     }
@@ -49,8 +52,9 @@ class admin_dash extends CI_Controller
     {
         $data['judul'] = 'PPDB | ADMIN PENDAFTAR';
         $data['siswa'] = $this->model_siswa->getallsiswa();
+        $data['admin'] = $this->model_siswa->getalladmin();
         $this->load->view('templates/header2', $data);
-        $this->load->view('templates/nav_admin');
+        $this->load->view('templates/nav_admin', $data);
         $this->load->view('daftar&admin/a_pendaftar', $data);
         $this->load->view('templates/footer2');
     }
@@ -58,8 +62,9 @@ class admin_dash extends CI_Controller
     {
         $data['judul'] = 'PPDB | ADMIN DETAIL SISWA';
         $data['siswa'] = $this->model_siswa->getsiswabyid($id);
+        $data['admin'] = $this->model_siswa->getalladmin();
         $this->load->view('templates/header2', $data);
-        $this->load->view('templates/nav_admin');
+        $this->load->view('templates/nav_admin', $data);
         $this->load->view('daftar&admin/detail/a_detail', $data);
         $this->load->view('templates/footer2');
     }
@@ -76,6 +81,7 @@ class admin_dash extends CI_Controller
     public function edit($id)
     {
         $data['judul'] = 'PPDB | EDIT FORM PENDAFTARAN SMK ATM';
+        $data['admin'] = $this->model_siswa->getalladmin();
         $data['siswa'] = $this->model_siswa->getsiswabyid($id);
         $data['Tingkat'] = ['', '1', '2', '3'];
         $data['Prodi'] = ['', 'Agribisnis Ternak Unggas', 'Usaha Perjalanan Wisata', 'Pemasaran'];
@@ -89,7 +95,7 @@ class admin_dash extends CI_Controller
         $data['Bantuan'] = ['', 'Kartu Indonesia Pintar (KIP)', 'Katu Indonesia Sehat (KIS)', 'PKH', 'KPS'];
 
         $this->load->view('templates/header2', $data);
-        $this->load->view('templates/nav_admin');
+        $this->load->view('templates/nav_admin', $data);
         $this->load->view('daftar&admin/a_edit', $data);
         $this->load->view('templates/footer2');
     }
@@ -97,15 +103,16 @@ class admin_dash extends CI_Controller
     {
         $this->model_form_update->editdatasiswa($id);
         $this->session->set_flashdata('flash', 'Diedit');
-        redirect('admin_dash/pendaftar');
+        redirect(base_url() . "admin_dash/detail/" . $id);
     }
 
     public function upload_data()
     {
         $data['judul'] = 'PPDB | DATA ADMIN';
         $data['sekolah'] = $this->model_admin->getallsekolah();
+        $data['admin'] = $this->model_siswa->getalladmin();
         $this->load->view('templates/header2', $data);
-        $this->load->view('templates/nav_admin');
+        $this->load->view('templates/nav_admin', $data);
         $this->load->view('daftar&admin/a_set_pengumuman', $data);
         $this->load->view('templates/footer2');
     }
@@ -163,8 +170,9 @@ class admin_dash extends CI_Controller
     public function ubah_pw_admin()
     {
         $data['judul'] = 'PPDB | UBAH PASSWORD ADMIN';
+        $data['admin'] = $this->model_siswa->getalladmin();
         $this->load->view('templates/header2', $data);
-        $this->load->view('templates/nav_admin');
+        $this->load->view('templates/nav_admin', $data);
         $this->load->view('daftar&admin/a_ubah_pw');
         $this->load->view('templates/footer2');
     }

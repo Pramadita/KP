@@ -7,6 +7,14 @@ class model_siswa extends CI_model
     {
         return $this->db->get('siswa')->result_array();
     }
+    /*public function getsiswaquery()
+    {
+        $this->db->query('SELECT * FROM siswa');
+    }*/
+    public function getalladmin()
+    {
+        return $this->db->get('admin', ['username' => $this->session->userdata('username')])->row_array();
+    }
     public function getalloc()
     {
         return $this->db->get('oc')->result_array();

@@ -200,7 +200,7 @@
                                                         </div>
                                                         <div>
                                                             <form method="post" class="approval" action="<?= base_url('admin_dash/approve_siswa/' . $siswa['id']); ?>">
-                                                                <input type="submit" class="btn btn-warning" name="conf" value="Confirm">
+                                                                <input type="submit" class="btn btn-success" name="conf" value="Confirm">
                                                             </form>
                                                         </div>
                                                     </div>
@@ -313,6 +313,7 @@
                                     </div>
                                 <?php endif ?>
                                 <a href="<?= base_url(); ?>admin_dash/edit/<?= $siswa["id"]; ?>"><button type="button" class="mb-xs mt-xs mr-xs btn-sm btn btn-info">Edit Data Siswa</button></a>
+                                <a href="<?= base_url(); ?>admin_dash/pendaftar"><button type="button" class="mb-xs mt-xs mr-xs btn-sm btn btn-primary">Kembali Ke Tabel Pendaftar</button></a>
                             </div>
                         </div>
                     </div>

@@ -217,6 +217,7 @@
                                     <div class="col-md-5">
                                         <select class="form-control mb-md" name="bantuan" id="w4-bantuan">
                                             <option value="0" selected disabled>-Jenis Bantuan-</option>
+                                            <option value="0"></option>
                                             <option value="Kartu Indonesia Pintar (KIP)">Kartu Indonesia Pintar (KIP)</option>
                                             <option value="Kartu Indonesia Sehat (KIS)">Kartu Indonesia Sehat (KIS)</option>
                                             <option value="PKH">PKH</option>
@@ -365,6 +366,7 @@
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jobwali" id="w4-jobwali">
                                             <option value="0" selected disabled>-Pilih Pekerjaan-</option>
+                                            <option value="0"></option>
                                             <option value="Tidak bekerja">Tidak Bekerja</option>
                                             <option value="Nelayan">Nelayan</option>
                                             <option value="Petani">Petani</option>
@@ -383,6 +385,7 @@
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="eduw" id="w4-eduw">
                                             <option value="0" selected disabled>-Pilih Pendidikan-</option>
+                                            <option value="0"></option>
                                             <option value="Tidak Sekolah">Tidak Sekolah</option>
                                             <option value="SD Sederajat">SD Sederajat</option>
                                             <option value="SMP Sederajat">SMP Sederajat</option>
@@ -399,6 +402,7 @@
                                     <div class="col-md-4">
                                         <select class="form-control mb-md" name="hasilw" id="w4-hasilw">
                                             <option value="0" selected disabled>-Pilih Penghasilan-</option>
+                                            <option value="0"></option>
                                             <option value="Kurang dari Rp.1.000.000">Kurang dari Rp.1.000.000</option>
                                             <option value="Rp.1.000.000 - Rp.2.000.000">Rp.1.000.000 - Rp.2.000.000</option>
                                             <option value="Lebih dari Rp.2.000.000">Lebih dari Rp.2.000.000</option>

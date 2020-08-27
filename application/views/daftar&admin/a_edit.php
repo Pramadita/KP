@@ -202,7 +202,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-pakaian">Ukuran Pakaian * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="pakaian" id="w4-pakaian">
+                                        <select class="form-control mb-md" name="pakaian" id="w4-pakaian" required>
                                             <option value="0" disabled>-Ukuran Pakaian-</option>
                                             <?php foreach ($Pakaian as $pakaian) : ?>
                                                 <?php if ($pakaian == $siswa['Ukuran_Pakaian']) : ?>
@@ -218,14 +218,14 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-hp">No Handphone * :</label>
                                     <div class="col-md-4">
-                                        <input type="number" class="form-control" name="hp" id="w4-hp" value="<?= $siswa['No_HP']; ?>">
+                                        <input type="number" class="form-control" name="hp" id="w4-hp" value="<?= $siswa['No_HP']; ?>" required>
                                     </div>
                                     <label>No Hp digunakan untuk komunikasi dan informasi sekolah</br>mohon isi dengan nomor yang aktif</label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-email">Email * :</label>
                                     <div class="col-md-5">
-                                        <input type="email" class="form-control" name="email" id="w4-email" value="<?= $siswa['Email']; ?>">
+                                        <input type="email" class="form-control" name="email" id="w4-email" value="<?= $siswa['Email']; ?>" required>
                                     </div>
                                     <label>mohon isi dengan email yang aktif</label>
                                 </div>
@@ -258,17 +258,17 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-nayah">Nama Ayah * :</label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" name="nayah" id="w4-nayah" value="<?= $siswa['Nama_Ayah']; ?>">
+                                        <input type="text" class="form-control" name="nayah" id="w4-nayah" value="<?= $siswa['Nama_Ayah']; ?>" required>
                                     </div>
                                     <label class="col-sm-2  control-label" for="w4-tlayah">Tahun Lahir * :</label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" name="tlayah" id="w4-tlayah" value="<?= $siswa['Lahir_Ayah']; ?>">
+                                        <input type="text" class="form-control" name="tlayah" id="w4-tlayah" value="<?= $siswa['Lahir_Ayah']; ?>" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="w4-jobayah">Pekerjaan * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="jobayah" id="w4-jobayah">
+                                        <select class="form-control mb-md" name="jobayah" id="w4-jobayah" required>
                                             <option value="0" disabled>-Pekerjaan Ayah-</option>
                                             <?php foreach ($Pekerjaan as $job) : ?>
                                                 <?php if ($job == $siswa['Pekerjaan_Ayah']) : ?>
@@ -281,7 +281,7 @@
                                     </div>
                                     <label class="col-md-3 control-label" for="w4-edua">Pendidikan Terakhir * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="edua" id="w4-edua">
+                                        <select class="form-control mb-md" name="edua" id="w4-edua" required>
                                             <option value="0" disabled>-Pendidikan Ayah-</option>
                                             <?php foreach ($Pendidikan as $edu) : ?>
                                                 <?php if ($edu == $siswa['Pendidikan_Ayah']) : ?>
@@ -296,7 +296,7 @@
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="w4-hasila">Penghasilan Bulanan * :</label>
                                     <div class="col-md-4">
-                                        <select class="form-control mb-md" name="hasila" id="w4-hasila">
+                                        <select class="form-control mb-md" name="hasila" id="w4-hasila" required>
                                             <option value="0" disabled>-Penghasilan Ayah-</option>
                                             <?php foreach ($Penghasilan as $penghasilan) : ?>
                                                 <?php if ($penghasilan == $siswa['Penghasilan_Ayah']) : ?>
@@ -313,17 +313,17 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-nibu">Nama Ibu * :</label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" name="nibu" id="w4-nibu" value="<?= $siswa['Nama_Ibu']; ?>">
+                                        <input type="text" class="form-control" name="nibu" id="w4-nibu" value="<?= $siswa['Nama_Ibu']; ?>" required>
                                     </div>
                                     <label class="col-sm-2 control-label" for="w4-tlibu">Tahun Lahir * :</label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" name="tlibu" id="w4-tlibu" value="<?= $siswa['Lahir_Ibu']; ?>">
+                                        <input type="text" class="form-control" name="tlibu" id="w4-tlibu" value="<?= $siswa['Lahir_Ibu']; ?>" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="w4-jobibu">Pekerjaan * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="jobibu" id="w4-jobibu">
+                                        <select class="form-control mb-md" name="jobibu" id="w4-jobibu" required>
                                             <option value="0" disabled>-Pekerjaan Ibu-</option>
                                             <?php foreach ($Pekerjaan as $job) : ?>
                                                 <?php if ($job == $siswa['Pekerjaan_Ibu']) : ?>
@@ -336,7 +336,7 @@
                                     </div>
                                     <label class="col-md-3 control-label" for="w4-edui">Pendidikan Terakhir * :</label>
                                     <div class="col-md-3">
-                                        <select class="form-control mb-md" name="edui" id="w4-edui">
+                                        <select class="form-control mb-md" name="edui" id="w4-edui" required>
                                             <option value="0" disabled>-Pendidikan Ibu-</option>
                                             <?php foreach ($Pendidikan as $edu) : ?>
                                                 <?php if ($edu == $siswa['Pendidikan_Ibu']) : ?>
@@ -351,7 +351,7 @@
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="w4-hasili">Penghasilan Bulanan * :</label>
                                     <div class="col-md-4">
-                                        <select class="form-control mb-md" name="hasili" id="w4-hasili">
+                                        <select class="form-control mb-md" name="hasili" id="w4-hasili" required>
                                             <option value="0" disabled>-Penghasilan Ibu-</option>
                                             <?php foreach ($Penghasilan as $penghasilan) : ?>
                                                 <?php if ($penghasilan == $siswa['Penghasilan_Ibu']) : ?>
@@ -429,31 +429,31 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-tinggi">Tinggi Badan * :</label>
                                     <div class="col-sm-2">
-                                        <input type="number" class="form-control" name="tinggi" id="w4-tinggi" value="<?= $siswa['Tinggi_Badan']; ?>">
+                                        <input type="number" class="form-control" name="tinggi" id="w4-tinggi" value="<?= $siswa['Tinggi_Badan']; ?>" required>
                                     </div>
                                     <label class="col-sm-1 control-label" for="w4-tinggi">cm</label>
                                     <label class="col-sm-2  control-label" for="w4-bb">Berat Badan * :</label>
                                     <div class="col-sm-2">
-                                        <input type="number" class="form-control" name="bb" id="w4-bb" value="<?= $siswa['Berat_Badan']; ?>">
+                                        <input type="number" class="form-control" name="bb" id="w4-bb" value="<?= $siswa['Berat_Badan']; ?>" required>
                                     </div>
                                     <label class=" control-label" for="w4-tinggi">kg</label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-jarak">Jarak Ke Sekolah * :</label>
                                     <div class="col-sm-2">
-                                        <input type="number" class="form-control" name="jarak" id="w4-jarak" value="<?= $siswa['Jarak_Sekolah']; ?>">
+                                        <input type="number" class="form-control" name="jarak" id="w4-jarak" value="<?= $siswa['Jarak_Sekolah']; ?>" required>
                                     </div>
                                     <label class="col-sm-1 control-label" for="w4-jarak">km</label>
                                     <label class="col-sm-2  control-label" for="w4-waktu">Waktu Tempuh Ke Sekolah * :</label>
                                     <div class="col-sm-2">
-                                        <input type="number" class="form-control" name="waktu" id="w4-waktu" value="<?= $siswa['Waktu_Tempuh']; ?>">
+                                        <input type="number" class="form-control" name="waktu" id="w4-waktu" value="<?= $siswa['Waktu_Tempuh']; ?>" required>
                                     </div>
                                     <label class=" control-label" for="w4-waktu">menit</label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-saudara">Jumlah Saudara Kandung * :</label>
                                     <div class="col-sm-2">
-                                        <input type="number" class="form-control" name="saudara" id="w4-saudara" value="<?= $siswa['Saudara_Kandung']; ?>">
+                                        <input type="number" class="form-control" name="saudara" id="w4-saudara" value="<?= $siswa['Saudara_Kandung']; ?>" required>
                                     </div>
                                 </div>
                             </div>
