@@ -58,6 +58,36 @@ class admin_dash extends CI_Controller
         $this->load->view('daftar&admin/a_pendaftar', $data);
         $this->load->view('templates/footer2');
     }
+    public function pendaftar_proses()
+    {
+        $data['judul'] = 'PPDB | ADMIN PENDAFTAR';
+        $data['siswa'] = $this->model_siswa->getsiswaproses();
+        $data['admin'] = $this->model_siswa->getalladmin();
+        $this->load->view('templates/header2', $data);
+        $this->load->view('templates/nav_admin', $data);
+        $this->load->view('daftar&admin/a_pendaftar', $data);
+        $this->load->view('templates/footer2');
+    }
+    public function pendaftar_lulus()
+    {
+        $data['judul'] = 'PPDB | ADMIN PENDAFTAR';
+        $data['siswa'] = $this->model_siswa->getsiswalulus();
+        $data['admin'] = $this->model_siswa->getalladmin();
+        $this->load->view('templates/header2', $data);
+        $this->load->view('templates/nav_admin', $data);
+        $this->load->view('daftar&admin/a_pendaftar', $data);
+        $this->load->view('templates/footer2');
+    }
+    public function pendaftar_tlulus()
+    {
+        $data['judul'] = 'PPDB | ADMIN PENDAFTAR';
+        $data['siswa'] = $this->model_siswa->getsiswatlulus();
+        $data['admin'] = $this->model_siswa->getalladmin();
+        $this->load->view('templates/header2', $data);
+        $this->load->view('templates/nav_admin', $data);
+        $this->load->view('daftar&admin/a_pendaftar', $data);
+        $this->load->view('templates/footer2');
+    }
     public function detail($id)
     {
         $data['judul'] = 'PPDB | ADMIN DETAIL SISWA';

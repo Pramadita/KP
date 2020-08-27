@@ -22,7 +22,7 @@
                         <figure class="profile-picture">
                             <img src="<?= base_url(); ?>sekolah/logo fix.png" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                         </figure>
-                        <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
+                        <div class="profile-info" data-lock-name="" data-lock-email="">
                             <span class="name"><?= $admin['username'] ?></span>
                             <span class="role">administrator</span>
                         </div>
@@ -67,11 +67,35 @@
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
-                                <li class="nav-active">
-                                    <a href="<?= base_url(); ?>admin_dash/pendaftar">
-                                        <i class="fa fa-list-alt" aria-hidden="true"></i>
-                                        <span>Pendaftar</span>
-                                    </a>
+                                <li class="nav-parent nav-active nav-expanded">
+                                    <a> <i class="fa fa-list-alt" aria-hidden="true"></i>
+                                        <span>Pendaftar</span></a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a href="<?= base_url(); ?>admin_dash/pendaftar">
+                                                <i class="fa fa-folder" aria-hidden="true"></i>
+                                                <span>Seluruh</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url(); ?>admin_dash/pendaftar_proses">
+                                                <i class="fa fa-folder-open" aria-hidden="true"></i>
+                                                <span>Belum Verifikasi</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url(); ?>admin_dash/pendaftar_lulus">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                <span>Lulus</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url(); ?>admin_dash/pendaftar_tlulus">
+                                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                                <span> Tidak Lulus</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="nav-active">
                                     <a href="<?= base_url(); ?>admin_dash/tambah_daftar">

@@ -313,7 +313,7 @@
                                     </div>
                                 <?php endif ?>
                                 <a href="<?= base_url(); ?>admin_dash/edit/<?= $siswa["id"]; ?>"><button type="button" class="mb-xs mt-xs mr-xs btn-sm btn btn-info">Edit Data Siswa</button></a>
-                                <a href="<?= base_url(); ?>admin_dash/pendaftar"><button type="button" class="mb-xs mt-xs mr-xs btn-sm btn btn-primary">Kembali Ke Tabel Pendaftar</button></a>
+                                <a href="<?= base_url(); ?>admin_dash/pendaftar_proses"><button type="button" class="mb-xs mt-xs mr-xs btn-sm btn btn-primary">Kembali Ke Tabel Pendaftar</button></a>
                             </div>
                         </div>
                     </div>

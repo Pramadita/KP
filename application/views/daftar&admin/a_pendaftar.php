@@ -49,7 +49,7 @@
                 <?php endif; ?>
             </div>
 
-            <div class="table-responsive">
+            <div class="table-responsive col-sm-12">
                 <table id="pendaftar" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
@@ -96,11 +96,3 @@
     </section>
     <!-- end: page -->
 </section>
-</div>
-</section>
-
-</div>
-</section>
-
-
-</div>

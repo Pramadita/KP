@@ -7,6 +7,18 @@ class model_siswa extends CI_model
     {
         return $this->db->get('siswa')->result_array();
     }
+    public function getsiswaproses()
+    {
+        return $this->db->get_where('siswa', ['status' => 1])->result_array();
+    }
+    public function getsiswalulus()
+    {
+        return $this->db->get_where('siswa', ['status' => 2])->result_array();
+    }
+    public function getsiswatlulus()
+    {
+        return $this->db->get_where('siswa', ['status' => 3])->result_array();
+    }
     /*public function getsiswaquery()
     {
         $this->db->query('SELECT * FROM siswa');
