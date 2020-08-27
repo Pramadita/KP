@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 29, 2020 at 06:24 PM
+-- Generation Time: Aug 27, 2020 at 09:21 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -25,6 +25,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` int(11) NOT NULL,
+  `username` varchar(64) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `full_name` varchar(255) NOT NULL,
+  `last_login` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `photo` varchar(64) NOT NULL DEFAULT 'user_no_image.jpg',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `is_active` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `username`, `password`, `email`, `full_name`, `last_login`, `photo`, `created_at`, `is_active`) VALUES
+(2, 'SMK ATM', '$2y$10$xDsN5UTI0U6tr7b4bwSMVej4cDEDIrozwchSvLX3q.L6jfmDaam.y', 'smkatm@gmail.com', 'SMK ATM', '2020-08-27 18:03:19', 'logo fix.jpg', '2020-08-27 10:41:33', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `oc`
 --
 
@@ -39,7 +64,7 @@ CREATE TABLE `oc` (
 --
 
 INSERT INTO `oc` (`id`, `status`, `Tanggal_Buka`) VALUES
-(1, '2', '2020-06-19 16:11:01');
+(1, '2', '2020-08-28 01:04:13');
 
 -- --------------------------------------------------------
 
@@ -51,15 +76,17 @@ CREATE TABLE `sekolah` (
   `id` int(11) NOT NULL,
   `tata_cara` varchar(256) NOT NULL DEFAULT 'default.pdf',
   `periode_daftar` varchar(128) NOT NULL,
-  `Info` varchar(256) DEFAULT 'default.jpg'
+  `Info` varchar(256) DEFAULT NULL,
+  `berkas` varchar(128) DEFAULT NULL,
+  `foto` varchar(128) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sekolah`
 --
 
-INSERT INTO `sekolah` (`id`, `tata_cara`, `periode_daftar`, `Info`) VALUES
-(7, 'Tugas_Besar_(UAS_-_SisTer).pdf', '13 Juli - 14 Agustus 2020', 'default.jpg');
+INSERT INTO `sekolah` (`id`, `tata_cara`, `periode_daftar`, `Info`, `berkas`, `foto`) VALUES
+(7, '1162-1238-1-PB.pdf', '15 Juli - 16 Agustus 2020', 'halaman_awal.png', '10_1001@jama_2020_3151.pdf', 's-pengumuman.png');
 
 -- --------------------------------------------------------
 
@@ -71,7 +98,7 @@ CREATE TABLE `siswa` (
   `id` int(11) UNSIGNED NOT NULL,
   `Tanggal_Daftar` datetime DEFAULT CURRENT_TIMESTAMP,
   `Tingkat` enum('1','2','3') DEFAULT NULL,
-  `Prodi` enum('Agribisnis Peternakan Unggas','Usaha Perjalanan Wisata','Pemasaran') DEFAULT NULL,
+  `Prodi` enum('Agribisnis Ternak Unggas','Usaha Perjalanan Wisata','Pemasaran') DEFAULT NULL,
   `Nama_Siswa` varchar(100) DEFAULT NULL,
   `Jenis_Kelamin` enum('Laki-laki','Perempuan') DEFAULT NULL,
   `Asal_Sekolah` varchar(50) DEFAULT NULL,
@@ -116,80 +143,56 @@ CREATE TABLE `siswa` (
   `Beasiswa_1` varchar(256) DEFAULT NULL,
   `Beasiswa_2` varchar(256) DEFAULT NULL,
   `Beasiswa_3` varchar(256) DEFAULT NULL,
-  `Akta_Lahir` varchar(256) NOT NULL,
-  `KK` varchar(256) DEFAULT NULL,
-  `Bio_Raport` varchar(256) DEFAULT NULL,
-  `KTP_Ayah` varchar(256) DEFAULT NULL,
-  `KTP_Ibu` varchar(256) DEFAULT NULL,
-  `Ijazah_SMP` varchar(256) DEFAULT NULL,
-  `SKHUN_SMP` varchar(256) DEFAULT NULL,
-  `Surat_Lulus_SMP` varchar(256) DEFAULT NULL,
-  `KPS` varchar(256) DEFAULT NULL,
-  `status` varchar(5) DEFAULT '1'
+  `Foto` varchar(256) DEFAULT NULL,
+  `Akta_Lahir` varchar(50) DEFAULT NULL,
+  `KK` varchar(50) DEFAULT NULL,
+  `Raport` varchar(50) DEFAULT NULL,
+  `KTP_Ayah` varchar(50) DEFAULT NULL,
+  `KTP_Ibu` varchar(50) DEFAULT NULL,
+  `Ijazah` varchar(50) DEFAULT NULL,
+  `SKHUN` varchar(50) DEFAULT NULL,
+  `Surat_Lulus` varchar(50) DEFAULT NULL,
+  `status` enum('1','2','3') DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `siswa`
 --
 
-INSERT INTO `siswa` (`id`, `Tanggal_Daftar`, `Tingkat`, `Prodi`, `Nama_Siswa`, `Jenis_Kelamin`, `Asal_Sekolah`, `NISN`, `No_Ijazah`, `No_SKHUN`, `No_UN`, `NIK`, `TTL`, `Alamat_Tinggal`, `Transportasi`, `Jenis_Tinggal`, `Rencana_Tinggal`, `Ukuran_Pakaian`, `No_HP`, `Email`, `Jenis_Bantuan`, `No_KKS`, `Nama_Ayah`, `Lahir_Ayah`, `Pekerjaan_Ayah`, `Pendidikan_Ayah`, `Penghasilan_Ayah`, `Nama_Ibu`, `Lahir_Ibu`, `Pekerjaan_Ibu`, `Pendidikan_Ibu`, `Penghasilan_Ibu`, `Nama_Wali`, `Lahir_Wali`, `Pekerjaan_Wali`, `Pendidikan_Wali`, `Penghasilan_Wali`, `Tinggi_Badan`, `Berat_Badan`, `Jarak_Sekolah`, `Waktu_Tempuh`, `Saudara_Kandung`, `Prestasi_1`, `Prestasi_2`, `Prestasi_3`, `Beasiswa_1`, `Beasiswa_2`, `Beasiswa_3`, `Akta_Lahir`, `KK`, `Bio_Raport`, `KTP_Ayah`, `KTP_Ibu`, `Ijazah_SMP`, `SKHUN_SMP`, `Surat_Lulus_SMP`, `KPS`, `status`) VALUES
-(1, '0000-00-00 00:00:00', '1', 'Pemasaran', 'Pramadita Sielda Dewi', 'Perempuan', 'SMPN 45 Kota Bandung', '928472347347', 'DN-82875438754', NULL, NULL, '327590303857', 'Bandung, 24 Oktober 1999', 'Jl.Cikaso No.197', 'Jalan Kaki', 'Bersama Orang Tua', 'Bersama Orang Tua', 'M', '087566777999', 'pramaditasielda@gmail.com', NULL, '', 'Yadi', '1966', 'Pensiunan', 'SMA Sederajat', 'Kurang dari Rp.1.000.000', 'Yani', '1972', 'Tidak Bekerja', 'SMA Sederajat', 'Lebih dari Rp.2.000.000', '', '', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '158', '55', '1,3', '30', '1', '', '', '', '', '', '', 'Akta-200729-b1c6d8211d.jpg', 'KK-200729-e148f2c572.jpg', 'Raport-200729-1451178db8.png', 'KTP_Ayah-200729-fdfe1831e3.jpg', 'KTP_Ibu-200729-f1f6350ef4.jpg', 'Ijazah-200729-1054f0d05a.png', 'SKHUN_SMP-200729-ec345bfce9.jpg', 'Surat_Lulus_SMP-200728-4cef753f61.png', 'KPS-200729-cbf7a0bc1d.jpg', '2'),
-(7, '0000-00-00 00:00:00', '1', 'Usaha Perjalanan Wisata', 'Vania Dinda', 'Perempuan', 'SMP Plus Parahiyangan', '987463776476', NULL, NULL, NULL, '327646483888', '', '', '', '', '', '', '', '', NULL, NULL, '', '', '', '', '', '', '', '', '', '', NULL, '', NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, 'Akta-200726-aa8eb33952.jpg', 'KK-200726-2adcd139e5', 'Raport-200726-a7dae315c8', 'KTP_Ayah-200726-48b47628ab', 'KTP_Ibu-200726-e1416d8bcf', 'Ijazah-200726-c9a534f8c0', 'SKHUN_SMP-200726-b3097fafd3', 'Surat_Lulus_SMP-200726-e6ba30c0da', 'KPS-200726-b014625843', '2'),
-(8, '0000-00-00 00:00:00', '1', 'Pemasaran', 'Damadika Husein Sagara', 'Laki-laki', 'SMPN 2 Majalengka', '9834858875487', NULL, NULL, NULL, '324545465656', '', '', '', '', '', '', '', '', NULL, NULL, '', '', '', '', '', '', '', '', '', '', NULL, '', NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, '2'),
-(9, '0000-00-00 00:00:00', '1', 'Pemasaran', 'Siti Auliya Syarif', 'Perempuan', 'SMPN 1 Majalengka', '98492482475', NULL, NULL, NULL, '32454655666', '', '', '', '', '', '', '', '', NULL, NULL, '', '', '', '', '', '', '', '', '', '', NULL, '', NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, '1'),
-(10, '0000-00-00 00:00:00', '1', 'Usaha Perjalanan Wisata', 'Kirana Dwinanda ', 'Perempuan', 'SMP Tiara Citra 2', '9484873262625', '', NULL, NULL, '3275433454555', '', '', 'Jalan Kaki', 'Bersama Orang Tua', 'Bersama Orang Tua', 'S', '', '', NULL, '', '', '', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '', '', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '', '', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2'),
-(11, '0000-00-00 00:00:00', '1', 'Agribisnis Peternakan Unggas', 'Budiawan Kusuma Dana', 'Laki-laki', 'SMP Bani Adam', '9859458753847', NULL, NULL, NULL, '3274958587576', '', '', '', '', '', '', '', '', NULL, NULL, '', '', '', '', '', '', '', '', '', '', NULL, '', NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, '1'),
-(12, '0000-00-00 00:00:00', '1', 'Pemasaran', 'Surya Nabawi', 'Laki-laki', 'SMPN 1 Majalengka', '984826346746', NULL, NULL, NULL, '3276454532222', '', '', '', '', '', '', '', '', NULL, NULL, '', '', '', '', '', '', '', '', '', '', NULL, '', NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, '1'),
-(37, '0000-00-00 00:00:00', '2', 'Usaha Perjalanan Wisata', 'Dannia', '', '', '', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', NULL, NULL, '', '', '', '', '', '', '', '', '', '', NULL, '', NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, NULL, NULL, '1'),
-(41, '0000-00-00 00:00:00', '1', 'Usaha Perjalanan Wisata', 'Nilam Sekar', 'Perempuan', 'SMPN 14 Kota Jakarta', '998548547857857', 'DN-UEUWR4URH8573', NULL, NULL, '325374858756545454', 'Kediri, 14 Agustus 2005', 'Jl. Bahagia Selamanya No. 78', 'Jalan Kaki', 'Asrama', 'Panti Asuhan', 'M', '084756645321', 'Nilams@gmail.com', NULL, '', 'Dodi Diansyah', '1970', 'Pedagang Kecil', 'SMA Sederajat', 'Rp.1.000.000 - Rp.2.000.000', 'Nining Ningsih', '1975', 'Pedagang Kecil', 'SMA Sederajat', 'Kurang dari Rp.1.000.000', '', '', NULL, NULL, NULL, '165', '58', '1,5', '45', '0', '', '', '', '', '', '', 'Akta-200724-f99e7904cf.png', 'KK-200724-43a6ff2cf1.png', 'Raport-200724-b684459e16.png', 'KTP_Ayah-200724-fd559f1203.png', 'KTP_Ibu-200724-6bd06a88be.png', 'Ijazah-200724-552810c1b7', 'SKHUN_SMP-200724-8b2d0d6686', 'Surat_Lulus_SMP-200724-50e2e6fe8f', 'KPS-200724-f0d75aa1c4', '1'),
-(42, '0000-00-00 00:00:00', '2', 'Usaha Perjalanan Wisata', 'Renaldi Naufal Atmaja', 'Laki-laki', 'SMP Unggul Berdikari', '98742762645234', '-', '-', '-', '3239565654747', 'Bandung, 19 Oktober 2005', 'Jl.Perjuangan 5 RT.08 RW.09 Kel.Sukaraja', 'Kendaraan Umum', 'Asrama', 'Bersama Orang Tua', 'XL', '08974637282744', 'naufalatmaja@gmail.com', NULL, '', 'Budiawan Randi', '1988', 'Karyawan Swasta', 'D1-D3', 'Lebih dari Rp.2.000.000', 'Putriani Narni', '1988', 'Tidak Bekerja', 'SMA Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '', '', NULL, NULL, NULL, '180', '70', '1', '15', '1', '', '', '', '', '', '', 'ikon.jpeg', 'Screenshot (1).png', 'Screenshot (9).png', 'Screenshot (11).png', 'Screenshot (8).png', '', '', '', '', '1'),
-(44, '2020-05-16 18:46:02', '1', 'Usaha Perjalanan Wisata', 'Niadinda', 'Perempuan', 'SMPN 90 Kota Jakarta', '98321434', '', NULL, NULL, '32342534', 'Jakarta, 15 Maret 2007', 'Jl.Kemanggisan No.5', 'Kendaraan Pribadi', 'Bersama Orang Tua', 'Kost', 'L', '09482425', 'niadi@gmail.com', NULL, '', 'Maulana Adi', '1985', 'Pedagang Kecil', 'SMA Sederajat', 'Rp.1.000.000 - Rp.2.000.000', 'Mulyawati', '1988', '', 'D1-D3', 'Lebih dari Rp.2.000.000', '', '', '', '', '', '158', '56', '1', '30', '3', '', '', '', '', '', '', 'c4f38935c1575d89958f852440276129.jpg', 'forests-why-matter_63516847.jpg', 'images (1).jpg', 'lana.jpg', 'images.jpg', '', '', '', '', '2'),
-(45, '2020-05-16 19:18:49', '1', 'Usaha Perjalanan Wisata', 'Okigawa', 'Laki-laki', 'SMPN 1 Tanggerang', '974634', '', NULL, NULL, '97685865', 'Hokaido, 16 Januari 2008', 'Jl.Duta Pemangga 1', 'Jalan Kaki', 'Bersama Orang Tua', 'Asrama', 'M', '098372423', 'okig@gmail.com', NULL, '', 'Wardana', '1980', 'Nelayan', 'S2', 'Lebih dari Rp.2.000.000', 'Mizaki Takara', '1983', 'Nelayan', 'D4/S1', 'Lebih dari Rp.2.000.000', '', '', '', '', '', '190', '69', '1', '20', '-', '', '', '', '', '', '', 'c4f38935c1575d89958f852440276129.jpg', 'forests-why-matter_63516847.jpg', 'images (1).jpg', 'images.jpg', 'lana.jpg', '', '', '', '', NULL),
-(47, '2020-05-17 21:03:49', '1', 'Usaha Perjalanan Wisata', 'Danniatur', 'Laki-laki', 'turu', 'utrt', '', NULL, NULL, 'uyr', 'turu', 'tur', 'Jalan Kaki', 'Bersama Orang Tua', 'Asrama', 'S', 'tftfh', 'y5546u7567@gmail.com', NULL, 'trytruy', 'tyruyr', 'urtuytr', 'Petani', 'SD Sederajat', 'Rp.1.000.000 - Rp.2.000.000', 'uytut', 'ytu', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '', '', '', '', '', 'uyt', 'ytu', 'uyt', 'uytu', 'uy', '', '', '', '', '', '', '0f948ef9244e8de6c597c26dba806aa1.jpg', '83519.png', 'card.jpg', 'android.png', 'car.jpg', '', '', '', '', NULL),
-(48, '2020-05-17 21:09:19', '2', 'Agribisnis Peternakan Unggas', 'Dwinanda', 'Laki-laki', 'rwe', 'trete', '', NULL, NULL, 'gfd', 'gfdg', 'fgd', 'Kendaraan Umum', 'Asrama', 'Bersama Orang Tua', 'M', 'gfd', 'iouoe@gmail.com', NULL, 'iuou', 'hyj', 'jhg', 'Nelayan', 'SD Sederajat', 'Rp.1.000.000 - Rp.2.000.000', 'jhg', 'hjgj', 'Tidak Bekerja', 'SD Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '', '', '', '', '', 'jhg', 'jhg', 'jhg', 'jhg', 'hj', '', '', '', '', '', '', '9c319328e5f938d9634ebc64219d4be6.jpg', 'android.png', '3981717-karaoke-png-background-image-peoplepngcom-karaoke-png-640_642_preview.png', 'persegi.png', 'lamb.png', '', '', '', '', NULL),
-(49, '2020-05-18 07:05:25', '1', 'Usaha Perjalanan Wisata', 'JYUJ', 'Laki-laki', 'HJ', 'HJ', 'fgh', NULL, NULL, 'fgh', 'hf', 'ghgf', 'Kendaraan Umum', 'Asrama', 'Kost', 'XL', 'hgh', 'iyu@gmail.com', NULL, 'jhku', 'jki', 'ik', 'Petani', 'Tidak Sekolah', 'Rp.1.000.000 - Rp.2.000.000', 'iku', 'kiu', 'Buruh', 'D4/S1', 'Kurang dari Rp.1.000.000', '', '', '', '', '', 'i', 'kiu', 'kiu', 'kiu', 'iu', '', '', '', '', '', '', 'dokumen-200518-522320939e', 'dokumen-200518-522320939e', 'dokumen-200518-522320939e', 'dokumen-200518-522320939e', 'dokumen-200518-522320939e', 'dokumen-200518-522320939e', 'dokumen-200518-522320939e', 'dokumen-200518-522320939e', 'dokumen-200518-522320939e', NULL),
-(50, '2020-05-18 07:07:39', '1', 'Usaha Perjalanan Wisata', 'JYUJ', 'Laki-laki', 'HJ', 'HJ', 'fgh', NULL, NULL, 'fgh', 'hf', 'ghgf', 'Kendaraan Umum', 'Asrama', 'Kost', 'XL', 'hgh', 'iyu@gmail.com', NULL, 'jhku', 'jki', 'ik', 'Petani', 'Tidak Sekolah', 'Rp.1.000.000 - Rp.2.000.000', 'iku', 'kiu', 'Buruh', 'D4/S1', 'Kurang dari Rp.1.000.000', '', '', '', '', '', 'i', 'kiu', 'kiu', 'kiu', 'iu', '', '', '', '', '', '', 'dokumen-200518-077694ba86', 'dokumen-200518-077694ba86', 'dokumen-200518-077694ba86', 'dokumen-200518-077694ba86', 'dokumen-200518-077694ba86', 'dokumen-200518-077694ba86', 'dokumen-200518-077694ba86', 'dokumen-200518-077694ba86', 'dokumen-200518-077694ba86', NULL),
-(60, '2020-07-22 19:26:51', NULL, NULL, 'Pramadita', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1'),
-(61, '2020-07-22 19:51:51', NULL, NULL, 'Kiran', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Akta-200725-7d5e83fc3d.png', 'KK-200725-f2d9b54463', 'Raport-200725-9c3ca5c142', 'KTP_Ayah-200725-0dd6168ca5', 'KTP_Ibu-200725-8fac78abfa', 'Ijazah-200725-4293564004', 'SKHUN_SMP-200725-d8835e1024', 'Surat_Lulus_SMP-200725-8eef5ab2e3', 'KPS-200725-a3ddca8d4c', '1'),
-(62, '2020-07-25 20:03:16', NULL, NULL, 'tata', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Akta-200725-64a44daab1.png', 'KK-200725-74c3787f11.png', 'Raport-200725-6e8a030e29.png', 'KTP_Ayah-200725-76ef0610ce.png', 'KTP_Ibu-200725-d43f5d10af.png', 'Ijazah-200725-41a5f415eb', 'SKHUN_SMP-200725-b8c86c316b', 'Surat_Lulus_SMP-200725-39af8a0500', 'KPS-200725-3cd77f3cf5', '1'),
-(63, '2020-07-26 17:16:42', NULL, NULL, 'Nayla', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Akta-200726-4a775992f0.jpg', 'KK-200726-c4795ad8a1', 'Raport-200726-07afff9d61', 'KTP_Ayah-200726-7336977f36', 'KTP_Ibu-200726-ee14439f44', 'Ijazah-200726-e6f546dc6c', 'SKHUN_SMP-200726-379f27f4f6', 'Surat_Lulus_SMP-200726-15f14cc1b7', 'KPS-200726-f1f096a2ec', '1'),
-(64, '2020-07-26 18:45:38', NULL, NULL, 'coba', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Akta-200726-1edb543d91.jpg', 'KK-200726-305c9b19eb.jpg', 'Raport-200726-c5f0f79eb0.png', 'KTP_Ayah-200726-389b852931.jpg', 'KTP_Ibu-200726-5294cfd607.jpg', 'Ijazah-200726-2bd7d5dd6c', 'SKHUN_SMP-200726-a13b454ea6', 'Surat_Lulus_SMP-200726-089c3496c4', 'KPS-200726-979f4bd550', '1');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `REG` varchar(128) NOT NULL,
-  `Tingkat` varchar(128) NOT NULL,
-  `Prodi` varchar(128) NOT NULL,
-  `Nama_Siswa` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `REG`, `Tingkat`, `Prodi`, `Nama_Siswa`) VALUES
-(1, 'ATM', '1', 'Agribisnis Peternakan Unggas', 'SWAD');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_role`
---
-
-CREATE TABLE `user_role` (
-  `id` int(11) NOT NULL,
-  `role` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `siswa` (`id`, `Tanggal_Daftar`, `Tingkat`, `Prodi`, `Nama_Siswa`, `Jenis_Kelamin`, `Asal_Sekolah`, `NISN`, `No_Ijazah`, `No_SKHUN`, `No_UN`, `NIK`, `TTL`, `Alamat_Tinggal`, `Transportasi`, `Jenis_Tinggal`, `Rencana_Tinggal`, `Ukuran_Pakaian`, `No_HP`, `Email`, `Jenis_Bantuan`, `No_KKS`, `Nama_Ayah`, `Lahir_Ayah`, `Pekerjaan_Ayah`, `Pendidikan_Ayah`, `Penghasilan_Ayah`, `Nama_Ibu`, `Lahir_Ibu`, `Pekerjaan_Ibu`, `Pendidikan_Ibu`, `Penghasilan_Ibu`, `Nama_Wali`, `Lahir_Wali`, `Pekerjaan_Wali`, `Pendidikan_Wali`, `Penghasilan_Wali`, `Tinggi_Badan`, `Berat_Badan`, `Jarak_Sekolah`, `Waktu_Tempuh`, `Saudara_Kandung`, `Prestasi_1`, `Prestasi_2`, `Prestasi_3`, `Beasiswa_1`, `Beasiswa_2`, `Beasiswa_3`, `Foto`, `Akta_Lahir`, `KK`, `Raport`, `KTP_Ayah`, `KTP_Ibu`, `Ijazah`, `SKHUN`, `Surat_Lulus`, `status`) VALUES
+(1, '0000-00-00 00:00:00', '1', 'Pemasaran', 'Pramadita Sielda Dewi', 'Perempuan', 'SMPN 45 Kota Bandung', '928472347347', 'DN-82875438754', NULL, NULL, '327590303857', 'Bandung, 24 Oktober 1999', 'Jl.Cikaso No.197', 'Jalan Kaki', 'Bersama Orang Tua', 'Bersama Orang Tua', 'M', '087566777999', 'pramaditasielda@gmail.com', NULL, '', 'Yadi', '1966', 'Pensiunan', 'SMA Sederajat', 'Kurang dari Rp.1.000.000', 'Yani', '1972', 'Tidak Bekerja', 'SMA Sederajat', 'Lebih dari Rp.2.000.000', '', '', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '158', '55', '1,3', '30', '1', '', '', '', '', '', '', 'lamb.png', '0', '0', '', '', '', '', '0', '', '3'),
+(64, '2020-07-26 18:45:38', NULL, NULL, 'coba', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'KK-200726-305c9b19eb.png', '0', '0', '', '', '', '', '0', '', '3'),
+(67, '2020-07-31 15:01:21', NULL, NULL, 'Hani Nafisa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'lana.jpg', '0', '0', '', '', '', '', '0', '', '2'),
+(69, '2020-08-22 17:50:13', NULL, NULL, 'Wani', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'buku.png', '0', '0', '', '', '', '', '0', '', '2'),
+(70, '2020-08-22 17:56:03', '', 'Usaha Perjalanan Wisata', 'Wayla Waliah Nurohmah', 'Perempuan', 'SMP Tiara Citra 2', '7567567', '', NULL, 'T567RFTGR6546456', '5678678', 'Bandung 12 Oktober 2007', '8hujkyukh', 'Kendaraan Umum', 'Asrama', 'Asrama', 'S', '98796876', 'waliyah@gmail.com', NULL, '', 'Uyun', '1979', 'Peternak', 'SMP Sederajat', 'Lebih dari Rp.2.000.000', 'Nurina', '1980', 'PNS/TNI/POLRI', 'SMP Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '', '', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '3467', '56', '6575', '546', '56', '', '', '', '', '', '', 'book1.png', '0', '0', '', '', '', '', '0', '', '3'),
+(71, '2020-08-24 15:52:13', '2', 'Usaha Perjalanan Wisata', 'dita', 'Perempuan', 'rthyry', '6756756', '', NULL, 'YTRUGHGH758575', '75677', 'Bandung 12 Oktober 2007', 'jhhfgjgh', 'Kendaraan Pribadi', 'Bersama Orang Tua', 'Asrama', 'M', '6575756', 'pramaditasiede@gmail.com', NULL, '', '8i', '1989', 'Petani', 'SMP Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '5465465', '411242', 'Wirausaha', 'SD Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '', '', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '12.7', '67.8', '56.8', '67.8', '65', '', '', '', '', '', '', 'Screenshot_(12).png', '0', '0', '', '', '', '', '0', '', '3'),
+(78, '2020-08-24 20:32:10', NULL, 'Usaha Perjalanan Wisata', 'ity7i', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'lamb.png', 'card.jpg', '', '', '', NULL, 'book.jpg', NULL, '3'),
+(80, '2020-08-24 22:56:33', '1', 'Usaha Perjalanan Wisata', 'ilkjlljk', 'Laki-laki', 'hggjtuyu', '65775676', '675657', 'tyruty', '75756', '75765', 'hfgj', 'jghjgj', 'Kendaraan Umum', 'Bersama Orang Tua', 'Kost', 'M', '756658586', 'jjhkhkjh@gmail.com', 'PKH', 'j657658', '75756', '25435', 'Nelayan', 'SMP Sederajat', 'Kurang dari Rp.1.000.000', '65466', '6465', 'Pensiunan', 'SMP Sederajat', 'Kurang dari Rp.1.000.000', 'hgjgj', '547467', 'Lainnya', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '564', '65', '646', '65', '54', 'hgjghj', 'kghkh', 'jhkhjk', 'kjhk', 'kjhj', 'khjkhk', 'Screenshot_(9).png', 'Screenshot_(33).png', 'Screenshot_(30).png', 'Screenshot_(34).png', 'Screenshot_(8).png', 'Screenshot_(25).png', 'Screenshot_(10).png', 'Screenshot_(32).png', 'Screenshot_(11).png', '1'),
+(81, '2020-08-24 23:07:47', '2', '', 'thjmvnvnh', 'Perempuan', 'hjv', '675585', 'hgfhfh', 'eree', '856', '85687', '87686', '7587', 'Kendaraan Pribadi', 'Bersama Orang Tua', 'Bersama Orang Tua', 'M', '7785', 'iuykjl@gmail.com', 'Kartu Indonesia Pintar (KIP)', 'rererr', 'iii8', '78', 'Petani', 'SD Sederajat', 'Rp.1.000.000 - Rp.2.000.000', 'ttyy', '786', 'Nelayan', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', 'ghfj', '6757', 'Petani', 'SD Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '6575', '67', '765', '76', '76', 'jhkkjk', 'kjkh', 'jhkjhk', 'jhkhjk', 'hkjhkh', 'khkj', 'ikon.jpeg', 'buku.png', 'pen-exam.png', 'persegipanjang.jpg', 'img_458524.png', 'bc950a88e182b515f98d3a0b276a04f1.jpg', 'lingkaran.png', 'pen-exam.png', '', '1'),
+(82, '2020-08-24 23:46:15', '3', 'Agribisnis Ternak Unggas', 'Man', 'Laki-laki', 'SMP Tiara Citra 2', '34334', '', '', '678', '54646', 'Bandung 12 Oktober 2007', 'kjhkljkl', 'Jalan Kaki', 'Panti Asuhan', 'Asrama', 'S', '89908', 'ljljlj@gmail.com', 'Katu Indonesia Sehat (KIS)', 'fbgvnvb', 'uiuoi', '798797', 'Nelayan', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '978', '899', 'Nelayan', 'SMP Sederajat', 'Kurang dari Rp.1.000.000', '', '', NULL, '', '', '6465', '6757', '6565', '7657', '75', 'khjkhj', 'kjhkh', 'khjk', 'hkh', 'khk', 'khjk', 'lingkaran.png', 'persegi.png', 'persegipanjang.jpg', 'keranjang.png', 'persegipanjang.jpg', 'book1.png', '', '', '', '2'),
+(83, '2020-08-27 20:53:30', '1', '', 'nasya', 'Perempuan', 'SMP Tiara Citra 2', '1234343', '5435', '543534', '5345', '534543', 'gfgfhfg', '56hgfhfgj', 'Jalan Kaki', 'Asrama', 'Asrama', 'M', '565476547', '7546756@gmail.com', NULL, 'uyuytu', 'fgh', '35235', 'Petani', 'SMA Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '45354', '12332', 'Wirausaha', 'SD Sederajat', 'Kurang dari Rp.1.000.000', '', '', NULL, NULL, NULL, '12', '432', '321', '43234', '23', '', '', '', '', '', '', 'lana.jpg', 'WhatsApp_Image_2019-05-12_at_20_13_53.jpeg', 'AKTA.jpg', 'Rapot.png', 'KTP.jpg', 'KTP1.jpg', 'IJAZAH.jpg', 'SKHUN.jpg', 'SULUS.png', '1'),
+(84, '2020-08-27 20:58:01', '1', '', 'narnia', 'Laki-laki', 'SMP Luar', '546', '56464', '', '6546', '56546', 'yyt', 'utyu', 'Jalan Kaki', 'Asrama', 'Asrama', 'S', '65756756', 'email@gmail.com', 'Kartu Indonesia Pintar (KIP)', 'dsrfet', 'rtet', '5465', 'Nelayan', 'SD Sederajat', 'Kurang dari Rp.1.000.000', 'hgj', '6757', 'Nelayan', 'SMP Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '675yt', '6756', 'Pensiunan', 'D4/S1', 'Kurang dari Rp.1.000.000', '54465', '564', '65465', '654', '65', 'hjygujyt', 'yiy', 'jhgj', 'ghjhg', 'jgj', 'hjghj', 'Screenshot_(21).png', 'Screenshot_(24).png', 'Screenshot_(25).png', 'Screenshot_(11).png', 'Screenshot_(28).png', 'Screenshot_(29).png', '', '', '', '1'),
+(87, '2020-08-27 21:11:07', NULL, '', 'ertt', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1'),
+(90, '2020-08-27 21:13:48', '', 'Usaha Perjalanan Wisata', 'iuohlo', 'Laki-laki', ',kjlj', '-1', '', '', 'l;kl;', ';kl;l', ';k;l', ';k;l', 'Jalan Kaki', 'Bersama Orang Tua', 'Panti Asuhan', 'S', '', 'jkjkjokoko@gmail.com', 'Kartu Indonesia Pintar (KIP)', 'lklk', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1'),
+(93, '2020-08-27 21:33:21', '1', '', 'karima', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Kartu Indonesia Pintar (KIP)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1'),
+(94, '2020-08-27 21:34:34', '2', '', 'dita', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Kartu Indonesia Pintar (KIP)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2'),
+(95, '2020-08-28 00:24:20', '1', 'Agribisnis Ternak Unggas', 'Renaldi', 'Laki-laki', 'SMP Luar', '2545354', 'frtdfgt5654765', NULL, '6786y6h', '676575', 'Bandung 12 Oktober 2007', 'jghjhjhk', 'Jalan Kaki', 'Bersama Orang Tua', 'Bersama Orang Tua', 'S', '0986878', 'khjkuk@gmail.com', 'Kartu Indonesia Pintar (KIP)', '676yju', 'uytut', '6778', 'Nelayan', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', 'gsdsfg', '6768', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', 'uyyuiyi', '78678', 'Petani', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '165', '123', '6', '23', '7', '', '', '', '', '', '', 'Screenshot_(12).png', 'Screenshot_(23).png', 'Screenshot_(33).png', 'Screenshot_(30).png', 'Screenshot_(28)1.png', 'Screenshot_(19).png', 'Screenshot_(32).png', 'Screenshot_(32)1.png', 'Screenshot_(2).png', '1'),
+(96, '2020-08-28 01:17:51', '2', 'Agribisnis Ternak Unggas', 'tyry', 'Perempuan', 'htrhr', '6757', '567', '677', '7657', '7567', '657567', 'yjtyj', 'Kendaraan Pribadi', 'Bersama Orang Tua', 'Asrama', 'S', '17685667', 'khjkhk@gmail.com', 'PKH', 'kyu', 'uiy', '76867', 'Peternak', 'SMP Sederajat', 'Kurang dari Rp.1.000.000', 'Nurina876', '876', 'Peternak', 'SMP Sederajat', 'Kurang dari Rp.1.000.000', '876', '876', 'Pensiunan', 'SD Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '78', '76', '87', '76', '87', 'khhjk', 'kjhk', 'khjk', 'kjhk', 'kjh', 'kjh', 's-pengumuman.png', 'halaman_awal_2.png', 's-login.png', 'info_ppdb.png', 's-akun_siswa.png', 's-akun_siswa.png', 's-formulir_pendaftaran.png', '', '', '1'),
+(97, '2020-08-28 01:26:45', '1', 'Agribisnis Ternak Unggas', 'try', 'Laki-laki', 'yty', '77566', '', '', '7657', '765', '765', 'gfhfj', 'Jalan Kaki', 'Asrama', 'Panti Asuhan', 'L', '67658', '868@gmail.com', '', '', 'htf', '786', 'Petani', 'D1-D3', 'Kurang dari Rp.1.000.000', '68', '878', 'Nelayan', 'SMP Sederajat', 'Kurang dari Rp.1.000.000', '', '', NULL, '', '', '76', '76', '76', '76', '76', '', '', '', '', '', '', '3x4.jpg', 'c4f38935c1575d89958f852440276129.jpg', 'forests-why-matter_63516847.jpg', 'images_(1).jpg', 'images.jpg', 'lana.jpg', '', '', '', '1'),
+(98, '2020-08-28 01:43:38', NULL, NULL, 'narnia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Tidak Sekolah', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '1'),
+(101, '2020-08-28 01:46:19', NULL, NULL, 'coba', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'D4/S1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1'),
+(108, '2020-08-28 01:53:29', '1', 'Pemasaran', 'jygj', 'Perempuan', 'khg', '77', '', NULL, '897', '987', 'iuy', 'hk', 'Jalan Kaki', 'Bersama Orang Tua', 'Asrama', 'M', '7989', '897@gmail.com', '', '', 'jy', '78', 'Buruh', 'SD Sederajat', 'Lebih dari Rp.2.000.000', '786', '876', 'Nelayan', 'SD Sederajat', 'Rp.1.000.000 - Rp.2.000.000', '', '', '', '', '', '87', '87', '86', '87', '78', '', '', '', '', '', '', 'lana1.jpg', 'c4f38935c1575d89958f8524402761291.jpg', 'forests-why-matter_635168471.jpg', 'images_(1)1.jpg', '3x4.jpg', 'images.jpg', '', '', '', '1'),
+(109, '2020-08-28 02:08:47', '1', 'Pemasaran', 'FDS', 'Laki-laki', 'FSD', '45345', '', '', '5435', '435', '543', 'HGNGJH', 'Kendaraan Pribadi', 'Kost', 'Kost', 'S', '657', 'HGTRT@gmail.com', '', '', '5445', '45', 'Petani', 'SMP Sederajat', 'Lebih dari Rp.2.000.000', 'TR445T', '54', 'Tidak Bekerja', 'Tidak Sekolah', 'Kurang dari Rp.1.000.000', '', '', NULL, '', '', '54', '54', '45', '45', '54', '', '', '', '', '', '', 'Screenshot_(14).png', 'Screenshot_(13).png', 'Screenshot_(16).png', 'Screenshot_(17).png', 'book1.png', 'Screenshot_(17).png', '', '', '', '1');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
 
 --
 -- Indexes for table `oc`
@@ -210,20 +213,14 @@ ALTER TABLE `siswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user_role`
---
-ALTER TABLE `user_role`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `oc`
@@ -241,19 +238,7 @@ ALTER TABLE `sekolah`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `user_role`
---
-ALTER TABLE `user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
