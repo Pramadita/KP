@@ -1,6 +1,6 @@
 
 
-(function( $ ) {
+(function ($) {
 
 	'use strict';
 
@@ -15,7 +15,7 @@
 		image: {
 			verticalFit: true
 		}
-		
+
 	});
 
 	$('.image-popup-no-margins').magnificPopup({
@@ -44,10 +44,10 @@
 		gallery: {
 			enabled: true,
 			navigateByImgClick: true,
-			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
 		},
 		image: {
-			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+			tError: 'Berkas Belum diupload.'
 		}
 	});
 
@@ -62,8 +62,8 @@
 		mainClass: 'mfp-with-zoom mfp-img-mobile',
 		image: {
 			verticalFit: true,
-			titleSrc: function(item) {
-				return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+			titleSrc: function (item) {
+				return item.el.attr('title') + ' &middot; <a class="image-source-link" href="' + item.el.attr('data-source') + '" target="_blank">image source</a>';
 			}
 		},
 		gallery: {
@@ -72,10 +72,10 @@
 		zoom: {
 			enabled: true,
 			duration: 300, // don't foget to change the duration also in CSS
-			opener: function(element) {
+			opener: function (element) {
 				return element.find('img');
 			}
-		}		
+		}
 	});
 
 	/*
@@ -104,7 +104,7 @@
 
 		closeBtnInside: true,
 		preloader: false,
-		
+
 		midClick: true,
 		removalDelay: 300,
 		mainClass: 'my-mfp-zoom-in'
@@ -120,7 +120,7 @@
 
 		closeBtnInside: true,
 		preloader: false,
-		
+
 		midClick: true,
 		removalDelay: 300,
 		mainClass: 'my-mfp-slide-bottom'
@@ -137,8 +137,8 @@
 		// When elemened is focused, some mobile browsers in some cases zoom in
 		// It looks not nice, so we disable it:
 		callbacks: {
-			beforeOpen: function() {
-				if($(window).width() < 700) {
+			beforeOpen: function () {
+				if ($(window).width() < 700) {
 					this.st.focus = false;
 				} else {
 					this.st.focus = '#name';
@@ -154,4 +154,4 @@
 		type: 'ajax'
 	});
 
-}).apply( this, [ jQuery ]);
+}).apply(this, [jQuery]);

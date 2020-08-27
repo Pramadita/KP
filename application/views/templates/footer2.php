@@ -78,6 +78,7 @@
 <script src="<?= base_url(); ?>assets/assets/javascripts/forms/examples.wizard.js"></script>
 <script src="<?= base_url(); ?>assets/assets/javascripts/forms/examples.advanced.form.js"></script>
 <script src="<?= base_url(); ?>assets/assets/javascripts/ui-elements/examples.modals.js"></script>
+<script src="<?= base_url(); ?>assets/assets/javascripts/ui-elements/examples.lightbox.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 <script>
     $(document).ready(function() {
