@@ -93,6 +93,7 @@ class admin_dash extends CI_Controller
         $data['judul'] = 'PPDB | ADMIN DETAIL SISWA';
         $data['siswa'] = $this->model_siswa->getsiswabyid($id);
         $data['admin'] = $this->model_siswa->getalladmin();
+        $data['status'] = ['1', '2', '3'];
         $this->load->view('templates/header2', $data);
         $this->load->view('templates/nav_admin', $data);
         $this->load->view('daftar&admin/detail/a_detail', $data);

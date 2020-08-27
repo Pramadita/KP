@@ -33,7 +33,7 @@ class form_daftar extends CI_Controller
     public function tambah_form()
     {
         $this->model_form_input->tambahdatasiswa();
-        redirect('home');
+        redirect('home/cek_status');
     }
     public function ubah_pw()
     {

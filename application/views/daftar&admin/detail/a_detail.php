@@ -166,154 +166,167 @@
                                     </div>
                                 </div>
                             </li>
+                            <li>
+                            </li>
                         </div>
                         <div class="col-sm-4">
-                            <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Foto"]; ?></h5>
-                            <a href="<?= base_url(); ?>pendaftar/Foto_Siswa/<?= $siswa["Foto"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="<?= $siswa["Foto"]; ?>">
-                                <img class="img-responsive" src="<?= base_url(); ?>pendaftar/Foto_Siswa/<?= $siswa["Foto"]; ?>" width="145">
-                            </a>
                             <div class="row">
-                                <h4>Status Siswa : </h4>
-                                <?php if ($siswa['status'] == 1) : ?>
-                                    <a class="mb-xs mt-xs mr-xs btn-sm modal-basic btn btn-success" name="verif" href="#verif">Lulus</a>
-                                    <div id="verif" class="modal-block modal-header-color modal-block-success mfp-hide">
-                                        <section class="panel">
-                                            <header class="panel-heading">
-                                                <h2 class="panel-title">Apakah anda yakin ?</h2>
-                                            </header>
-                                            <div class="panel-body">
-                                                <div class="modal-wrapper">
-                                                    <div class="modal-icon">
-                                                        <i class="fa fa-question-circle"></i>
-                                                    </div>
-                                                    <div class="modal-text">
-                                                        <h4>Verifikasi</h4>
-                                                        <p>Pilih satsus Kelulusan Siswa <strong>Lulus</strong>?</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <footer class="panel-footer">
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-sm-10 text-right">
-                                                            <button class="btn btn-default modal-dismiss">Cancel</button>
+                                <div class="row">
+                                    <h5 class="text-semibold text-dark text-uppercase"><?= $siswa["Foto"]; ?></h5>
+                                    <a href="<?= base_url(); ?>pendaftar/Foto_Siswa/<?= $siswa["Foto"]; ?>" data-plugin-lightbox data-plugin-options='{ "type":"image" }' title="<?= $siswa["Foto"]; ?>">
+                                        <img class="img-responsive" src="<?= base_url(); ?>pendaftar/Foto_Siswa/<?= $siswa["Foto"]; ?>" width="145">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row">
+                                    <h4>Status Siswa : </h4>
+                                </div>
+                                <div class="row">
+                                    <?php if ($siswa['status'] == 1) : ?>
+                                        <a class="mb-xs mt-xs mr-xs btn-sm modal-basic btn btn-success" name="verif" href="#verif">Lulus</a>
+                                        <div id="verif" class="modal-block modal-header-color modal-block-success mfp-hide">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    <h2 class="panel-title">Apakah anda yakin ?</h2>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <div class="modal-wrapper">
+                                                        <div class="modal-icon">
+                                                            <i class="fa fa-question-circle"></i>
                                                         </div>
-                                                        <div>
-                                                            <form method="post" class="approval" action="<?= base_url('admin_dash/approve_siswa/' . $siswa['id']); ?>">
-                                                                <input type="submit" class="btn btn-success" name="conf" value="Confirm">
-                                                            </form>
+                                                        <div class="modal-text">
+                                                            <h4>Verifikasi</h4>
+                                                            <p>Pilih satsus Kelulusan Siswa <strong>Lulus</strong>?</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                    <a class="mb-xs mt-xs mr-xs btn-sm modal-basic btn btn-danger" name="verif" href="#verif2">Tidak Lulus</a>
-                                    <div id="verif2" class="modal-block modal-header-color modal-block-danger mfp-hide">
-                                        <section class="panel">
-                                            <header class="panel-heading">
-                                                <h2 class="panel-title">Apakah anda yakin ?</h2>
-                                            </header>
-                                            <div class="panel-body">
-                                                <div class="modal-wrapper">
-                                                    <div class="modal-icon">
-                                                        <i class="fa fa-question-circle"></i>
-                                                    </div>
-                                                    <div class="modal-text">
-                                                        <h4>Verifikasi</h4>
-                                                        <p>Apakah anda yakin untuk memverifikasi <strong>Tidak Lulus</strong> ?</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <footer class="panel-footer">
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-sm-10 text-right">
-                                                            <button class="btn btn-default modal-dismiss">Cancel</button>
-                                                        </div>
-                                                        <div>
-                                                            <form method="post" class="approval" action="<?= base_url('admin_dash/no_approve_siswa/' . $siswa['id']); ?>">
-                                                                <input type="submit" class="btn btn-danger" name="conf" value="Confirm">
-                                                            </form>
+                                                <footer class="panel-footer">
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <div class="col-sm-10 text-right">
+                                                                <button class="btn btn-default modal-dismiss">Cancel</button>
+                                                            </div>
+                                                            <div>
+                                                                <form method="post" class="approval" action="<?= base_url('admin_dash/approve_siswa/' . $siswa['id']); ?>">
+                                                                    <input type="submit" class="btn btn-success" name="conf" value="Confirm">
+                                                                </form>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                <?php elseif ($siswa['status'] == 2) : ?>
-                                    <h3 class="text-success">LULUS</h3>
-                                    <a class="mb-xs mt-xs mr-xs btn-sm modal-basic btn btn-warning" name="verif" href="#verif2">Batalkan Status</a>
-                                    <div id="verif2" class="modal-block modal-header-color modal-block-warning mfp-hide">
-                                        <section class="panel">
-                                            <header class="panel-heading">
-                                                <h2 class="panel-title">Apakah anda yakin ?</h2>
-                                            </header>
-                                            <div class="panel-body">
-                                                <div class="modal-wrapper">
-                                                    <div class="modal-icon">
-                                                        <i class="fa fa-question-circle"></i>
-                                                    </div>
-                                                    <div class="modal-text">
-                                                        <h4>Verifikasi</h4>
-                                                        <p>Apakah Anda Yakin <strong>Membatalkan Status</strong>?</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <footer class="panel-footer">
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-sm-10 text-right">
-                                                            <button class="btn btn-default modal-dismiss">Cancel</button>
+                                                </footer>
+                                            </section>
+                                        </div>
+                                        <a class="mb-xs mt-xs mr-xs btn-sm modal-basic btn btn-danger" name="verif" href="#verif2">Tidak Lulus</a>
+                                        <div id="verif2" class="modal-block modal-header-color modal-block-danger mfp-hide">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    <h2 class="panel-title">Apakah anda yakin ?</h2>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <div class="modal-wrapper">
+                                                        <div class="modal-icon">
+                                                            <i class="fa fa-question-circle"></i>
                                                         </div>
-                                                        <div>
-                                                            <form method="post" class="approval" action="<?= base_url('admin_dash/back_approve_siswa/' . $siswa['id']); ?>">
-                                                                <input type="submit" class="btn btn-warning" name="conf" value="Confirm">
-                                                            </form>
+                                                        <div class="modal-text">
+                                                            <h4>Verifikasi</h4>
+                                                            <p>Apakah anda yakin untuk memverifikasi <strong>Tidak Lulus</strong> ?</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                <?php elseif ($siswa['status'] == 3) : ?>
-                                    <h3 class="text-danger">TIDAK LULUS</h3>
-                                    <a class="mb-xs mt-xs mr-xs btn-sm modal-basic btn btn-warning" name="verif" href="#verif2">Batalkan Status</a>
-                                    <div id="verif2" class="modal-block modal-header-color modal-block-warning mfp-hide">
-                                        <section class="panel">
-                                            <header class="panel-heading">
-                                                <h2 class="panel-title">Apakah anda yakin ?</h2>
-                                            </header>
-                                            <div class="panel-body">
-                                                <div class="modal-wrapper">
-                                                    <div class="modal-icon">
-                                                        <i class="fa fa-question-circle"></i>
-                                                    </div>
-                                                    <div class="modal-text">
-                                                        <h4>Verifikasi</h4>
-                                                        <p>Apakah Anda Yakin <strong>Membatalkan Status</strong>?</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <footer class="panel-footer">
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-sm-10 text-right">
-                                                            <button class="btn btn-default modal-dismiss">Cancel</button>
-                                                        </div>
-                                                        <div>
-                                                            <form method="post" class="approval" action="<?= base_url('admin_dash/back_approve_siswa/' . $siswa['id']); ?>">
-                                                                <input type="submit" class="btn btn-warning" name="conf" value="Confirm">
-                                                            </form>
+                                                <footer class="panel-footer">
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <div class="col-sm-10 text-right">
+                                                                <button class="btn btn-default modal-dismiss">Cancel</button>
+                                                            </div>
+                                                            <div>
+                                                                <form method="post" class="approval" action="<?= base_url('admin_dash/no_approve_siswa/' . $siswa['id']); ?>">
+                                                                    <input type="submit" class="btn btn-danger" name="conf" value="Confirm">
+                                                                </form>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                </footer>
+                                            </section>
+                                        </div>
+
+                                    <?php elseif ($siswa['status'] == 2) : ?>
+                                        <h3 class="text-success">LULUS</h3>
+                                        <a class="mb-xs mt-xs mr-xs btn-sm modal-basic btn btn-warning" name="verif" href="#verif2">Batalkan Status</a>
+                                        <div id="verif2" class="modal-block modal-header-color modal-block-warning mfp-hide">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    <h2 class="panel-title">Apakah anda yakin ?</h2>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <div class="modal-wrapper">
+                                                        <div class="modal-icon">
+                                                            <i class="fa fa-question-circle"></i>
+                                                        </div>
+                                                        <div class="modal-text">
+                                                            <h4>Verifikasi</h4>
+                                                            <p>Apakah Anda Yakin <strong>Membatalkan Status</strong>?</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                <?php endif ?>
-                                <a href="<?= base_url(); ?>admin_dash/edit/<?= $siswa["id"]; ?>"><button type="button" class="mb-xs mt-xs mr-xs btn-sm btn btn-info">Edit Data Siswa</button></a>
-                                <a href="<?= base_url(); ?>admin_dash/pendaftar_proses"><button type="button" class="mb-xs mt-xs mr-xs btn-sm btn btn-primary">Kembali Ke Tabel Pendaftar</button></a>
+                                                <footer class="panel-footer">
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <div class="col-sm-10 text-right">
+                                                                <button class="btn btn-default modal-dismiss">Cancel</button>
+                                                            </div>
+                                                            <div>
+                                                                <form method="post" class="approval" action="<?= base_url('admin_dash/back_approve_siswa/' . $siswa['id']); ?>">
+                                                                    <input type="submit" class="btn btn-warning" name="conf" value="Confirm">
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </footer>
+                                            </section>
+                                        </div>
+                                    <?php elseif ($siswa['status'] == 3) : ?>
+                                        <h3 class="text-danger">TIDAK LULUS</h3>
+                                        <a class="mb-xs mt-xs mr-xs btn-sm modal-basic btn btn-warning" name="verif" href="#verif2">Batalkan Status</a>
+                                        <div id="verif2" class="modal-block modal-header-color modal-block-warning mfp-hide">
+                                            <section class="panel">
+                                                <header class="panel-heading">
+                                                    <h2 class="panel-title">Apakah anda yakin ?</h2>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <div class="modal-wrapper">
+                                                        <div class="modal-icon">
+                                                            <i class="fa fa-question-circle"></i>
+                                                        </div>
+                                                        <div class="modal-text">
+                                                            <h4>Verifikasi</h4>
+                                                            <p>Apakah Anda Yakin <strong>Membatalkan Status</strong>?</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <footer class="panel-footer">
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <div class="col-sm-10 text-right">
+                                                                <button class="btn btn-default modal-dismiss">Cancel</button>
+                                                            </div>
+                                                            <div>
+                                                                <form method="post" class="approval" action="<?= base_url('admin_dash/back_approve_siswa/' . $siswa['id']); ?>">
+                                                                    <input type="submit" class="btn btn-warning" name="conf" value="Confirm">
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </footer>
+                                            </section>
+                                        </div>
+                                    <?php endif ?>
+                                </div>
+                                <div class="row">
+                                    <a href="<?= base_url(); ?>admin_dash/edit/<?= $siswa["id"]; ?>"><button type="button" class="mb-xs mt-xs mr-xs btn-sm btn btn-info">Edit Data Siswa</button></a>
+                                    <a href="<?= base_url(); ?>admin_dash/pendaftar_proses"><button type="button" class="mb-xs mt-xs mr-xs btn-sm btn btn-primary">Kembali Ke Tabel Pendaftar</button></a>
+                                </div>
                             </div>
                         </div>
                     </div>
