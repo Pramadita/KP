@@ -352,7 +352,7 @@
                                 </div>
                                 <h3>Data Wali (Bukan Ayah/Ibu Kandung)</h3>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="w4-nwali">Nama Ibu * :</label>
+                                    <label class="col-sm-3 control-label" for="w4-nwali">Nama Wali * :</label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control" name="nwali" id="w4-nwali">
                                     </div>
@@ -503,8 +503,7 @@
                                 </li>
                                 <li class="text-dark">Seluruh foto berkas termasuk foto siswa diupload dengan format <strong> .jpg atau .jpeg atau.png</strong></li>
                                 <li class="text-dark">Nama file disesuaikan dengan ketetuan penamaan.</li>
-                                <p class="text-dark"> Ketentuan Penamaan = <strong>Jenis Berkas_Nama Lengkap Pendaftar_Jurusan yang dipilih.jenis file foto</strong>,</br>Contoh : Foto_Lily Lyanna_Pemasaran.png, Akta_Kelahiran_Lily Lyanna_Pemasaran.png</p>
-
+                                <p class="text-dark"> Ketentuan Penamaan = <strong>Nama lengkap Pendaftar_Jenis Berkas.jenis file foto</strong>,</br>Contoh :Lily Lyanna_Foto Siswa.png, Lily Lyanna_Akta Lahir.png</p>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-foto">Foto Siswa* :</label>
                                     <div class="col-sm-5">
