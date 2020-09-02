@@ -112,4 +112,27 @@
                 </div>
             </section>
         </div>
+        <div class="col-md-12">
+            <section class="panel panel-dark">
+                <header class="panel-heading">
+                    <h4 class="panel-title">Print Kelulusan Perjurusan</h4>
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                    </div>
+                </header>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <a href="<?= base_url(); ?>admin_dash/print_ATU" type="button" class="mb-xs mt-xs mr-xs btn btn-success"><i class="fa  fa-print"></i> Agribisnis Ternak Unggas</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="<?= base_url(); ?>admin_dash/print_pem" type="button" class="mb-xs mt-xs mr-xs btn btn-danger"><i class="fa  fa-print"></i> Pemasaran</a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="<?= base_url(); ?>admin_dash/print_UPW" type="button" class="mb-xs mt-xs mr-xs btn btn-primary"><i class="fa  fa-print"></i> Usaha Perjalanan Wisata</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     <?php endforeach; ?>

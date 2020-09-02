@@ -213,4 +213,30 @@ class admin_dash extends CI_Controller
         $this->session->sess_destroy();
         redirect(site_url('SMK_ATM_LOG_auth'));
     }
+
+    //PRINT
+    public function print_ATU()
+    {
+        $data['judul'] = 'Agribisnis Ternak Unggas';
+        $data['siswa'] = $this->model_siswa->getallsiswaATU();
+        $this->load->view('templates/header2', $data);
+        $this->load->view('daftar&admin/detail/print_siswa', $data);
+        $this->load->view('templates/footer2');
+    }
+    public function print_pem()
+    {
+        $data['judul'] = 'Pemasaran';
+        $data['siswa'] = $this->model_siswa->getallsiswaPem();
+        $this->load->view('templates/header2', $data);
+        $this->load->view('daftar&admin/detail/print_siswa', $data);
+        $this->load->view('templates/footer2');
+    }
+    public function print_UPW()
+    {
+        $data['judul'] = 'Usaha Perjalanan Wisata';
+        $data['siswa'] = $this->model_siswa->getallsiswaUPW();
+        $this->load->view('templates/header2', $data);
+        $this->load->view('daftar&admin/detail/print_siswa', $data);
+        $this->load->view('templates/footer2');
+    }
 }

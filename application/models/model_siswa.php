@@ -7,6 +7,18 @@ class model_siswa extends CI_model
     {
         return $this->db->get('siswa')->result_array();
     }
+    public function getallsiswaATU()
+    {
+        return $this->db->get_where('siswa', ['Prodi' => 'Agribisnis Ternak Unggas'])->result_array();
+    }
+    public function getallsiswaPem()
+    {
+        return $this->db->get_where('siswa', ['Prodi' => 'Pemasaran'])->result_array();
+    }
+    public function getallsiswaUPW()
+    {
+        return $this->db->get_where('siswa', ['Prodi' => 'Usaha Perjalanan Wisata'])->result_array();
+    }
     public function getsiswaproses()
     {
         return $this->db->get_where('siswa', ['status' => 1])->result_array();
