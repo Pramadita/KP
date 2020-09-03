@@ -12,6 +12,7 @@ class admin_dash extends CI_Controller
         $this->load->model('model_form_input');
         $this->load->model('model_form_update');
         $this->load->model("login_model");
+        $this->load->library('form_validation');
         if ($this->login_model->isNotLogin()) redirect(site_url('SMK_ATM_LOG_auth'));
     }
 

@@ -7,6 +7,7 @@
             <th>NISN</th>
             <th>Prodi</th>
             <th>Asal Sekolah</th>
+            <th>Status</th>
         </tr>
         <?php
         $no = 1;
@@ -17,6 +18,13 @@
                 <td><?= $ssw["NISN"] ?></td>
                 <td><?= $ssw["Prodi"] ?></td>
                 <td><?= $ssw["Asal_Sekolah"] ?></td>
+                <td><?php if ($ssw['status'] == 1) : ?>
+                        <p>BELUM DI VERIFIKASI</p>
+                    <?php elseif ($ssw['status'] == 2) : ?>
+                        <p class="text-primary">LULUS</p>
+                    <?php elseif ($ssw['status'] == 3) : ?>
+                        <p class="text-danger">TIDAK LULUS</p>
+                    <?php endif ?></td>
             </tr>
         <?php endforeach; ?>
     </table>
