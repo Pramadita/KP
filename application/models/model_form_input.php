@@ -96,7 +96,7 @@ class model_form_input extends CI_model
         $sulus = $data8['file_name'];
 
         if ($_FILES['foto']['size'] != 0) {
-            // kk
+            //foto
             if ($upload_foto) {
                 $data0;
             } else {
