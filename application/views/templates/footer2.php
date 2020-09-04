@@ -1,5 +1,4 @@
 <!-- Vendor -->
-<script src="<?= base_url(); ?>assets/assets/vendor/jquery/jquery.js"></script>
 <script src="<?= base_url(); ?>assets/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
 <script src="<?= base_url(); ?>assets/assets/vendor/bootstrap/js/bootstrap.js"></script>
 <script src="<?= base_url(); ?>assets/assets/vendor/nanoscroller/nanoscroller.js"></script>

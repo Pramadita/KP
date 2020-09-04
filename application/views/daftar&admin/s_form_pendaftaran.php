@@ -519,6 +519,7 @@
                                                 <li>Foto yang disertakan harus jelas!</li>
                                                 <li class="text-dark">Foto siswa yang disertakan <strong>merupakan foto resmi berukuran 3x4 dengan backround biru </strong>
                                                 </li>
+                                                <li class="text-dark">Ukuran file <strong>maksimal 800 KB </strong></li>
                                                 <li class="text-dark">Seluruh foto berkas termasuk foto siswa diupload dengan format <strong> .jpg atau .jpeg atau.png</strong></li>
                                                 <li class="text-dark">Nama file disesuaikan dengan ketetuan penamaan.</li>
                                                 <p class="text-dark"> Ketentuan Penamaan = <strong>Nama lengkap Pendaftar_Jenis Berkas.jenis file foto</strong>,</br>Contoh : Lily Lyanna_Foto Siswa.png, Lily Lyanna_Akta Lahir.png</br>Contoh = <a href="<?= base_url('download/download_foto/') . $skl['id']; ?>"><strong>download disini</strong></a></p>
@@ -532,37 +533,38 @@
                                             <div class="form-group">
                                                 <label class="col-sm-3 control-label" for="w4-foto">Foto Siswa* :</label>
                                                 <div class="col-sm-8">
-                                                    <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" required>
+                                                    <input type='file' class="form-control" id='fileinput' name="foto" id="w4-foto" accept="image/*" id="file" onchange="ValidateSize(this)" required>
+                                                    <!--<input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" id="file" required>-->
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-sm-3 control-label" for="w4-akta">Akta Kelahiran* :</label>
                                                 <div class="col-sm-8">
-                                                    <input type="file" class="form-control" name="akta" id="w4-berkas" accept="image/*" required>
+                                                    <input type="file" class="form-control" name="akta" id="w4-berkas" accept="image/*" id="file" onchange="ValidateSize(this)" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-sm-3 control-label" for="w4-kk">KK* :</label>
                                                 <div class="col-sm-8">
-                                                    <input type="file" class="form-control" name="kk" id="w4-foto" accept="image/*" required>
+                                                    <input type="file" class="form-control" name="kk" id="w4-foto" accept="image/*" id="file" onchange="ValidateSize(this)" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-sm-3 control-label" for="w4-raport">Biodata Raport* :</label>
                                                 <div class="col-sm-8">
-                                                    <input type="file" class="form-control" name="raport" id="w4-raport" accept="image/*" required>
+                                                    <input type="file" class="form-control" name="raport" id="w4-raport" accept="image/*" id="file" onchange="ValidateSize(this)" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-sm-3 control-label" for="w4-ktpa">KTP Ayah* :</label>
                                                 <div class="col-sm-8">
-                                                    <input type="file" class="form-control" name="ktpa" id="w4-ktpa" accept="image/*" required>
+                                                    <input type="file" class="form-control" name="ktpa" id="w4-ktpa" accept="image/*" id="file" onchange="ValidateSize(this)" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-sm-3 control-label" for="w4-ktpi">KTP Ibu* :</label>
                                                 <div class="col-sm-8">
-                                                    <input type="file" class="form-control" name="ktpi" id="w4-ktpi" accept="image/*" required>
+                                                    <input type="file" class="form-control" name="ktpi" id="w4-ktpi" accept="image/*" id="file" onchange="ValidateSize(this)" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -570,19 +572,19 @@
                                             <div class="form-group">
                                                 <label class="col-sm-4 control-label" for="w4-ijazah">Ijazah :</label>
                                                 <div class="col-sm-8">
-                                                    <input type="file" class="form-control" name="ijazah" id="w4-ijazah" accept="image/*">
+                                                    <input type="file" class="form-control" name="ijazah" id="w4-ijazah" accept="image/*" id="file" onchange="ValidateSize(this)">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-sm-4 control-label" for="w4-skhun">SKHUN :</label>
                                                 <div class="col-sm-8">
-                                                    <input type="file" class="form-control" name="skhun" id="w4-skhun" accept="image/*">
+                                                    <input type="file" class="form-control" name="skhun" id="w4-skhun" accept="image/*" id="file" onchange="ValidateSize(this)">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-sm-4 control-label" for="w4-sulus">Surat Kelulusan SMP :</label>
                                                 <div class="col-sm-8">
-                                                    <input type="file" class="form-control" name="sulus" id="w4-sulus" accept="image/*">
+                                                    <input type="file" class="form-control" name="sulus" id="w4-sulus" accept="image/*" id="file" onchange="ValidateSize(this)">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -622,3 +624,14 @@
         <!-- end: page -->
 
     </section>
+    <script type='text/javascript'>
+        function ValidateSize(file) {
+            var FileSize = file.files[0].size / 800 / 800; // in MB
+            if (FileSize > 0.8) {
+                alert('Ukuran File lebih dari 800KB, Silahkan upload file sesuai ketentuan!');
+                $(file).val(''); //for clearing with Jquery
+            } else {
+
+            }
+        }
+    </script>
