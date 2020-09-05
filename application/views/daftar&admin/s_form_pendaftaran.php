@@ -8,7 +8,7 @@
                         <h1 class="panel-title"><a href="/" class="logo pull-left">
                             </a>Form Pendaftaran SMK ATM
                             <div class="pull-right">
-                                <a href="<?= base_url(); ?>home/index">
+                                <a href="<?= base_url(); ?>home/cek_status">
                                     <i class="fa fa-home"> sudah mendaftar
                                     </i>
                                 </a>
