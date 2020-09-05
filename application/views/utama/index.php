@@ -138,8 +138,7 @@
                             </div>
                             <div class="desc">
                                 <h3><a href="#">Agribisnis Ternak Unggas</a></h3>
-                                <p>Pointing has no control about the blind texts it is an almost unorthographic
-                                    life</p>
+                                <p>Kompetensi yang dipelajari pada jurusan Agribisnis Ternak Unggas yaitu usaha peternakan unggas, pedaging, dan petelur, pakan ternak unggas dan pembibitan ternak unggas.</p>
                             </div>
                         </div>
                     </div>
@@ -149,8 +148,7 @@
                             </div>
                             <div class="desc">
                                 <h3><a href="#">Usaha Perjalanan Wisata</a></h3>
-                                <p>Pointing has no control about the blind texts it is an almost unorthographic
-                                    life</p>
+                                <p>Jurusan ini mempelajari kegiatan komersial yang mengatur, menyediakan, dan menyelenggarakan pelayanan bagi bagi seseorang, sekelompok orang yang melakukan perjalanan dengan tujuan utama yaitu berwisata.</p>
                             </div>
                         </div>
                     </div>
@@ -160,8 +158,7 @@
                             </div>
                             <div class="desc">
                                 <h3><a href="#">Pemasaran</a></h3>
-                                <p>Pointing has no control about the blind texts it is an almost unorthographic
-                                    life</p>
+                                <p>Pemasaran merupakan jurusan yang mempelajari perencanaan, pengelolaan, pelaksanaan, pengawasan, hingga evaluasi proses dan kegiatan pemasaran barang dan jasa, untuk memenuhi tujuan dari perusahaan atau organisasi tertentu.</p>
                             </div>
                         </div>
                     </div>
