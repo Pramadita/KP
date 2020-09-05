@@ -9,13 +9,19 @@
                 <p>
                     <ul class="colorlib-social-icons">
                         <li>
-                            <p><i class="icon-facebook"></i> SMK Auliya Teladan Mandiri</p>
+                            <a href="https://www.facebook.com/pg/smkauliyateladanmandiri/posts/" target="_blank">
+                                <p><i class="icon-facebook"></i> SMK Auliya Teladan Mandiri</p>
+                            </a>
                         </li>
                         <li>
-                            <p><i class="icon-youtube"></i> SMK Auliya Teladan Mandiri</p>
+                            <a href="https://www.youtube.com/channel/UCNtM1e7QIm9WuzIkdtBRxwA" target="_blank">
+                                <p><i class="icon-youtube"></i> SMK Auliya Teladan Mandiri</p>
+                            </a>
                         </li>
                         <li>
-                            <p><i class="icon-instagram"></i> smkatm</p>
+                            <a href="https://www.instagram.com/smkatm/" target="_blank">
+                                <p><i class="icon-instagram"></i> smkatm</p>
+                            </a>
                         </li>
                     </ul>
                 </p>

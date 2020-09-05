@@ -7,7 +7,7 @@ class model_form_update extends CI_model
     {
         $fileInfo = $this->db->get_where('siswa', ['id' => $id])->row();
 
-        if ($_FILES['foto']['size'] != 0 && $_FILES['foto']['size'] <= 800) {
+        if ($_FILES['foto']['size'] != 0) {
             //Akta
             $config = array();
             $config['upload_path'] = './pendaftar/Foto_Siswa/';
@@ -31,7 +31,7 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['akta']['size'] != 0 && $_FILES['akta']['size'] <= 800) {
+        if ($_FILES['akta']['size'] != 0) {
             //Akta
             $config = array();
             $config['upload_path'] = './pendaftar/Akta_Lahir/';
@@ -55,7 +55,7 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['kk']['size'] != 0 && $_FILES['kk']['size'] <= 800) {
+        if ($_FILES['kk']['size'] != 0) {
             //KK
             $config = array();
             $config['upload_path'] = './pendaftar/KK/';
@@ -79,7 +79,7 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salahs', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['raport']['size'] != 0 && $_FILES['raport']['size'] <= 800) {
+        if ($_FILES['raport']['size'] != 0) {
             //raport
             $config = array();
             $config['upload_path'] = './pendaftar/Bio_Raport/';
@@ -103,7 +103,7 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['ktpa']['size'] != 0 && $_FILES['ktpa']['size'] <= 800) {
+        if ($_FILES['ktpa']['size'] != 0) {
             //ktpa
             $config = array();
             $config['upload_path'] = './pendaftar/KTP_Ayah/';
@@ -127,7 +127,7 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['ktpi']['size'] != 0 && $_FILES['ktpi']['size'] <= 800) {
+        if ($_FILES['ktpi']['size'] != 0) {
             //ktpi
             $config = array();
             $config['upload_path'] = './pendaftar/KTP_Ibu/';
@@ -151,7 +151,7 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['ijazah']['size'] != 0 && $_FILES['ijazah']['size'] <= 800) {
+        if ($_FILES['ijazah']['size'] != 0) {
             //ijazah
             $config = array();
             $config['upload_path'] = './pendaftar/Ijazah/';
@@ -175,7 +175,7 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['skhun']['size'] != 0 && $_FILES['skhun']['size'] <= 800) {
+        if ($_FILES['skhun']['size'] != 0) {
             //SKHUN
             $config = array();
             $config['upload_path'] = './pendaftar/SKHUN/';
@@ -199,7 +199,7 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salahs', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['sulus']['size'] != 0 && $_FILES['sulus']['size'] <= 800) {
+        if ($_FILES['sulus']['size'] != 0) {
             //sulus
             $config = array();
             $config['upload_path'] = './pendaftar/Surat_Lulus/';

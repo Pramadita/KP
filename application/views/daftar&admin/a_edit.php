@@ -627,7 +627,7 @@
 </div>
 <script type='text/javascript'>
     function ValidateSize(file) {
-        var FileSize = file.files[0].size / 800 / 800; // in MB
+        var FileSize = file.files[0].size / 1024 / 1024; // in MB
         if (FileSize > 0.8) {
             alert('Ukuran File lebih dari 800KB, Silahkan upload file sesuai ketentuan!');
             $(file).val(''); //for clearing with Jquery

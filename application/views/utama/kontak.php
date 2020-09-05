@@ -35,11 +35,17 @@
                                 </div>
                             <?php endforeach; ?>
                             <div class="con-info">
-                                <p><span><i class="icon-facebook "></i></span> SMK Auliya Teladan Mandiri</p>
-                                <p><span><i class="icon-youtube "></i></span> SMK Auliya Teladan Mandiri</p>
+                                <a href="https://www.facebook.com/pg/smkauliyateladanmandiri/posts/" target="_blank">
+                                    <p><i class="icon-facebook"></i> SMK Auliya Teladan Mandiri</p>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCNtM1e7QIm9WuzIkdtBRxwA" target="_blank">
+                                    <p><i class="icon-youtube"></i> SMK Auliya Teladan Mandiri</p>
+                                </a>
                             </div>
                             <div class="con-info">
-                                <p><span><i class="icon-instagram"></i></span> smkatm</p>
+                                <a href="https://www.instagram.com/smkatm/" target="_blank">
+                                    <p><i class="icon-instagram"></i> smkatm</p>
+                                </a>
                             </div>
                         </div>
                     </div>
