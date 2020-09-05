@@ -68,21 +68,21 @@
                             </div>
                         </li>
                         <li>
-                            <div class="form-group"><label class="col-sm-4 control-label" for="ijazah">NOMOR SERI IJAZAH : </label>
+                            <div class="form-group"><label class="col-sm-4 control-label" for="ijazah">NO SERI IJAZAH : </label>
                                 <div class="col-sm-4">
                                     <p><strong><?= $siswa["No_Ijazah"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <div class="form-group"><label class="col-sm-4 control-label" for="skhun">SERI SKHUN SMP/MTs : </label>
+                            <div class="form-group"><label class="col-sm-4 control-label" for="skhun">NO SERI SKHUN SMP/MTs : </label>
                                 <div class="col-sm-4">
                                     <p><strong><?= $siswa["No_SKHUN"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <div class="form-group"><label class="col-sm-4 control-label" for="un">No Ujian Nasional SMP/MTs : </label>
+                            <div class="form-group"><label class="col-sm-4 control-label" for="un">No UN SMP/MTs : </label>
                                 <div class="col-sm-4">
                                     <p><strong><?= $siswa["No_UN"]; ?></strong></p>
                                 </div>

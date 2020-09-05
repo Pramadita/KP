@@ -117,7 +117,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-skhun">NOMOR SERI SKHUN SMP/Mts :</label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" name="skhun" id="w4-skhun">
+                                        <input type="text" class="form-control" name="noskhun" id="w4-skhun">
                                         <b>DN-</b>
                                     </div>
                                     <label class="control-label">lihat pada lembar SKHUN paling bawah</label>

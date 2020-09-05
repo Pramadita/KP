@@ -39,6 +39,7 @@ class home extends CI_Controller
     {
         $data['judul'] = 'CEK STATUS PPDB';
         $data['siswa'] = $this->model_siswa->getallsiswa();
+        $data['sekolah'] = $this->model_admin->getallsekolah();
         $this->load->view('templates/header1', $data);
         $this->load->view('utama/cek_status', $data);
         $this->load->view('templates/footer1', $data);

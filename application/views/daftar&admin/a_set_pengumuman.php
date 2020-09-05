@@ -52,7 +52,7 @@
                             <div class="row">
                                 <label class="col-sm-2 control-label" for="info">Input Brosur/Info :</label>
                                 <div class="col-sm-6">
-                                    <input type="file" accept="image/*" class="form-control" name="info" id="info" placeholder="<?= $skl['Info']; ?>">
+                                    <input type="file" accept="image/*" class="form-control" name="info" id="info" placeholder="<?= $skl['Info']; ?>" id="file" onchange="ValidateSize(this)">
                                     <p>*upload file dalam bentuk jpg/png/jpeg</p>
                                     <?php if ($this->session->flashdata('wrong')) : ?>
                                         <p class="text-danger"><?= $this->session->flashdata('wrong'); ?></p>
@@ -86,7 +86,7 @@
                             <div class="row">
                                 <label class="col-sm-3 control-label" for="panduan">Input File Panduan :</label>
                                 <div class="col-sm-5">
-                                    <input type="file" accept="application/pdf" class="form-control" name="panduan" id="panduan" placeholder="<?= $skl['tata_cara']; ?>">
+                                    <input type="file" accept="application/pdf" class="form-control" name="panduan" id="panduan" placeholder="<?= $skl['tata_cara']; ?>" id="file" onchange="ValidateSize(this)">
                                     <p>*upload file dalam bentuk pdf</p>
                                     <?php if ($this->session->flashdata('wrong')) : ?>
                                         <p class="text-danger"><?= $this->session->flashdata('wrongs'); ?></p>
@@ -101,7 +101,7 @@
                             <div class="row">
                                 <label class="col-sm-3 control-label" for="foto">Input Contoh Foto:</label>
                                 <div class="col-sm-5">
-                                    <input type="file" accept="image/*" class="form-control" name="foto" id="foto" placeholder="<?= $skl['foto']; ?>">
+                                    <input type="file" accept="image/*" class="form-control" name="foto" id="foto" placeholder="<?= $skl['foto']; ?>" id="file" onchange="ValidateSize(this)">
                                     <p>*upload file dalam bentuk jpg/png/jpeg</p>
                                     <?php if ($this->session->flashdata('wrong')) : ?>
                                         <p class="text-danger"><?= $this->session->flashdata('wrongsss'); ?></p>
@@ -148,3 +148,14 @@
             </section>
         </div>
     <?php endforeach; ?>
+    <script type='text/javascript'>
+        function ValidateSize(file) {
+            var FileSize = file.files[0].size / 1024 / 1024; // in MB
+            if (FileSize > 2) {
+                alert('Ukuran File lebih dari 2 MB, Silahkan upload file sesuai ketentuan!');
+                $(file).val(''); //for clearing with Jquery
+            } else {
+
+            }
+        }
+    </script>
