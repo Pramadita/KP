@@ -28,9 +28,12 @@
                             <div class="con-info">
                                 <p><span><i class="icon-location-2"></i></span> Jl.Babakan Randu, RT 05, RW 02, Desa Lemah Sugih, <br> Kecamatan Lemah Sugih, Kabupaten Majalengka</p>
                             </div>
-                            <div class="con-info">
-                                <p><span><i class="icon-phone3 text-center"></i></span> 0813-2112-3001</p>
-                            </div>
+                            <?php foreach ($sekolah as $skl) : ?>
+                                <div class="con-info">
+                                    <p><span><i class="icon-phone3 text-center"></i></span> <?= $skl['kontak1']; ?></p>
+                                    <p><span><i class="icon-phone3 text-center"></i></span> <?= $skl['kontak2']; ?></p>
+                                </div>
+                            <?php endforeach; ?>
                             <div class="con-info">
                                 <p><span><i class="icon-facebook "></i></span> SMK Auliya Teladan Mandiri</p>
                                 <p><span><i class="icon-youtube "></i></span> SMK Auliya Teladan Mandiri</p>

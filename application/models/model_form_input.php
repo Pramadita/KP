@@ -28,7 +28,7 @@ class model_form_input extends CI_model
         $akta = $data1['file_name'];
 
         //KK
-        /*$config = array();
+        $config = array();
         $config['upload_path'] = './pendaftar/KK/';
         $config['allowed_types'] = 'jpeg|jpg|png|';
         $config['max_size'] = '800';
@@ -102,7 +102,7 @@ class model_form_input extends CI_model
         $this->sulusupload->initialize($config);
         $upload_sulus = $this->sulusupload->do_upload('sulus');
         $data8 = $this->sulusupload->data();
-        $sulus = $data8['file_name'];*/
+        $sulus = $data8['file_name'];
 
         if ($_FILES['foto']['size'] != 0  && $_FILES['foto']['size'] <= 800) {
             //foto
@@ -120,7 +120,7 @@ class model_form_input extends CI_model
                 $this->aktaupload->display_errors('<p>', '</p>');
             }
         }
-        /*if ($_FILES['kk']['size'] != 0 && $_FILES['kk']['size'] <= 800) {
+        if ($_FILES['kk']['size'] != 0 && $_FILES['kk']['size'] <= 800) {
             // kk
             if ($upload_kk) {
                 $data2;
@@ -175,15 +175,15 @@ class model_form_input extends CI_model
             } else {
                 $this->sulusupload->display_errors('<p>', '</p>');
             }
-        }*/
-        if ($upload_akta && $upload_foto) {
+        }
+        if ($upload_ktpi && $upload_ktpa && $upload_raport && $upload_kk && $upload_akta && $upload_foto) {
             $post = $this->input;
             $data = [
                 //DATA SISWA
-                /*"Tingkat" => $post->post('Tingkat'),
-                "Prodi" => $post->post('Prodi'),*/
+                "Tingkat" => $post->post('Tingkat'),
+                "Prodi" => $post->post('Prodi'),
                 "Nama_siswa" => $post->post('Nama_Siswa', true),
-                /* "Jenis_Kelamin" => $post->post('jk'),
+                "Jenis_Kelamin" => $post->post('jk'),
                 "Asal_Sekolah" => $post->post('asek'),
                 "NISN" => $post->post('nisn', true),
                 "No_Ijazah" => $post->post('ijazah', true),
@@ -231,18 +231,18 @@ class model_form_input extends CI_model
                 "Prestasi_3" => $post->post('prestasi3', true),
                 "Beasiswa_1" => $post->post('beasiswa1', true),
                 "Beasiswa_2" => $post->post('beasiswa2', true),
-                "Beasiswa_3" => $post->post('beasiswa3', true),*/
+                "Beasiswa_3" => $post->post('beasiswa3', true),
 
                 //BERKAS
                 "Foto" => $foto,
-                "Akta_Lahir" => $akta
-                /*"KK" => $kk,
+                "Akta_Lahir" => $akta,
+                "KK" => $kk,
                 "Raport" => $raport,
                 "KTP_Ibu" => $ktpi,
                 "KTP_Ayah" => $ktpa,
                 "Ijazah" => $ijazah,
                 "SKHUN" => $skhun,
-                "Surat_Lulus" => $sulus*/
+                "Surat_Lulus" => $sulus
             ];
             $this->db->insert('siswa', $data);
         }

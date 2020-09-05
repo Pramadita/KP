@@ -106,7 +106,7 @@ class admin_dash extends CI_Controller
     {
         $this->model_siswa->hapusdatasiswa($id);
         $this->session->set_flashdata('flash', 'Dihapus');
-        redirect('admin_dash/pendaftar');
+        redirect('admin_dash/pendaftar_tlulus');
     }
 
     //UPDATE
@@ -124,7 +124,7 @@ class admin_dash extends CI_Controller
         $data['Pekerjaan'] = ['', 'Tidak Bekerja', 'Nelayan', 'Petani', 'Peternak', 'PNS/TNI/POLRI', 'Karyawan Swasta', 'Pedagang Kecil', ' Wiraswasta', 'Wirausaha', 'Buruh', 'Pekerja Seni', 'Pensiunan', 'Lainnya'];
         $data['Pendidikan'] = ['', 'Tidak Sekolah', 'SD Sederajat', 'SMP Sederajat', 'SMA Sederajat', 'D1-D3', 'D4/S1', 'S2', 'S3'];
         $data['Penghasilan'] = ['', 'Kurang dari Rp.1.000.000', 'Rp.1.000.000 - Rp.2.000.000', 'Lebih dari Rp.2.000.000'];
-        $data['Bantuan'] = ['', 'Kartu Indonesia Pintar (KIP)', 'Katu Indonesia Sehat (KIS)', 'PKH', 'KPS'];
+        $data['Bantuan'] = ['', 'Kartu Indonesia Pintar (KIP)', 'Kartu Indonesia Sehat (KIS)', 'PKH', 'KPS'];
 
         $this->load->view('templates/header2', $data);
         $this->load->view('templates/nav_admin', $data);

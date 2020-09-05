@@ -30,16 +30,28 @@
                     <form method="post" action="<?= base_url('admin_dash/update_info/' . $skl['id']) ?>" enctype="multipart/form-data">
                         <div class="form-group">
                             <div class="row">
-                                <label class="col-sm-3 control-label" for="periode">Input Periode :</label>
-                                <div class="col-sm-5">
+                                <label class="col-sm-2 control-label" for="periode">Input Periode :</label>
+                                <div class="col-sm-4">
                                     <input type="text" class="form-control" name="periode" id="periode" value="<?= $skl['periode_daftar']; ?>">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="row">
-                                <label class="col-sm-3 control-label" for="info">Input Brosur/Info :</label>
-                                <div class="col-sm-5">
+                                <label class="col-sm-2 control-label" for="kontak1">Kontak 1 :</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" name="kontak1" id="kontak1" value="<?= $skl['kontak1']; ?>">
+                                </div>
+                                <label class="col-sm-2 control-label" for="kontak2">Kontak 2 :</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="kontak2" id="kontak2" value="<?= $skl['kontak2']; ?>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label class="col-sm-2 control-label" for="info">Input Brosur/Info :</label>
+                                <div class="col-sm-6">
                                     <input type="file" accept="image/*" class="form-control" name="info" id="info" placeholder="<?= $skl['Info']; ?>">
                                     <p>*upload file dalam bentuk jpg/png/jpeg</p>
                                     <?php if ($this->session->flashdata('wrong')) : ?>
@@ -47,7 +59,7 @@
                                     <?php endif; ?>
                                 </div>
                                 <div class="col-sm-3 alert alert-default">
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-4">
                                         <strong><?= $skl['Info']; ?></strong>
                                     </div>
                                 </div>

@@ -45,17 +45,15 @@ class model_admin extends CI_model
                 }
                 $this->session->set_flashdata('flash', 'Diupdate');
             } else {
-                //error
-                //other codes
-
-                //optional
                 $this->session->set_flashdata('wrong', 'Pastikan file sesuai ketentuan');
             }
         }
         $post = $this->input;
         $data = [
             //DATA INFO
-            "periode_daftar" => $post->post('periode')
+            "periode_daftar" => $post->post('periode'),
+            "kontak1" => $post->post('kontak1'),
+            "kontak2" => $post->post('kontak2'),
         ];
         $this->db->where('id', $id);
         $this->db->update('sekolah', $data);

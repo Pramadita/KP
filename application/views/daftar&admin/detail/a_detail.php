@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <div class="form-group"> <label class="col-sm-4 control-label dark" for="Prodi">Tingkat : </label>
                                     <div class="col-sm-4">
-                                        <label><?= $siswa["Tingkat"]; ?> </label>
+                                        <p><strong><?= $siswa["Tingkat"]; ?></strong> </p>
                                     </div>
                                 </div>
                         </li>
@@ -35,133 +35,133 @@
                             <div class="form-group">
                                 <div class="form-group"> <label class="col-sm-4 control-label dark" for="Prodi">Program Studi : </label>
                                     <div class="col-sm-4">
-                                        <label><?= $siswa["Prodi"]; ?> </label>
+                                        <p><strong><?= $siswa["Prodi"]; ?> </strong></p>
                                     </div>
                                 </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="Nama_Siswa">Nama : </label>
                                 <div class="col-sm-4">
-                                    <label><?= $siswa["Nama_Siswa"]; ?></label>
+                                    <p><strong><?= $siswa["Nama_Siswa"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label " for="jk">Jenis Kelamin : </label>
                                 <div class="col-sm-4">
-                                    <label><?= $siswa["Jenis_Kelamin"]; ?></label>
+                                    <p><strong><?= $siswa["Jenis_Kelamin"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="asek">Asal Sekolah : </label>
                                 <div class="col-sm-4">
-                                    <label><?= $siswa["Asal_Sekolah"]; ?></label>
+                                    <p><strong><?= $siswa["Asal_Sekolah"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="asek">NISN : </label>
                                 <div class="col-sm-4">
-                                    <label><?= $siswa["NISN"]; ?></label>
+                                    <p><strong><?= $siswa["NISN"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="ijazah">NOMOR SERI IJAZAH : </label>
                                 <div class="col-sm-4">
-                                    <label><?= $siswa["No_Ijazah"]; ?></label>
+                                    <p><strong><?= $siswa["No_Ijazah"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="skhun">SERI SKHUN SMP/MTs : </label>
                                 <div class="col-sm-4">
-                                    <label><?= $siswa["No_SKHUN"]; ?></label>
+                                    <p><strong><?= $siswa["No_SKHUN"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="un">No Ujian Nasional SMP/MTs : </label>
                                 <div class="col-sm-4">
-                                    <label><?= $siswa["No_UN"]; ?></label>
+                                    <p><strong><?= $siswa["No_UN"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="nik">NIK : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["NIK"]; ?></label>
+                                    <p><strong><?= $siswa["NIK"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="tl">Tempat Tanggal Lahir : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["TTL"]; ?></label>
+                                    <p><strong><?= $siswa["TTL"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="att">Alamat Tempat Tinggal : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["Alamat_Tinggal"]; ?></label>
+                                    <p><strong><?= $siswa["Alamat_Tinggal"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="transport">Alat Transportasi : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["Transportasi"]; ?></label>
+                                    <p><strong><?= $siswa["Transportasi"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="jtinggal">Jenis Tinggal : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["Jenis_Tinggal"]; ?></label>
+                                    <p><strong><?= $siswa["Jenis_Tinggal"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="rtinggal">Rencana Tinggal : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["Rencana_Tinggal"]; ?></label>
+                                    <p><strong><?= $siswa["Rencana_Tinggal"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="pakaian">Ukuran Pakaian : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["Ukuran_Pakaian"]; ?></label>
+                                    <p><strong><?= $siswa["Ukuran_Pakaian"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="hp">No Handphone : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["No_HP"]; ?></label>
+                                    <p><strong><?= $siswa["No_HP"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="email">Email : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["Email"]; ?></label>
+                                    <p><strong><?= $siswa["Email"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="bantuan">Jenis Bantuan : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["Jenis_Bantuan"]; ?></label>
+                                    <p><strong><?= $siswa["Jenis_Bantuan"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="form-group"><label class="col-sm-4 control-label" for="kps">No KKS : </label>
                                 <div class="col-sm-5">
-                                    <label><?= $siswa["No_KKS"]; ?></label>
+                                    <p><strong><?= $siswa["No_KKS"]; ?></strong></p>
                                 </div>
                             </div>
                         </li>
@@ -342,35 +342,35 @@
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="nayah">Nama Ayah : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Nama_Ayah"]; ?></label>
+                                        <p><strong><?= $siswa["Nama_Ayah"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="tlyah">Tahun Lahir Ayah : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Lahir_Ayah"]; ?></label>
+                                        <p><strong><?= $siswa["Lahir_Ayah"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="jobayah">Pekerjaan Ayah : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Pekerjaan_Ayah"]; ?></label>
+                                        <p><strong><?= $siswa["Pekerjaan_Ayah"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="edua">Pendidikan Ayah : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Pendidikan_Ayah"]; ?></label>
+                                        <p><strong><?= $siswa["Pendidikan_Ayah"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="hasila">Penghasilan Bulanan Ayah : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Penghasilan_Ayah"]; ?></label>
+                                        <p><strong><?= $siswa["Penghasilan_Ayah"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
@@ -380,35 +380,35 @@
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="nibu">Nama Ibu : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Nama_Ibu"]; ?></label>
+                                        <p><strong><?= $siswa["Nama_Ibu"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="tlibu">Tahun Lahir Ibu : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Lahir_Ibu"]; ?></label>
+                                        <p><strong><?= $siswa["Lahir_Ibu"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="jobibu">Pekerjaan Ibu : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Nama_Ibu"]; ?></label>
+                                        <p><strong><?= $siswa["Nama_Ibu"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="edui">Pendidikan Terakhir Ibu : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Pendidikan_Ibu"]; ?></label>
+                                        <p><strong><?= $siswa["Pendidikan_Ibu"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="hasili">Penghasilan Ibu : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Penghasilan_Ibu"]; ?></label>
+                                        <p><strong><?= $siswa["Penghasilan_Ibu"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
@@ -420,35 +420,35 @@
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="nwali">Nama Wali : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Nama_Wali"]; ?></label>
+                                        <p><strong><?= $siswa["Nama_Wali"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="tlwali">Tahun Lahir Wali : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Lahir_Wali"]; ?></label>
+                                        <p><strong><?= $siswa["Lahir_Wali"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="jobwali">Pekerjaan Wali : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Pekerjaan_Wali"]; ?></label>
+                                        <p><strong><?= $siswa["Pekerjaan_Wali"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="eduw">Pendidikan Wali : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Pendidikan_Wali"]; ?></label>
+                                        <p><strong><?= $siswa["Pendidikan_Wali"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="form-group"><label class="col-sm-4 control-label" for="hasilw">Penghasilan Bulanan Wali : </label>
                                     <div class="col-sm-5">
-                                        <label><?= $siswa["Penghasilan_Wali"]; ?></label>
+                                        <p><strong><?= $siswa["Penghasilan_Wali"]; ?></strong></p>
                                     </div>
                                 </div>
                             </li>
@@ -471,35 +471,35 @@
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="tinggi">Tinggi Badan : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Tinggi_Badan"]; ?></label>
+                                <p><strong><?= $siswa["Tinggi_Badan"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="bb">Berat Badan : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Berat_Badan"]; ?></label>
+                                <p><strong><?= $siswa["Berat_Badan"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="jarak">Jarak Ke Sekolah : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Jarak_Sekolah"]; ?></label>
+                                <p><strong><?= $siswa["Jarak_Sekolah"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="tinggi">Waktu Tempuh Ke Sekolah : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Waktu_Tempuh"]; ?></label>
+                                <p><strong><?= $siswa["Waktu_Tempuh"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="tinggi">Jumlah Saudara Kandung : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Saudara_Kandung"]; ?></label>
+                                <p><strong><?= $siswa["Saudara_Kandung"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
@@ -520,21 +520,21 @@
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="jepres">Prestasi 1 : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Prestasi_1"]; ?></label>
+                                <p><strong><?= $siswa["Prestasi_1"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="jepres2">Prestasi 2 : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Prestasi_2"]; ?></label>
+                                <p><strong><?= $siswa["Prestasi_2"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="jepres3">Prestasi 3 : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Prestasi_3"]; ?></label>
+                                <p><strong><?= $siswa["Prestasi_3"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
@@ -555,21 +555,21 @@
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="beasiswa">Beasiswa 1 : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Beasiswa_1"]; ?></label>
+                                <p><strong><?= $siswa["Beasiswa_1"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="beasiswa2">Beasiswa 2 : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Beasiswa_2"]; ?></label>
+                                <p><strong><?= $siswa["Beasiswa_2"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="form-group"><label class="col-sm-4 control-label" for="beasiswa3">Beasiswa 3 : </label>
                             <div class="col-sm-5">
-                                <label><?= $siswa["Beasiswa_3"]; ?></label>
+                                <p><strong><?= $siswa["Beasiswa_3"]; ?></strong></p>
                             </div>
                         </div>
                     </li>
@@ -582,7 +582,6 @@
             <header class="panel-heading">
                 <div class="panel-actions">
                     <a href="#" class="fa fa-caret-down"></a>
-                    <a href="#" class="fa fa-times"></a>
                 </div>
 
                 <h2 class="panel-title">Berkas Pendaftar</h2>
@@ -590,54 +589,58 @@
             <div class="panel-body">
                 <div class="popup-gallery">
                     <div class="col-md-12">
-                        <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Akta_Lahir/<?= $siswa["Akta_Lahir"]; ?>" title="<?= $siswa["Akta_Lahir"]; ?>">
-                            <p class="text-center"><?= $siswa["Akta_Lahir"]; ?></p>
-                            <div class="img-responsive center">
-                                <img src="<?= base_url(); ?>pendaftar/Akta_Lahir/<?= $siswa["Akta_Lahir"]; ?>" width="105">
-                            </div>
-                        </a>
-                        <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/KK/<?= $siswa["KK"]; ?>" title="<?= $siswa["KK"]; ?>">
-                            <p class="text-center"><?= $siswa["KK"]; ?></p>
-                            <div class="img-responsive center">
-                                <img src="<?= base_url(); ?>pendaftar/KK/<?= $siswa["KK"]; ?>" width="105">
-                            </div>
-                        </a>
-                        <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Bio_Raport/<?= $siswa["Raport"]; ?>" title="<?= $siswa["Raport"]; ?>">
-                            <p class="text-center"><?= $siswa["Raport"]; ?></p>
-                            <div class="img-responsive center">
-                                <img src="<?= base_url(); ?>pendaftar/Bio_Raport/<?= $siswa["Raport"]; ?>" width="105">
-                            </div>
-                        </a>
-                        <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/KTP_Ayah/<?= $siswa["KTP_Ayah"]; ?>" title="<?= $siswa["KTP_Ayah"]; ?>">
-                            <p class="text-center"><?= $siswa["KTP_Ayah"]; ?></p>
-                            <div class="img-responsive center">
-                                <img src="<?= base_url(); ?>pendaftar/KTP_Ayah/<?= $siswa["KTP_Ayah"]; ?>" width="105">
-                            </div>
-                        </a>
-                        <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/KTP_Ibu/<?= $siswa["KTP_Ibu"]; ?>" title="<?= $siswa["KTP_Ibu"]; ?>">
-                            <p class="text-center"><?= $siswa["KTP_Ibu"]; ?></p>
-                            <div class="img-responsive center">
-                                <img src="<?= base_url(); ?>pendaftar/KTP_Ibu/<?= $siswa["KTP_Ibu"]; ?>" width="105">
-                            </div>
-                        </a>
-                        <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Ijazah/<?= $siswa["Ijazah"]; ?>" title="<?= $siswa["Ijazah"]; ?>">
-                            <p class="text-center"><?= $siswa["Ijazah"]; ?></p>
-                            <div class="img-responsive center">
-                                <img src="<?= base_url(); ?>pendaftar/Ijazah/<?= $siswa["Ijazah"]; ?>" width="105">
-                            </div>
-                        </a>
-                        <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/SKHUN/<?= $siswa["SKHUN"]; ?>" title="<?= $siswa["SKHUN"]; ?>">
-                            <p class="text-center"><?= $siswa["SKHUN"]; ?></p>
-                            <div class="img-responsive center">
-                                <img src="<?= base_url(); ?>pendaftar/SKHUN/<?= $siswa["SKHUN"]; ?>" width="105">
-                            </div>
-                        </a>
-                        <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Surat_Lulus/<?= $siswa["Surat_Lulus"]; ?>" title="<?= $siswa["Surat_Lulus"]; ?>">
-                            <p class="text-center"><?= $siswa["Surat_Lulus"]; ?></p>
-                            <div class="img-responsive center">
-                                <img src="<?= base_url(); ?>pendaftar/Surat_Lulus/<?= $siswa["Surat_Lulus"]; ?>" width="105">
-                            </div>
-                        </a>
+                        <div class="form-group">
+                            <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Akta_Lahir/<?= $siswa["Akta_Lahir"]; ?>" title="<?= $siswa["Akta_Lahir"]; ?>">
+                                <p class="text-center"><?= $siswa["Akta_Lahir"]; ?></p>
+                                <div class="img-responsive center">
+                                    <img src="<?= base_url(); ?>pendaftar/Akta_Lahir/<?= $siswa["Akta_Lahir"]; ?>" width="105">
+                                </div>
+                            </a>
+                            <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/KK/<?= $siswa["KK"]; ?>" title="<?= $siswa["KK"]; ?>">
+                                <p class="text-center"><?= $siswa["KK"]; ?></p>
+                                <div class="img-responsive center col-sm-3">
+                                    <img src="<?= base_url(); ?>pendaftar/KK/<?= $siswa["KK"]; ?>" width="105">
+                                </div>
+                            </a>
+                            <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Bio_Raport/<?= $siswa["Raport"]; ?>" title="<?= $siswa["Raport"]; ?>">
+                                <p class="text-center"><?= $siswa["Raport"]; ?></p>
+                                <div class="img-responsive center col-sm-3">
+                                    <img src="<?= base_url(); ?>pendaftar/Bio_Raport/<?= $siswa["Raport"]; ?>" width="105">
+                                </div>
+                            </a>
+                            <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/KTP_Ayah/<?= $siswa["KTP_Ayah"]; ?>" title="<?= $siswa["KTP_Ayah"]; ?>">
+                                <p class="text-center"><?= $siswa["KTP_Ayah"]; ?></p>
+                                <div class="img-responsive center">
+                                    <img src="<?= base_url(); ?>pendaftar/KTP_Ayah/<?= $siswa["KTP_Ayah"]; ?>" width="105">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="form-group">
+                            <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/KTP_Ibu/<?= $siswa["KTP_Ibu"]; ?>" title="<?= $siswa["KTP_Ibu"]; ?>">
+                                <p class="text-center"><?= $siswa["KTP_Ibu"]; ?></p>
+                                <div class="img-responsive center col-sm-3">
+                                    <img src="<?= base_url(); ?>pendaftar/KTP_Ibu/<?= $siswa["KTP_Ibu"]; ?>" width="105">
+                                </div>
+                            </a>
+                            <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Ijazah/<?= $siswa["Ijazah"]; ?>" title="<?= $siswa["Ijazah"]; ?>">
+                                <p class="text-center"><?= $siswa["Ijazah"]; ?></p>
+                                <div class="img-responsive center col-sm-3">
+                                    <img src="<?= base_url(); ?>pendaftar/Ijazah/<?= $siswa["Ijazah"]; ?>" width="105">
+                                </div>
+                            </a>
+                            <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/SKHUN/<?= $siswa["SKHUN"]; ?>" title="<?= $siswa["SKHUN"]; ?>">
+                                <p class="text-center"><?= $siswa["SKHUN"]; ?></p>
+                                <div class="img-responsive center col-sm-3">
+                                    <img src="<?= base_url(); ?>pendaftar/SKHUN/<?= $siswa["SKHUN"]; ?>" width="105">
+                                </div>
+                            </a>
+                            <a class="pull-left mb-xs mr-xs" href="<?= base_url(); ?>pendaftar/Surat_Lulus/<?= $siswa["Surat_Lulus"]; ?>" title="<?= $siswa["Surat_Lulus"]; ?>">
+                                <p class="text-center"><?= $siswa["Surat_Lulus"]; ?></p>
+                                <div class="img-responsive center col-sm-3">
+                                    <img src="<?= base_url(); ?>pendaftar/Surat_Lulus/<?= $siswa["Surat_Lulus"]; ?>" width="105">
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
         </section>

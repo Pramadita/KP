@@ -57,7 +57,7 @@
 
                     <form method="post" action="<?= base_url('admin_dash/tambah_form_admin') ?>" enctype="multipart/form-data">
                         <div class="tab-content">
-                            <!--<div id="w4-siswa" class="tab-pane active">
+                            <div id="w4-siswa" class="tab-pane active">
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="Tingkat">Tingkat * :</label>
                                     <div class="col-md-3">
@@ -77,14 +77,14 @@
                                             <option value="Usaha Perjalanan Wisata">Usaha Perjalanan Wisata</option>
                                         </select>
                                     </div>
-                                </div>-->
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="Nama_Siswa">Nama Lengkap * :</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="Nama_Siswa" id="Nama_Siswa" value="<?= set_value("Nama_Siswa"); ?>" required>
                                 </div>
-                            </div>
-                            <!--<div class="form-group">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="Nama_Siswa">Nama Lengkap * :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="Nama_Siswa" id="Nama_Siswa" value="<?= set_value("Nama_Siswa"); ?>" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-jk">Jenis Kelamin * :</label>
                                     <div class="col-md-3">
                                         <select class="form-control mb-md" name="jk" id="w4-jk" required>
@@ -503,92 +503,92 @@
                                 </li>
                                 <li class="text-dark">Seluruh foto berkas termasuk foto siswa diupload dengan format <strong> .jpg atau .jpeg atau.png</strong></li>
                                 <li class="text-dark">Nama file disesuaikan dengan ketetuan penamaan.</li>
-                                <p class="text-dark"> Ketentuan Penamaan = <strong>Nama lengkap Pendaftar_Jenis Berkas.jenis file foto</strong>,</br>Contoh :Lily Lyanna_Foto Siswa.png, Lily Lyanna_Akta Lahir.png</p>-->
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="w4-foto">Foto Siswa* :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" id="file" onchange="ValidateSize(this)" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="w4-akta">Akta Kelahiran* :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="akta" id="w4-berkas" accept="image/*" id="file" onchange="ValidateSize(this)" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="w4-kk">KK* :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="kk" id="w4-foto" accept="image/*" id="file" onchange="ValidateSize(this)" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="w4-raport">Biodata Raport* :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="raport" id="w4-raport" accept="image/*" id="file" onchange="ValidateSize(this)" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="w4-ktpa">KTP Ayah* :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="ktpa" id="w4-ktpa" accept="image/*" id="file" onchange="ValidateSize(this)" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="w4-ktpi">KTP Ibu* :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="ktpi" id="w4-ktpi" accept="image/*" id="file" onchange="ValidateSize(this)" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="w4-ijazah">Ijazah :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="ijazah" id="w4-ijazah" accept="image/*" id="file" onchange="ValidateSize(this)">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="w4-skhun">SKHUN :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="skhun" id="w4-skhun" accept="image/*" id="file" onchange="ValidateSize(this)">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label" for="w4-sulus">Surat Kelulusan SMP :</label>
-                                <div class="col-sm-5">
-                                    <input type="file" class="form-control" name="sulus" id="w4-sulus" accept="image/*" id="file" onchange="ValidateSize(this)">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-9">
-                                    <div class="checkbox-custom">
-                                        <input type="checkbox" name="terms" id="w4-terms" required>
-                                        <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
+                                <p class="text-dark"> Ketentuan Penamaan = <strong>Nama lengkap Pendaftar_Jenis Berkas.jenis file foto</strong>,</br>Contoh :Lily Lyanna_Foto Siswa.png, Lily Lyanna_Akta Lahir.png</p>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-foto">Foto Siswa* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" id="file" onchange="ValidateSize(this)" required>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-akta">Akta Kelahiran* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="akta" id="w4-berkas" accept="image/*" id="file" onchange="ValidateSize(this)" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-kk">KK* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="kk" id="w4-foto" accept="image/*" id="file" onchange="ValidateSize(this)" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-raport">Biodata Raport* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="raport" id="w4-raport" accept="image/*" id="file" onchange="ValidateSize(this)" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-ktpa">KTP Ayah* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="ktpa" id="w4-ktpa" accept="image/*" id="file" onchange="ValidateSize(this)" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-ktpi">KTP Ibu* :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="ktpi" id="w4-ktpi" accept="image/*" id="file" onchange="ValidateSize(this)" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-ijazah">Ijazah :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="ijazah" id="w4-ijazah" accept="image/*" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-skhun">SKHUN :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="skhun" id="w4-skhun" accept="image/*" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="w4-sulus">Surat Kelulusan SMP :</label>
+                                    <div class="col-sm-5">
+                                        <input type="file" class="form-control" name="sulus" id="w4-sulus" accept="image/*" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <div class="checkbox-custom">
+                                            <input type="checkbox" name="terms" id="w4-terms" required>
+                                            <label for="w4-terms">Saya menyatakan semua data yang dimasukkan adalah benar.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                         </div>
                 </div>
-        </div>
-        <div class="panel-footer">
-            <ul class="pager">
-                <li class="previous disabled">
-                    <a><i class="fa fa-angle-left"></i> Previous</a>
-                </li>
-                <!--<li>
+                <div class="panel-footer">
+                    <ul class="pager">
+                        <li class="previous disabled">
+                            <a><i class="fa fa-angle-left"></i> Previous</a>
+                        </li>
+                        <!--<li>
                                 <button type="submit" class="btn btn-primary pull-right">Daftar</button>
                             </li>-->
-                <li class="next">
-                    <a>Next <i class="fa fa-angle-right"></i></a>
-                </li>
-            </ul>
-        </div>
-        </form>
+                        <li class="next">
+                            <a>Next <i class="fa fa-angle-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                </form>
 
-</section>
-</div>
-</div>
-<!-- end: page -->
+            </section>
+        </div>
+    </div>
+    <!-- end: page -->
 </section>
 </div>
 

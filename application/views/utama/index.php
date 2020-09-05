@@ -113,8 +113,7 @@
                                                 anda
                                                 sudah terkoneksi dengan internet)</br> 2. Klik "Daftar"
                                                 untuk
-                                                mendaftarkan calon siswa</br> 3. Isikan Form</br> 4. Tunggu
-                                                Pengumuman dari pihak sekolah melalui website ini</p>
+                                                mendaftarkan calon siswa</br> 3. Isikan Form sesuai ketentuan</br> 4. Cek Status Kelulusan dari pihak sekolah melalui website ini</p>
                                         </div>
                                     </div>
                                 </div>
@@ -157,7 +156,7 @@
                     </div>
                     <div class="col-md-4 animate-box">
                         <div class="classes">
-                            <div class="classes-img" style="background-image: url(<?= base_url('assets/images/atuu.jpg'); ?>)">
+                            <div class="classes-img" style="background-image: url(<?= base_url('assets/images/pemasaran.jpg'); ?>)">
                             </div>
                             <div class="desc">
                                 <h3><a href="#">Pemasaran</a></h3>

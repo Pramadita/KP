@@ -7,11 +7,12 @@ class model_form_update extends CI_model
     {
         $fileInfo = $this->db->get_where('siswa', ['id' => $id])->row();
 
-        if ($_FILES['foto']['size'] != 0) {
+        if ($_FILES['foto']['size'] != 0 && $_FILES['foto']['size'] <= 800) {
             //Akta
             $config = array();
             $config['upload_path'] = './pendaftar/Foto_Siswa/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['max_size'] = '800';
             $this->load->library('upload', $config, 'fotoupload');
             $this->fotoupload->initialize($config);
             $upload_foto = $this->fotoupload->do_upload('foto');
@@ -30,11 +31,12 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['akta']['size'] != 0) {
+        if ($_FILES['akta']['size'] != 0 && $_FILES['akta']['size'] <= 800) {
             //Akta
             $config = array();
             $config['upload_path'] = './pendaftar/Akta_Lahir/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['max_size'] = '800';
             $this->load->library('upload', $config, 'aktaupload');
             $this->aktaupload->initialize($config);
             $upload_akta = $this->aktaupload->do_upload('akta');
@@ -53,11 +55,12 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['kk']['size'] != 0) {
+        if ($_FILES['kk']['size'] != 0 && $_FILES['kk']['size'] <= 800) {
             //KK
             $config = array();
             $config['upload_path'] = './pendaftar/KK/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['max_size'] = '800';
             $this->load->library('upload', $config, 'kkupload');
             $this->kkupload->initialize($config);
             $upload_kk = $this->kkupload->do_upload('kk');
@@ -76,11 +79,12 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salahs', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['raport']['size'] != 0) {
+        if ($_FILES['raport']['size'] != 0 && $_FILES['raport']['size'] <= 800) {
             //raport
             $config = array();
             $config['upload_path'] = './pendaftar/Bio_Raport/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['max_size'] = '800';
             $this->load->library('upload', $config, 'raportupload');
             $this->raportupload->initialize($config);
             $upload_raport = $this->raportupload->do_upload('raport');
@@ -99,11 +103,12 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['ktpa']['size'] != 0) {
+        if ($_FILES['ktpa']['size'] != 0 && $_FILES['ktpa']['size'] <= 800) {
             //ktpa
             $config = array();
             $config['upload_path'] = './pendaftar/KTP_Ayah/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['max_size'] = '800';
             $this->load->library('upload', $config, 'ktpaupload');
             $this->ktpaupload->initialize($config);
             $upload_ktpa = $this->ktpaupload->do_upload('ktpa');
@@ -122,11 +127,12 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['ktpi']['size'] != 0) {
+        if ($_FILES['ktpi']['size'] != 0 && $_FILES['ktpi']['size'] <= 800) {
             //ktpi
             $config = array();
             $config['upload_path'] = './pendaftar/KTP_Ibu/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['max_size'] = '800';
             $this->load->library('upload', $config, 'ktpiupload');
             $this->ktpiupload->initialize($config);
             $upload_ktpi = $this->ktpiupload->do_upload('ktpi');
@@ -145,11 +151,12 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['ijazah']['size'] != 0) {
+        if ($_FILES['ijazah']['size'] != 0 && $_FILES['ijazah']['size'] <= 800) {
             //ijazah
             $config = array();
             $config['upload_path'] = './pendaftar/Ijazah/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['max_size'] = '800';
             $this->load->library('upload', $config, 'ijazahupload');
             $this->ijazahupload->initialize($config);
             $upload_ijazah = $this->ijazahupload->do_upload('ijazah');
@@ -168,11 +175,12 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salah', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['skhun']['size'] != 0) {
+        if ($_FILES['skhun']['size'] != 0 && $_FILES['skhun']['size'] <= 800) {
             //SKHUN
             $config = array();
             $config['upload_path'] = './pendaftar/SKHUN/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['max_size'] = '800';
             $this->load->library('upload', $config, 'skhunupload');
             $this->skhunupload->initialize($config);
             $upload_skhun = $this->skhunupload->do_upload('skhun');
@@ -191,11 +199,12 @@ class model_form_update extends CI_model
                 $this->session->set_flashdata('salahs', 'Pastikan file sesuai ketentuan');
             }
         }
-        if ($_FILES['sulus']['size'] != 0) {
+        if ($_FILES['sulus']['size'] != 0 && $_FILES['sulus']['size'] <= 800) {
             //sulus
             $config = array();
             $config['upload_path'] = './pendaftar/Surat_Lulus/';
             $config['allowed_types'] = 'jpeg|jpg|png|';
+            $config['max_size'] = '800';
             $this->load->library('upload', $config, 'sulusupload');
             $this->sulusupload->initialize($config);
             $upload_sulus = $this->sulusupload->do_upload('sulus');

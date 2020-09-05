@@ -37,10 +37,12 @@
                 <ul class="colorlib-footer-links">
                     <li>Jl.Babakan Randu, RT 05, RW 02, Desa Lemah Sugih, Kecamatan Lemah Sugih,
                         Kabupaten Majalengka </li>
-                    <li><a><i class="icon-phone"></i>0813-2112-3001</a>
-                    </li>
-                    <li><a><i class="icon-phone"></i>0853-2485-5965</a>
-                    </li>
+                    <?php foreach ($sekolah as $skl) : ?>
+                        <li><a><i class="icon-phone"></i><?= $skl['kontak1']; ?></a>
+                        </li>
+                        <li><a><i class="icon-phone"></i><?= $skl['kontak2']; ?></a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>

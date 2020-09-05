@@ -519,55 +519,82 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-foto">Foto Siswa* :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" value="<?= $siswa['Foto']; ?>">
+                                        <input type="file" class="form-control" name="foto" id="w4-foto" accept="image/*" value="<?= $siswa['Foto']; ?>" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p><?= $siswa['Foto']; ?></p>
                                     </div>
                                 </div>
                                 <div class=" form-group">
                                     <label class="col-sm-3 control-label" for="w4-akta">Akta Kelahiran* :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="akta" id="w4-akta" accept="image/*" value="<?= $siswa['Akta_Lahir']; ?>">
+                                        <input type="file" class="form-control" name="akta" id="w4-akta" accept="image/*" value="<?= $siswa['Akta_Lahir']; ?>" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p><?= $siswa['Akta_Lahir']; ?></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-kk">KK* :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="kk" id="w4-kk" accept="image/*" value="<?= $siswa['KK']; ?>">
+                                        <input type="file" class="form-control" name="kk" id="w4-kk" accept="image/*" value="<?= $siswa['KK']; ?>" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p><?= $siswa['KK']; ?></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-raport">Biodata Raport* :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="raport" id="w4-raport" accept="image/*" value="<?= $siswa['Raport']; ?>">
+                                        <input type="file" class="form-control" name="raport" id="w4-raport" accept="image/*" value="<?= $siswa['Raport']; ?>" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p><?= $siswa['Raport']; ?></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-ktpa">KTP Ayah* :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="ktpa" id="w4-ktpa" accept="image/*" value="<?= $siswa['KTP_Ayah']; ?>">
+                                        <input type="file" class="form-control" name="ktpa" id="w4-ktpa" accept="image/*" value="<?= $siswa['KTP_Ayah']; ?>" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p><?= $siswa['KTP_Ayah']; ?></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-ktpi">KTP Ibu* :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="ktpi" id="w4-ktpi" accept="image/*" value="<?= $siswa['KTP_Ibu']; ?>">
+                                        <input type="file" class="form-control" name="ktpi" id="w4-ktpi" accept="image/*" value="<?= $siswa['KTP_Ibu']; ?>" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p><?= $siswa['KTP_Ibu']; ?></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-ijazah">Ijazah :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="ijazah" id="w4-ijazah" accept="image/*" value="<?= $siswa['Ijazah']; ?>">
+                                        <input type="file" class="form-control" name="ijazah" id="w4-ijazah" accept="image/*" value="<?= $siswa['Ijazah']; ?>" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p><?= $siswa['Ijazah']; ?></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-skhun">SKHUN :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="skhun" id="w4-skhun" accept="image/*" value="<?= $siswa['SKHUN']; ?>">
+                                        <input type="file" class="form-control" name="skhun" id="w4-skhun" accept="image/*" value="<?= $siswa['SKHUN']; ?>" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p><?= $siswa['SKHUN']; ?></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" for="w4-sulus">Surat Kelulusan SMP :</label>
                                     <div class="col-sm-5">
-                                        <input type="file" class="form-control" name="sulus" id="w4-sulus" accept="image/*" value="<?= $siswa['Surat_Lulus']; ?>">
+                                        <input type="file" class="form-control" name="sulus" id="w4-sulus" accept="image/*" value="<?= $siswa['Surat_Lulus']; ?>" id="file" onchange="ValidateSize(this)">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p><?= $siswa['Surat_Lulus']; ?></p>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary pull-right">Edit</button>
@@ -598,3 +625,14 @@
 
 </section>
 </div>
+<script type='text/javascript'>
+    function ValidateSize(file) {
+        var FileSize = file.files[0].size / 800 / 800; // in MB
+        if (FileSize > 0.8) {
+            alert('Ukuran File lebih dari 800KB, Silahkan upload file sesuai ketentuan!');
+            $(file).val(''); //for clearing with Jquery
+        } else {
+
+        }
+    }
+</script>

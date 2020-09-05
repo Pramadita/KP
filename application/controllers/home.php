@@ -17,7 +17,7 @@ class home extends CI_Controller
         $data['sekolah'] = $this->model_admin->getallsekolah();
         $this->load->view('templates/header1', $data);
         $this->load->view('utama/index', $data);
-        $this->load->view('templates/footer1');
+        $this->load->view('templates/footer1', $data);
     }
     public function info_ppdb()
     {
@@ -25,14 +25,15 @@ class home extends CI_Controller
         $data['sekolah'] = $this->model_admin->getallsekolah();
         $this->load->view('templates/header1', $data);
         $this->load->view('utama/info-ppdb', $data);
-        $this->load->view('templates/footer1');
+        $this->load->view('templates/footer1', $data);
     }
     public function kontak_kami()
     {
         $data['judul'] = 'KONTAK KAMI';
+        $data['sekolah'] = $this->model_admin->getallsekolah();
         $this->load->view('templates/header1', $data);
-        $this->load->view('utama/kontak');
-        $this->load->view('templates/footer1');
+        $this->load->view('utama/kontak', $data);
+        $this->load->view('templates/footer1', $data);
     }
     public function cek_status()
     {
@@ -40,7 +41,7 @@ class home extends CI_Controller
         $data['siswa'] = $this->model_siswa->getallsiswa();
         $this->load->view('templates/header1', $data);
         $this->load->view('utama/cek_status', $data);
-        $this->load->view('templates/footer1');
+        $this->load->view('templates/footer1', $data);
     }
     public function belum_masa_daftar()
     {
@@ -49,9 +50,10 @@ class home extends CI_Controller
             redirect('home');
         } else {
             $data['judul'] = 'NOT AVAILABLE';
+            $data['sekolah'] = $this->model_admin->getallsekolah();
             $this->load->view('templates/header1', $data);
             $this->load->view('errors/NotAvailable');
-            $this->load->view('templates/footer1');
+            $this->load->view('templates/footer1', $data);
         }
     }
 }
