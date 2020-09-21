@@ -135,13 +135,13 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-3">
-                            <a href="<?= base_url(); ?>admin_dash/print_ATU" type="button" class="mb-xs mt-xs mr-xs btn btn-success"><i class="fa  fa-print"></i> Agribisnis Ternak Unggas</a>
+                            <a href="<?= base_url(); ?>admin_dash/print_ATU" target="_blank" type="button" class="mb-xs mt-xs mr-xs btn btn-success"><i class="fa  fa-print"></i> Agribisnis Ternak Unggas</a>
                         </div>
                         <div class="col-sm-2">
-                            <a href="<?= base_url(); ?>admin_dash/print_pem" type="button" class="mb-xs mt-xs mr-xs btn btn-danger"><i class="fa  fa-print"></i> Pemasaran</a>
+                            <a href="<?= base_url(); ?>admin_dash/print_pem" target="_blank" type="button" class="mb-xs mt-xs mr-xs btn btn-danger"><i class="fa  fa-print"></i> Pemasaran</a>
                         </div>
                         <div class="col-sm-3">
-                            <a href="<?= base_url(); ?>admin_dash/print_UPW" type="button" class="mb-xs mt-xs mr-xs btn btn-primary"><i class="fa  fa-print"></i> Usaha Perjalanan Wisata</a>
+                            <a href="<?= base_url(); ?>admin_dash/print_UPW" target="_blank" type="button" class="mb-xs mt-xs mr-xs btn btn-primary"><i class="fa  fa-print"></i> Usaha Perjalanan Wisata</a>
                         </div>
                     </div>
                 </div>
